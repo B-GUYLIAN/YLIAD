@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import base from "./Base.module.css"
 
 
+
 function Trash(){
 
     return (

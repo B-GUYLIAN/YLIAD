@@ -1,0 +1,15 @@
+.Bgm {
+    position: absolute;
+    width: 3rem;
+    top: 2rem;
+    right: 10vw;
+    cursor: pointer;
+}
+
+.Bgm_M {
+    position: absolute;
+    width: 2rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
