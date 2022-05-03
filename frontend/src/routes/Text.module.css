@@ -1,0 +1,84 @@
+/* Google font */
+/* @import url('https://fonts.googleapis.com/css?family=Dancing+Script'); */
+/* body {
+  background-color: rgba(0,0,0,0.1);
+} */
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* styling paper */
+#paper {
+  width: 40vw;
+  height: 45vh;
+  /* width: 140vw; */
+  /* height: 95vh; */
+  /* position: relative; */
+  position: absolute;
+  /* margin: 20px auto; */
+  /* margin: 0.5vh auto; */
+  padding-top: 54vh;
+  /* padding-bottom: 4vh; */
+  background-color: rgba(255, 255, 255, 0);
+  /* box-shadow: 0px 0px 5px 0px #888; */
+}
+
+/* styling red vertical line */
+#paper::before {
+  content: '';
+  width: 0.1vw;
+  /* height: 100%; */
+  /* height: 40vh; */
+  padding-top: 50vh;
+  /* margin-top: 54vh; */
+  position: absolute;
+  /* top: 0; */
+  left: 40px;
+  background-color: rgba(255,0,0,0.6);
+}
+
+/* styling text content */
+#content {
+    position: absolute;
+    display: flex;
+    width: 70vw;
+    height: 60vh;
+    top: 20vh;
+    /* padding-top: 3vh; */
+    padding-left: 2vw;
+    padding-right: 2vw;
+    line-height: 3.5vh;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'SDMiSaeng';
+    font-size: 4vh;
+    /* font-style: white; */
+    color: white;
+    letter-spacing: 0.4vw;
+    word-spacing: 0.3vw;
+    /* background-color: rgba(240, 248, 255, 0); */
+    /* background-image: repeating-linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 24px, rgb(186, 253, 253) 25px); */
+    background-color: rgba(173, 212, 246, 0);
+    background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 24px, rgb(113, 125, 250) 25px);
+}
+
+.button {
+    position: absolute;
+    display: inline-flex;
+    justify-content: left;
+    top: 83vh;
+}
+
+.save {
+    justify-content: left;
+    padding-right: 3vw;
+    padding-top: 1vh;
+}
+
+.back {
+    justify-content: left;
+    padding-left: 3vw;
+    padding-top: 1vh;
+}
