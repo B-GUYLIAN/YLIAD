@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.P_container {
+    margin-top: 10rem;
+    font-size: 24px;
+}
+
+.M_container {
+    margin-top: 8rem;
+}
+
+.react-calendar { 
+    width: 23rem;
+    max-width: 100%;
+    background-color: #090b3b;
+    color: #ffed54;
+    border: none;
+    font-family: 'SDMiSaeng';
+    font-size: 3rem;
+    line-height: 1.125em;
+   }
+   .react-calendar__navigation button {
+    color: #ffffff;
+    min-width: 44px;
+    background: none;
+    font-size: 2rem;
+    margin-top: 3.5rem;
+    font-family: 'SDMiSaeng';
+   }
+
+   .react-calendar__navigation__arrow react-calendar__navigation__next2-button{
+    font-size: 0.5vw !important;
+   }
+   .react-calendar__navigation__arrow react-calendar__navigation__next-button{
+    font-size: 0.5vw !important;
+   }
+
+   .react-calendar__navigation button:enabled:hover,
+   .react-calendar__navigation button:enabled:focus {
+    background-color: #f8f8fa;
+   }
+   .react-calendar__navigation button[disabled] {
+    background-color: #f0f0f0;
+   }
+   abbr[title] {
+    text-decoration: none;
+    /* color: white; */
+   }
+   .react-calendar__month-view__days__day--weekend {
+    color: #ff0000 !important;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+
+   .react-calendar__month-view__days__day {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+
+   .react-calendar__tile{
+    height: 4rem;
+   }
+
+   .react-calendar__tile:enabled:hover,
+   .react-calendar__tile:enabled:focus {
+    background: #f8f8fa;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+   .react-calendar__tile--now {
+    background: #92fda0;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #0400ff !important;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+   .react-calendar__tile--now:enabled:hover,
+   .react-calendar__tile--now:enabled:focus {
+    background: #6f48eb33;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #6f48eb;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+   .react-calendar__tile--hasActive:enabled:hover,
+   .react-calendar__tile--hasActive:enabled:focus {
+    background: #f8f8fa;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+    color: blue !important;
+   }
+   .react-calendar__tile--active {
+    background: #6f48eb;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+   }
+   .react-calendar__tile--active:enabled:hover,
+   .react-calendar__tile--active:enabled:focus {
+    background: #6f48eb;
+    color: white;
+   }
+   .react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #f8f8fa;
+   }
+   .react-calendar__tile--range {
+    background: #f8f8fa;
+    color: #6f48eb;
+    border-radius: 0;
+   }
+   .react-calendar__tile--rangeStart {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background: #6f48eb;
+    color: white;
+   }
+   .react-calendar__tile--rangeEnd {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #6f48eb;
+    color: white;
+   }
+
+   .react-calendar__year-view__months {
+    color: white !important;
+    font-family: 'SDMiSaeng';
+    }
+
+    .react-calendar__year-view .react-calendar__tile, 
+    .react-calendar__decade-view .react-calendar__tile, 
+    .react-calendar__century-view .react-calendar__tile{
+    color: rgb(255, 175, 28) ;
+    font-family: 'SDMiSaeng';  
+    font-size: 1.5rem;
+    }
+

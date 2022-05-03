@@ -10,6 +10,7 @@ function Trash(){
             <h1>감정쓰레기통</h1>
 
             <Link to="/lobby"><button> 로비로 이동 </button></Link>
+
         </div>
     );
 }

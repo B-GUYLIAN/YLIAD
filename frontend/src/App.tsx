@@ -2,7 +2,7 @@ import React, { useEffect, useState, } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Lobby from "./routes/Lobby";
-import Calendar from "./routes/Calendar";
+import CalendarPage from "./routes/CalendarPage";
 import Clinic from "./routes/Clinic";
 import Trash from "./routes/Trash";
 import Setting from "./routes/Setting";
@@ -65,7 +65,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/lobby" element={<Lobby />}></Route>
-          <Route path="/calendar" element={<Calendar />}></Route>
+          <Route path="/calendar" element={<CalendarPage />}></Route>
           <Route path="/clinic" element={<Clinic />}></Route>
           <Route path="/trash" element={<Trash />}></Route>
           <Route path="/setting" element={<Setting />}></Route>
