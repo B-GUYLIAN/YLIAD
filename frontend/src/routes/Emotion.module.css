@@ -1,0 +1,111 @@
+
+
+
+.P_container{
+    margin-top: 13rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+#greenbox{
+    width: 30rem;
+    height: 5rem;
+    background-color: green;
+    cursor: pointer;
+}
+
+#purplebox{
+    width: 30rem;
+    height: 5rem;
+    background-color: purple;
+    cursor: pointer;
+}
+
+#yellowbox{
+    width: 30rem;
+    height: 5rem;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#bluebox{
+    width: 30rem;
+    height: 5rem;
+    background-color: blue;
+    cursor: pointer;
+}
+
+#redbox{
+    width: 30rem;
+    height: 5rem;
+    background-color: red;
+    cursor: pointer;
+}
+
+#pinkbox{
+    width: 30rem;
+    height: 5rem;
+    background-color: pink;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.M_container {
+    margin-top: 6rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#greenbox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: green;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#purplebox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: purple;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#yellowbox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: yellow;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#bluebox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: blue;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#redbox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: red;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#pinkbox_M{
+    width: 20rem;
+    height: 6rem;
+    background-color: pink;
+    margin: 0 auto;
+    cursor: pointer;
+}
+

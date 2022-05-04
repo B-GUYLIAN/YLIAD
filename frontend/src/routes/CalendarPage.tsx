@@ -1,15 +1,38 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import base from "./Base.module.css"
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './Calendar.css'
 import { BrowserView, MobileView } from 'react-device-detect';
 import { useState } from 'react';
-
+import moment from 'moment';
+import Modal from "@mui/material/Modal";
+import Read from "../assets/images/read.png"
+import Write from "../assets/images/write.png"
 
 function CalendarPage(){
 
     const [date, setDate] = useState(new Date());
+    const [modalOpen, setModalOpen] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+    function onClickDay(){
+        
+        setModalOpen(true);
+    }
+
+    function handleClose(){
+        setModalOpen(false);
+    }
+
+    function readDiary(){
+        navigate('/dayDiary')
+    }
+
+    function writeDiary(){
+        const selectdate: number = Number(moment(date).format("YYYYMMDD"))
+        navigate(`/emotion/${selectdate}`)
+    }
 
     return (
         <div className={base.container}> 
@@ -18,16 +41,33 @@ function CalendarPage(){
                     <Calendar
                     onChange={setDate} 
                     value={date}    
+                    formatDay={(locale, date) => moment(date).format("DD")}
                     showNeighboringMonth={false}
                     next2Label=""
                     prev2Label=""
+                    nextLabel=">"
+                    prevLabel="<"
+                    onClickDay={onClickDay}
                     ></Calendar>
                 </div>
-                    
+                
+                <Modal open={modalOpen} onClose={handleClose}>
+                    <div id='modalbox'> 
+                        <div className="modaldate">
+                            {moment(date).format("YYYY년 MM월 DD일")} 
+                        </div>
+                        <div className="modalimgbox">
+                            <img onClick={readDiary} id='readimg'src={Read} alt="read" />
+                            <img onClick={writeDiary} id='writeimg' src={Write} alt="write" />
+                        </div>
+                        <div className="modaltextbox">
+                            <span>일기 읽기</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>일기 쓰기 </span>
+                        </div>
+                    </div>
+                </Modal>
 
-                    <Link to="/lobby"><button> 로비로 이동 </button></Link>
-                    <Link to="/emotion"><button> 감정 선택 </button></Link>
-                     <Link to="/dayDiary"><button> 날짜별 일기 </button></Link>
+                <Link to="/lobby"><button> 로비로 이동 </button></Link>
             </BrowserView>
 
             <MobileView>
@@ -35,10 +75,30 @@ function CalendarPage(){
                 <Calendar
                     onChange={setDate} 
                     value={date}    
+                    formatDay={(locale, date) => moment(date).format("DD")}
                     showNeighboringMonth={false}
                     next2Label=""
                     prev2Label=""
+                    nextLabel=">"
+                    prevLabel="<"
+                    onClickDay={onClickDay}
                     ></Calendar>
+
+                <Modal open={modalOpen} onClose={handleClose}>
+                    <div id='modalbox'> 
+                        <div className="modaldate">
+                            {moment(date).format("YYYY년 MM월 DD일")} 
+                        </div>
+                        <div className="modalimgbox">
+                            <img onClick={readDiary} id='readimg'src={Read} alt="read" />
+                            <img onClick={writeDiary} id='writeimg' src={Write} alt="write" />
+                        </div>
+                        <div className="modaltextbox">
+                            <span>일기 읽기</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span>일기 쓰기 </span>
+                        </div>
+                    </div>
+                </Modal>
                 </div>
             </MobileView>
 
