@@ -1,15 +1,180 @@
+/* PC버전 */
+.firstContentP{
+    display: flex;
+    height: 8vh;
+}
+
+.totalP {
+    width: 20vw;
+    height: 4vh;
+
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
+}
+
+.totalCntP {
+    /* justify-content: flex-start; */
+    width: 20vw;
+    /* margin-right: 30vw; */
+    font-size: 4vh;
+    text-align: center;
+}
+
+.yearP {
+    justify-content: flex-start;
+    width: 20vw;
+    height: 4vh;
+    margin-right: 35vw;
+
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
+}
+
+.monthP {
+    justify-content: flex-end;
+    margin-right: 1vw;
+    width: 20vw;
+    height: 4vh;
+
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
+}
+
+.secondContentP{
+    display: flex;
+}
+
+.yearCntP {
+ justify-content: flex-start;
+ width: 20vw;
+ margin-right: 42vw;
+ font-size: 4vh;
+ text-align: center;  
+ margin-top: 2vh; 
+}
+
+.monthCntP {
+    justify-content: flex-end;
+    font-size: 4vh;
+    margin-right: 9vw;
+    margin-top: 2vh;
+}
+
+.EmotionP {
+    font-size: 4vh;
+}
+
+.EmotionCntP {
+    font-size: 4vh;
+}
+.chartP {
+    font-size: 4vh;
+}
+
+.chartCntP {
+
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* 모바일버전 */
+.firstContent{
+    display: flex;
+    justify-content: flex-start;
+    height: 8vh;
+}
+
 .total {
-    font-size: 2vh;
+    position: relative;
+    top: 7vh;
+    width: 20vw;
+    height: 4vh;
+    left: -15vw;
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
 }
+
+.totalCnt {
+    position: relative;
+    top: 7vh;
+    left: -15vw;
+    font-size: 4vh;
+    /* justify-content: flex-start; */
+    width: 20vw;
+    /* margin-right: 30vw; */
+    font-size: 4vh;
+    text-align: center;
+}
+
 .year {
+    justify-content: flex-start;
+    width: 20vw;
+    height: 4vh;
+    margin-right: 35vw;
 
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
 }
+
 .month {
+    justify-content: flex-end;
+    margin-right: 1vw;
+    width: 20vw;
+    height: 4vh;
 
+    font-size: 4vh;
+    background-color: beige;
+    text-align: center;
+    color: steelblue;
+    border-radius: 20vh;
 }
-.Emotion {
 
+.secondContent{
+    display: flex;
+}
+
+.yearCnt {
+ justify-content: flex-start;
+ width: 20vw;
+ margin-right: 42vw;
+ font-size: 4vh;
+ text-align: center;  
+ margin-top: 2vh; 
+}
+
+.monthCnt {
+    justify-content: flex-end;
+    font-size: 4vh;
+    margin-right: 9vw;
+    margin-top: 2vh;
+}
+
+.Emotion {
+    font-size: 4vh;
+}
+
+.EmotionCnt {
+    font-size: 4vh;
 }
 .chart {
+    font-size: 4vh;
+}
+
+.chartCnt {
 
 }

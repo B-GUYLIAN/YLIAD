@@ -1,15 +1,16 @@
 .Bgm {
     position: absolute;
-    width: 3rem;
-    top: 2rem;
-    right: 10vw;
+    width: 1.7rem;
+    top: 2.35rem;
+    /* right: 13vw; */
+    right: 24.5vw;
     cursor: pointer;
 }
 
 .Bgm_M {
     position: absolute;
-    width: 2rem;
+    width: 1.6rem;
     top: 1.5rem;
-    right: 1.5rem;
+    right: 1.95rem;
     cursor: pointer;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
+import Stars2 from "../components/layout/Stars2";
 import base from "./Base.module.css"
 import Styles from "./Text.module.css"
 
@@ -42,6 +43,7 @@ function TextDiary(){
     return (
         <>
             <Navbar />
+            <Stars2 />
             <div className={base.container}>
                 {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
                     <textarea name="textdiary" value={text} onChange={(

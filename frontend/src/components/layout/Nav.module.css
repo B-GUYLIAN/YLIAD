@@ -1,7 +1,99 @@
-.nav{
+/* PC 버전 */
+.navP{
+    position: absolute;
     display: inline-flex;
     padding: 2vw;
-    margin:2vw;
+}
+
+/* left, right를 꽉채우는 flex로 하고, 그 안에서 얘들을 나란히? */
+
+.leftP{
+    position: absolute;
+    /* padding: 2vw; */
+    /* margin-right:15vw; */
+    left: 26vw;
+}
+
+.left2P{
+    display: inline-flex;
+    justify-content: flex-start;
+    /* padding: 2vw; */
+    /* margin:2vw; */
+}
+
+.rightP{
+    position: absolute;
+    /* padding: 2vw; */
+    right: -73.8vw;
+}
+
+.right2P{
+    display: inline-flex;
+    justify-content: flex-end;
+    /* padding: 2vw; */
+    /* margin:2vw; */
+}
+
+.homeP {
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    width: 5vw;
+    height: 4vh;
+    /* padding: 0.5vw; */
+    padding: 3%;
+}
+
+.peopleP {
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    width: 5vw;
+    height: 4vh;
+    /* padding: 5%; */
+    padding: 3%;
+    /* padding-left: 30%; */
+}
+
+.calenderP {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    width: 5vw;
+    height: 4vh;
+    padding: 3%;
+    padding-right: 40%;
+}
+
+.hospitalP {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    width: 4vw;
+    height: 4vh;
+    padding: 3%;
+}
+
+.trashP {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    width: 4vw;
+    height: 4vh;
+    padding: 3%;
+}
+
+.gearP {
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    width: 4vw;
+    height: 4vh;
+    padding: 3%;
+    padding-right: 40%;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+/* 모바일 버전 */
+.nav{
+    display: inline-flex;
+    padding: 0.4rem;
+    /* 마진 없애기 */
+    margin:0.2rem; 
     /* margin-right:9vw; */
     width: 100;
 }
@@ -9,27 +101,27 @@
 /* left, right를 꽉채우는 flex로 하고, 그 안에서 얘들을 나란히? */
 
 .left{
-    /* display: inline-flex; */
-    flex-direction: row;
-    justify-content: flex-start;
+    position: absolute;
     /* padding: 2vw; */
-    margin-right:15vw;
+    /* margin-right:3.8rem; */
+    top: 0.5rem;
+    left:0.8rem;
 }
 
 .left2{
     display: inline-flex;
     justify-content: flex-start;
     /* padding: 2vw; */
-    margin:2vw;
+    margin:0.5rem;
 }
 
 .right{
-    flex-direction: row;
-    /* display: inline-flex; */
-    justify-content: flex-end;
-    justify-content: end;
     /* padding: 2vw; */
-    margin-left:32vw;
+    /* margin-left:32vw; */
+    top: 0.5rem;
+    position: absolute;
+    /* margin-left:17.2rem; */
+    right:2rem;
 }
 
 .right2{
@@ -37,14 +129,16 @@
     justify-content: flex-end;
     justify-content: end;
     /* padding: 2vw; */
-    margin:2vw;
+    margin:0.6rem;
 }
 
 .home {
     /* display: flex; */
     /* justify-content: flex-start; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.5rem;
+    height: 2rem;
     /* padding: 0.5vw; */
     padding: 5%;
 }
@@ -52,43 +146,54 @@
 .people {
     /* display: flex; */
     /* justify-content: flex-start; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.5rem;
+    height: 2rem;
     /* padding: 5%; */
     padding: 5%;
-    padding-left: 30%;
+    padding-left: 15%;
 }
 
 .calender {
     /* display: flex; */
     /* justify-content: flex-end; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.5rem;
+    height: 2rem;
     padding: 5%;
-    padding-right: 10%;
+    padding-left: 15%;
 }
 
 .hospital {
     /* display: flex; */
     /* justify-content: flex-end; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.6rem;
+    height: 2rem;
     padding: 5%;
 }
 
 .trash {
     /* display: flex; */
     /* justify-content: flex-end; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.6rem;
+    height: 2rem;
     padding: 5%;
 }
 
 .gear {
     /* display: flex; */
     /* justify-content: flex-end; */
-    width: 6vw;
-    height: 4vh;
+    /* width: 6vw; */
+    /* height: 4vh; */
+    width: 1.5rem;
+    height: 2rem;
     padding: 5%;
     padding-left: 6%;
+    padding-right: 40%;
 }

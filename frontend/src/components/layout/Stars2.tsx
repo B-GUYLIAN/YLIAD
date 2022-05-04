@@ -6,9 +6,11 @@ function Stars2(){
         <>
             <div className={Styles.container}>
             <div className={Styles.sky}>
-                {/* <div className="text">#CODEVEMBER</div> */}
-                <div className={Styles.stars}></div>
-                <div className={Styles.stars1}></div>
+                {/* 제일 작고, 빼곡 */}
+                {/* <div className={Styles.stars}></div> */}
+                {/* 두번째, 덜빼곡 */}
+                {/* <div className={Styles.stars1}></div> */}
+                {/* 제을 크고, 듬성듬성 */}
                 <div className={Styles.stars2}></div>
                 <div className={Styles.shootingstars}></div>
             </div>
