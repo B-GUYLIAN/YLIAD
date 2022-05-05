@@ -7,8 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.DuplicateFormatFlagsException;
-
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
@@ -19,7 +17,7 @@ public class UserService {
     //회원가입
     @Transactional
     public void saveUser(SaveUserRequestDto requestDto) {
-        checkDuplicateMemberNickname(requestDto.getNickname());
+        checkDuplicateUserNickname(requestDto.getNickname());
         User user = requestDto.toEntity();
         userRepository.save(requestDto.toEntity());
     }
@@ -46,7 +44,7 @@ public class UserService {
     }
 
     //닉네임 중복체크
-    private void checkDuplicateMemberNickname(String nickname) {
+    public void checkDuplicateUserNickname(String nickname) {
         if(userRepository.existsByNickname(nickname)){
 //            throw new Exception("");
             //예외처리코드만들기

@@ -19,12 +19,25 @@ repositories {
 }
 
 dependencies {
+	/* JPA */
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	/* lombok */
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	/* h2 */
+	runtimeOnly 'com.h2database:h2'
+
+	/* maria */
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	/* Swagger */
+	implementation "io.springfox:springfox-boot-starter:3.0.0"
+	implementation "io.springfox:springfox-swagger-ui:3.0.0"
 }
 
 tasks.named('test') {
