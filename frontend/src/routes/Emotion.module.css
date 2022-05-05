@@ -5,52 +5,158 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&display=swap');
 
 .P_container{
-    margin-top: 13rem;
+    margin-top: 10rem;
     font-size: 3rem;
     text-align: center;
+    font-family: 'Bitter', serif !important;
 }
 
 
-#greenbox{
-    width: 30rem;
-    height: 5rem;
-    background-color: green;
+#redbox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 15vw;
+    left: 40vw;
 }
 
-#purplebox{
-    width: 30rem;
-    height: 5rem;
-    background-color: purple;
-    cursor: pointer;
+#redbox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
-#yellowbox{
-    width: 30rem;
-    height: 5rem;
-    background-color: yellow;
+
+
+#greenbox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 42vw;
+    right: 40vw;
 }
 
-#bluebox{
-    width: 30rem;
-    height: 5rem;
-    background-color: blue;
-    cursor: pointer;
+#greenbox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
-#redbox{
-    width: 30rem;
-    height: 5rem;
-    background-color: red;
+#purplebox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 27vw;
+    left: 40vw;
 }
 
-#pinkbox{
-    width: 30rem;
-    height: 5rem;
-    background-color: pink;
+#purplebox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+
+#yellowbox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 30vw;
+    right: 40vw;
+}
+
+#yellowbox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#bluebox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 39vw;
+    left: 40vw;
+}
+
+#bluebox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#pinkbox_P{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+    transition: all 0.3s ease-in-out; 
+
+    top: 18vw;
+    right: 40vw;
+}
+
+#pinkbox_P:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 
@@ -215,5 +321,5 @@
 #icon2 {
     position: relative;
     width: 5rem;
-    top: 0.5rem;
+    top: 0.8rem;
 }

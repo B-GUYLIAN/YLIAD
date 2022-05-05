@@ -31,19 +31,38 @@ function Emotion(){
         <div className={base.container}> 
             <BrowserView>
                 <div className={styles.P_container}>
-                    <p> 감정 선택 </p>
+                <p> Emotion </p>
                     <div onClick={()=>{
-                        moveToSelectDiary('green')}} id={styles.greenbox}> 녹색 </div>
+                        moveToSelectDiary('red')}} id={styles.redbox_P}> 
+                        <div id={styles.borderR}> ANGER 
+                        <img id={styles.icon2} src={Anger} alt="anger" />
+                        </div> </div>
                     <div onClick={()=>{
-                        moveToSelectDiary('purple')}} id={styles.purplebox}> 보라 </div>
+                        moveToSelectDiary('green')}} id={styles.greenbox_P}> 
+                        <div id={styles.borderG}> DISGUST 
+                        <img id={styles.icon2} src={Disgust} alt="disgust" />
+                        </div> </div>
                     <div onClick={()=>{
-                        moveToSelectDiary('yellow')}} id={styles.yellowbox}> 노랑 </div>
+                        moveToSelectDiary('purple')}} id={styles.purplebox_P}>
+                        <div id={styles.borderP}> FEAR 
+                        <img id={styles.icon} src={Fear} alt="fear" />
+                        </div> </div>
                     <div onClick={()=>{
-                        moveToSelectDiary('blue')}} id={styles.bluebox}> blue </div>
+                        moveToSelectDiary('yellow')}} id={styles.yellowbox_P}> 
+                        <div id={styles.borderY}> JOY 
+                        <img id={styles.icon} src={Joy} alt="joy" />
+                        </div> </div>
                     <div onClick={()=>{
-                        moveToSelectDiary('red')}} id={styles.redbox}> red </div>
-                    <div onClick={()=>{
-                        moveToSelectDiary('pink')}} id={styles.pinkbox}> pink </div>
+                        moveToSelectDiary('blue')}} id={styles.bluebox_P}> 
+                        <div id={styles.borderB}> SAD 
+                        <img id={styles.icon} src={Sad} alt="sad" />
+                        </div> </div>
+
+                        <div onClick={()=>{
+                        moveToSelectDiary('pink')}} id={styles.pinkbox_P}> 
+                        <div id={styles.borderPink}> Love 
+                        <img id={styles.icon} src={Love} alt="love" />
+                        </div> </div>
                 </div>
             </BrowserView>
 
