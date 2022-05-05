@@ -1,5 +1,8 @@
+/* Russo One */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-
+/* Bitter */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&display=swap');
 
 .P_container{
     margin-top: 13rem;
@@ -56,56 +59,161 @@
 
 
 .M_container {
-    margin-top: 6rem;
+    margin-top: 3rem;
     font-size: 3rem;
     text-align: center;
-}
-
-#greenbox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: green;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-#purplebox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: purple;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-#yellowbox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: yellow;
-    margin: 0 auto;
-    cursor: pointer;
-}
-
-#bluebox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: blue;
-    margin: 0 auto;
-    cursor: pointer;
+    font-family: 'Bitter', serif !important;
 }
 
 #redbox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: red;
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
     margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 10rem;
+    left: 2rem;
 }
+
+
+
+#greenbox_M{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 40rem;
+    right: 2rem;
+}
+
+#purplebox_M{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 23rem;
+    left: 2rem;
+}
+
+#yellowbox_M{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 27rem;
+    right: 2rem;
+}
+
+#bluebox_M{
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 36rem;
+    left: 2rem;
+}
+
 
 #pinkbox_M{
-    width: 20rem;
-    height: 6rem;
-    background-color: pink;
+    position: absolute;
+    width: 9rem;
+    height: 10rem;
     margin: 0 auto;
     cursor: pointer;
+    border: 1px solid;
+    border-color: white;
+    padding: 8px;
+    color: white;
+
+    top: 14rem;
+    right: 2rem;
 }
 
+#borderR {
+    width: 100%;
+    height: 100%;
+    background: red;
+    font-family: 'Bitter', serif !important;
+    font-size: 2.4rem;
+    color: greenyellow;
+  }
+#borderG {
+    width: 100%;
+    height: 100%;
+    background: green;
+    font-family: 'Bitter', serif !important;
+    font-size: 2.1rem;
+    color: white;
+  }
+#borderP {
+    width: 100%;
+    height: 100%;
+    background: purple;
+    font-family: 'Bitter', serif !important;
+    color: yellow;
+  }
+#borderY {
+    width: 100%;
+    height: 100%;
+    background: yellow;
+    font-family: 'Bitter', serif !important;
+    color: blue;
+    font-size: 3rem;
+  }
+#borderB {
+    width: 100%;
+    height: 100%;
+    background: blue;
+    font-family: 'Bitter', serif !important;
+    font-size: 3rem;
+    color: orange;
+  }
+
+#borderPink {
+    width: 100%;
+    height: 100%;
+    background: pink;
+    font-family: 'Bitter', serif !important;
+    color: red;
+    font-size: 3rem;
+  }
+
+
+#icon {
+    width: 5rem;
+}
+
+#icon2 {
+    position: relative;
+    width: 5rem;
+    top: 0.5rem;
+}
