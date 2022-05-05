@@ -28,4 +28,12 @@ public class User {
         this.password = password;
         this.nickname = nickname;
     }
+
+    public void changeNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public void changePassword(String password) {
+        this.password = password;
+    }
 }
