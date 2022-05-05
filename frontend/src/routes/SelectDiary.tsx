@@ -32,22 +32,28 @@ function SelectDiary(){
         <div className={base.container}> 
              <BrowserView>
                 <div className={styles.P_container}>
-                    <p> 일기 작성 방법 선택</p>
-                    <img onClick={moveVoiceDiary} id={styles.voice} src={Voice} alt="voice" />
-                    <img onClick={moveTextDiary}id={styles.text} src={Text} alt="text" />
-                    <div id={styles.voicetext}>음성 녹음</div>
-                    <div id={styles.texttext}>문자 작성</div>
+                <div id={styles.voicebox_P}>
+                    <div id={styles.voicetext_P}>Voice
+                    <img onClick={moveVoiceDiary} id={styles.voice_P} src={Voice} alt="voice" /></div>
+                </div>
+                <div id={styles.textbox_P}>
+                    <div id={styles.texttext_P}>Text
+                    <img onClick={moveTextDiary} id={styles.text_P} src={Text} alt="text" /></div>
+                </div>
                 </div>
             </BrowserView>
 
 
             <MobileView>
             <div className={styles.M_container}>
-                <p> 일기 작성 방법 선택</p>
-                <img onClick={moveVoiceDiary} id={styles.voice_M} src={Voice} alt="voice" />
-                <img onClick={moveTextDiary}id={styles.text_M} src={Text} alt="text" />
-                <div id={styles.voicetext_M}>음성 녹음</div>
-                <div id={styles.texttext_M}>문자 작성</div>         
+                <div id={styles.voicebox_M}>
+                    <div id={styles.voicetext_M}>Voice
+                    <img onClick={moveVoiceDiary} id={styles.voice_M} src={Voice} alt="voice" /></div>
+                </div>
+                <div id={styles.textbox_M}>
+                    <div id={styles.texttext_M}>Text
+                    <img onClick={moveTextDiary} id={styles.text_M} src={Text} alt="text" /></div>
+                </div>
             </div>
             </MobileView>
         </div>

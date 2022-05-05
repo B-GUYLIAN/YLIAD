@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import base from "./Base.module.css"
 import styles from "./Home.module.css"
 import man from "../assets/images/man.png"
-import fire from "../assets/images/fire.png"
 import { BrowserView, MobileView } from 'react-device-detect';
 import Campfire from "../components/Campfire";
 import Stars2 from "../components/layout/Stars2"

@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Bitter */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&display=swap');
+
+/* Russo One */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
+
+.P_container{
+    margin-top: 12rem;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.P_container2{
+    margin-top: 12rem;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bitter', serif !important;
+}
+
+#title_P{
+    position: relative;
+    margin-bottom: 8vw;
+    left: 0.5vw;
+}
+
+
+#btn1_P {
+    width: 18vw;
+    height: 4.5vh;
+    font-size: 2vw;
+    font-family: 'SDMiSaeng';
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #ffed54;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    position: relative;
+    /* top: 4vh; */
+    bottom: 10vh;
+    transition: 0.4s all; 
+    overflow:hidden;
+}
+
+
+#btn1_P:hover{transform:scale(1.2);}
+#btn1_P:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn1_P:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}
+
+
+#btn2_P {
+    width: 18vw;
+    height: 4.5vh;
+    font-size: 1.4vw;
+    font-family: 'Bitter', serif !important;
+    font-weight: 300;
+    border-radius: 10px;
+    background-color: #ffed54;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    position: relative;
+    /* top: 4vh; */
+    bottom: 10vh;
+    transition: 0.4s all; 
+    overflow:hidden;
+}
+
+
+#btn2_P:hover{transform:scale(1.2);}
+#btn2_P:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn2_P:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}
+
+
+
+.M_container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        font-size: 3rem;
+        justify-content: center;
+        align-items: center;
+}    
+
+.M_container2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    font-size: 2.8rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bitter', serif !important;
+}    
+
+#title_M{
+    position: relative;
+    margin-bottom: 6vw;
+}
+
+
+
+#btn1_M {
+    width: 18rem;
+    height: 2.8rem;
+    font-size: 2rem;
+    font-family: 'SDMiSaeng';
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #ffed54;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 3rem;
+
+    transition:0.4s all; 
+    overflow:hidden;
+}
+
+#btn2_M {
+    width: 18rem;
+    height: 2.8rem;
+    font-size: 1.5rem;
+    font-family: 'Bitter', serif !important;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #ffed54;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 3rem;
+
+    transition:0.4s all; 
+    overflow:hidden;
+}
+
+#btn1_M:hover{transform:scale(1.2);}
+#btn1_M:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn1_M:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}

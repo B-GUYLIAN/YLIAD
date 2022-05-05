@@ -1,16 +1,35 @@
 import { Link } from "react-router-dom";
 import base from "./Base.module.css"
+import styles from "./Setting.module.css"
+import { BrowserView, MobileView } from 'react-device-detect';
+import Stars2 from "../components/layout/Stars2"
+import Navbar from "../components/layout/Navbar";
 
 
 function PasswordChange(){
 
     return (
+        <>
+        <Navbar />
+        <Stars2 />
         <div className={base.container}> 
-            <h1>비밀번호 변경</h1>
-
-            <Link to="/lobby"><button> 로비로 이동 </button></Link>
-            <Link to="/setting"><button> 환경설정으로 이동 </button></Link>
+        <BrowserView>
+         <div className={styles.P_container2}>
+            <h1 id={styles.title_P}>Password</h1>
+            
+            <Link to="/setting"><button id={styles.btn1_P}> 돌아가기 </button></Link>
         </div>
+        </BrowserView>
+
+        <MobileView>
+        <div className={styles.M_container2}>
+            <h2 id={styles.title_M}>Password</h2>
+            
+            <Link to="/setting"><button id={styles.btn1_M}> 돌아가기 </button></Link>
+        </div>
+        </MobileView>
+        </div>
+        </>
     );
 }
 
