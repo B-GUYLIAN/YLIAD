@@ -1,32 +1,129 @@
-.time {
+/* PC 버전 */
+.timeP {
     position: absolute;
     justify-content: center;
     font-size: 10vh;
-    top: 28vh;
+    top: 24vh;
+}
+
+.recodeP {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 45vh;
+    width: 7.5vw;
+    height: 15vh;
+    border-radius: 50%;
+    background-color: red;
+    border: 1.5vh solid aliceblue;
+}
+
+.recodingP {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 45vh;
+    width: 7.5vw;
+    height: 15vh;
+    border-radius: 50%;
+    background-color: red;
+    border: 1.5vh solid aliceblue;
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+#recodeP::checked ~ .recodeP {
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+/* .on_now_tag:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fd183a;
+    border-radius: 50%;
+    margin-left: 3px;
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+} */
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.infoP {
+    position: absolute;
+    justify-content: center;
+    font-size: 4vh;
+    top: 90vh;
+}
+
+.buttonP {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.saveP {
+    position: absolute;
+    padding-right: 11vw;
+    padding-top: 1vh;
+    top: 75vh;
+}
+
+.backP {
+    position: absolute;
+    padding-left: 11vw;
+    padding-top: 1vh;
+    top: 75vh;
+}
+
+
+/* //////////////////////////////////////////////////////// */
+/* 모바일 버전 */
+.time {
+    position: absolute;
+    justify-content: center;
+    font-size: 6rem;
+    top: 14rem;
 }
 
 .recode{
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 50vh;
-    width: 15vw;
-    height: 7vh;
+    top: 26rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     background-color: red;
-    border: 1.5vh solid aliceblue;
+    border: 0.7rem solid aliceblue;
 }
 
 .recoding {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 50vh;
-    width: 15vw;
-    height: 7vh;
+    top: 26rem;
+    width: 5.5rem;
+    height: 5.5rem;
     border-radius: 50%;
     background-color: red;
-    border: 1.5vh solid aliceblue;
+    border: 0.7rem solid aliceblue;
     box-shadow: 0 0 30px rgb(254, 194, 194);
     -webkit-animation:blink 1s ease-in-out infinite alternate;
     -moz-animation:blink 1s ease-in-out infinite alternate;
@@ -68,8 +165,8 @@
 .info{
     position: absolute;
     justify-content: center;
-    font-size: 4vh;
-    top: 90vh;
+    font-size: 2rem;
+    top: 50rem;
 }
 
 .button {
@@ -80,15 +177,15 @@
 .save {
     position: absolute;
     /* justify-content: left; */
-    padding-right: 11vw;
-    padding-top: 1vh;
-    top: 75vh;
+    padding-right: 7rem;
+    padding-top: 1rem;
+    top: 40rem;
 }
 
 .back {
     position: absolute;
     /* justify-content: right; */
-    padding-left: 5vw;
-    padding-top: 1vh;
-    top: 75vh;
+    padding-left: 7rem;
+    padding-top: 1rem;
+    top: 40rem;
 }

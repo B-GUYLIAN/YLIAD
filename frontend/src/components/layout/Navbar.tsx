@@ -19,16 +19,16 @@ function Navbar(){
             <div className={Styles.navP}>
                     <div className={Styles.leftP}>
                         <div className={Styles.left2P}>
-                            <Link to="/lobby" className={Styles.homeP} > <img src={home}/> </Link>
-                            <Link to="/mypage" className={Styles.peopleP}><img src={people}/></Link>
-                            <Link to="/calendar" className={Styles.calenderP}><img src={calender}/></Link>
+                            <Link to="/lobby" className={Styles.homeP} > <img src={home} alt="home"/> </Link>
+                            <Link to="/mypage" className={Styles.peopleP}><img src={people} alt="mypage"/></Link>
+                            <Link to="/calendar" className={Styles.calenderP}><img src={calender} alt="calender"/></Link>
                         </div>
                     </div>
                     <div className={Styles.rightP}>
                         <div className={Styles.right2P}>
-                            <Link to="/clinic" className={Styles.hospitalP}><img src={hospital}/></Link>
-                            <Link to="/trash" className={Styles.trashP}><img src={trash}/></Link>
-                            <Link to="/setting" className={Styles.gearP}><img src={gear}/></Link>
+                            <Link to="/clinic" className={Styles.hospitalP}><img src={hospital} alt="clinic"/></Link>
+                            <Link to="/trash" className={Styles.trashP}><img src={trash} alt="trash"/></Link>
+                            <Link to="/setting" className={Styles.gearP}><img src={gear} alt="setting"/></Link>
                         </div>
                     </div>
                 </div>
@@ -37,16 +37,16 @@ function Navbar(){
                 <div className={Styles.nav}>
                     <div className={Styles.left}>
                         <div className={Styles.left2}>
-                            <Link to="/lobby" className={Styles.home} > <img src={home}/> </Link>
-                            <Link to="/mypage" className={Styles.people}><img src={people}/></Link>
-                            <Link to="/calendar" className={Styles.calender}><img src={calender}/></Link>
+                            <Link to="/lobby" className={Styles.home} > <img src={home} alt="home"/> </Link>
+                            <Link to="/mypage" className={Styles.people}><img src={people} alt="mypage"/></Link>
+                            <Link to="/calendar" className={Styles.calender}><img src={calender} alt="calender"/></Link>
                         </div>
                     </div>
                     <div className={Styles.right}>
                         <div className={Styles.right2}>
-                            <Link to="/clinic" className={Styles.hospital}><img src={hospital}/></Link>
-                            <Link to="/trash" className={Styles.trash}><img src={trash}/></Link>
-                            <Link to="/setting" className={Styles.gear}><img src={gear}/></Link>
+                            <Link to="/clinic" className={Styles.hospital}><img src={hospital} alt="clinic"/></Link>
+                            <Link to="/trash" className={Styles.trash}><img src={trash} alt="trash"/></Link>
+                            <Link to="/setting" className={Styles.gear}><img src={gear} alt="setting"/></Link>
                         </div>
                     </div>
                 </div>

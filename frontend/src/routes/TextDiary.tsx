@@ -4,6 +4,8 @@ import Navbar from "../components/layout/Navbar";
 import Stars2 from "../components/layout/Stars2";
 import base from "./Base.module.css"
 import Styles from "./Text.module.css"
+import { useNavigate, useParams } from "react-router-dom";
+import { BrowserView, MobileView } from 'react-device-detect';
 
 //form에서 받은 Props -> onSubmit 함수(인자로 form:{...}을 받음)
 //form의 textdiary는 문자
@@ -13,6 +15,14 @@ import Styles from "./Text.module.css"
 
 // function TextDiary({onSubmit} : textdiaryProps){
 function TextDiary(){
+    const params = useParams();
+    const navigate = useNavigate();
+
+    function moveselectDiary(){
+        const date = params.date
+        const color = params.color
+        navigate(`/selectdiary/${date}/${color}`)
+    }
     
     const [text, setText] = useState<string>("");
     console.log("1",text);
@@ -44,18 +54,34 @@ function TextDiary(){
         <>
             <Navbar />
             <Stars2 />
-            <div className={base.container}>
-                {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} id={Styles.content} 
-                    >
-                    </textarea>
-                    <div className={Styles.button}>
-                        <img onClick={SavaDiary} className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png"/>
-                        <Link to="/selectdiary"><img className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png"/></Link>
-                    </div>
-            </div>
+            <BrowserView>
+                <div className={base.container}>
+                    {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
+                        <textarea name="textdiary" value={text} onChange={(
+                            ev: React.ChangeEvent<HTMLTextAreaElement>,
+                            ): void => setText(ev.target.value)} id={Styles.contentP} 
+                        >
+                        </textarea>
+                        <div className={Styles.buttonP}>
+                            <img onClick={SavaDiary} className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
+                            <img onClick={moveselectDiary} className={Styles.backP} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                        </div>
+                </div>
+            </BrowserView>
+            <MobileView>
+                <s></s><div className={base.container}>
+                    {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
+                        <textarea name="textdiary" value={text} onChange={(
+                            ev: React.ChangeEvent<HTMLTextAreaElement>,
+                            ): void => setText(ev.target.value)} id={Styles.content} 
+                        >
+                        </textarea>
+                        <div className={Styles.button}>
+                            <img onClick={SavaDiary} className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
+                            <img onClick={moveselectDiary} className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                        </div>
+                </div>
+            </MobileView>
         </>
     );
 }

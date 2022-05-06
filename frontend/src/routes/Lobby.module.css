@@ -60,6 +60,28 @@
     top: 21vh;
 }
 
-.ground {
-    
+/* PC 버전 */
+.earthP{
+    position: relative;
+    top: 75vh;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(-360deg);
+    }
+}
+
+/* 모바일 버전 */
+.earth{
+    position: relative;
+    top: 40rem;
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+	100% {
+    	transform: rotate(-360deg);
+    }
 }

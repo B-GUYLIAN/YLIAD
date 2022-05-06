@@ -10,17 +10,85 @@
     font-style: normal;
 }
 
+/* PC 버전 */
+#paperP {
+    position: absolute;
+    width: 30vw;
+    height: 45vh;
+    top: 5vh;
+    /* padding-top: 20vh; */
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  /* styling red vertical line */
+  #paperP::before {
+    content: '';
+    width: 0.1vw;
+    /* height: 100%; */
+    /* height: 40vh; */
+    /* padding-top: 50vh; */
+    /* margin-top: 54vh; */
+    position: absolute;
+    /* top: 0; */
+    left: 40px;
+    background-color: rgba(255,0,0,0.6);
+  }
+  
+  /* styling text content */
+  #contentP {
+      position: absolute;
+      display: flex;
+      width: 35vw;
+      height: 60vh;
+      top: 20vh;
+      /* padding-top: 3vh; */
+      padding-left: 2vw;
+      padding-right: 2vw;
+      line-height: 4vh;
+      /* font-family: 'Dancing Script', cursive; */
+      font-family: 'SDMiSaeng';
+      font-size: 4vh;
+      /* font-style: white; */
+      color: white;
+      letter-spacing: 0.4vw;
+      word-spacing: 0.3vw;
+      /* background-color: rgba(240, 248, 255, 0); */
+      /* background-image: repeating-linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 24px, rgb(186, 253, 253) 25px); */
+      background-color: rgba(173, 212, 246, 0);
+      background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 24px, rgb(113, 125, 250) 25px);
+  }
+  
+  .buttonP {
+      position: absolute;
+      display: inline-flex;
+      justify-content: left;
+      top: 83vh;
+  }
+  
+  .saveP {
+      padding-right: 3vw;
+      padding-top: 1vh;
+  }
+  
+  .backP {
+      padding-left: 7vw;
+      padding-top: 1vh;
+  }
+
+
+/* /////////////////////////////////////////////////////////////// */
+/* 모바일 버전 */
 /* styling paper */
 #paper {
-  width: 40vw;
-  height: 45vh;
+  width: 20rem;
+  height: 27rem;
   /* width: 140vw; */
   /* height: 95vh; */
   /* position: relative; */
   position: absolute;
   /* margin: 20px auto; */
   /* margin: 0.5vh auto; */
-  padding-top: 54vh;
+  padding-top: 27rem;
   /* padding-bottom: 4vh; */
   background-color: rgba(255, 255, 255, 0);
   /* box-shadow: 0px 0px 5px 0px #888; */
@@ -29,14 +97,14 @@
 /* styling red vertical line */
 #paper::before {
   content: '';
-  width: 0.1vw;
+  width: 0.1rem;
   /* height: 100%; */
   /* height: 40vh; */
-  padding-top: 50vh;
+  padding-top: 50rem;
   /* margin-top: 54vh; */
   position: absolute;
   /* top: 0; */
-  left: 40px;
+  left: 40.1rem;
   background-color: rgba(255,0,0,0.6);
 }
 
@@ -44,20 +112,20 @@
 #content {
     position: absolute;
     display: flex;
-    width: 70vw;
-    height: 60vh;
-    top: 20vh;
+    width: 25rem;
+    height: 33rem;
+    top: 10rem;
     /* padding-top: 3vh; */
-    padding-left: 2vw;
-    padding-right: 2vw;
-    line-height: 3.5vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 1rem;
     /* font-family: 'Dancing Script', cursive; */
     font-family: 'SDMiSaeng';
-    font-size: 4vh;
+    font-size:2.5rem;
     /* font-style: white; */
     color: white;
-    letter-spacing: 0.4vw;
-    word-spacing: 0.3vw;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.5rem;
     /* background-color: rgba(240, 248, 255, 0); */
     /* background-image: repeating-linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 24px, rgb(186, 253, 253) 25px); */
     background-color: rgba(173, 212, 246, 0);
@@ -68,17 +136,17 @@
     position: absolute;
     display: inline-flex;
     justify-content: left;
-    top: 83vh;
+    top: 45rem;
 }
 
 .save {
     justify-content: left;
-    padding-right: 3vw;
-    padding-top: 1vh;
+    padding-right: 3rem;
+    padding-top: 1rem;
 }
 
 .back {
     justify-content: left;
-    padding-left: 3vw;
-    padding-top: 1vh;
+    padding-left: 3rem;
+    padding-top: 1rem;
 }

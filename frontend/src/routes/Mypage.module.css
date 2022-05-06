@@ -1,34 +1,40 @@
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* PC버전 */
 .firstContentP{
-    display: flex;
+    position: relative;
+    display: inline-flex;
     height: 8vh;
+    font-family: 'SDMiSaeng';
+    justify-content: space-between;
 }
 
 .totalP {
-    width: 20vw;
+    position: relative;
+    width: 6vw;
     height: 4vh;
-
+    top: 12vh;
     font-size: 4vh;
+    left: 30vw;
     background-color: beige;
     text-align: center;
     color: steelblue;
     border-radius: 20vh;
 }
 
-.totalCntP {
-    /* justify-content: flex-start; */
-    width: 20vw;
-    /* margin-right: 30vw; */
-    font-size: 4vh;
-    text-align: center;
-}
-
 .yearP {
-    justify-content: flex-start;
-    width: 20vw;
+    position: relative;
+    width: 6vw;
     height: 4vh;
+    top: 12vh;
+    font-size: 4vh;
+    left: 42.5vw;
     margin-right: 35vw;
-
     font-size: 4vh;
     background-color: beige;
     text-align: center;
@@ -37,11 +43,13 @@
 }
 
 .monthP {
-    justify-content: flex-end;
-    margin-right: 1vw;
-    width: 20vw;
+    position: relative;
+    width: 6vw;
     height: 4vh;
-
+    top: 12vh;
+    font-size: 4vh;
+    left: 19.5vw;
+    margin-right: 35vw;
     font-size: 4vh;
     background-color: beige;
     text-align: center;
@@ -50,38 +58,104 @@
 }
 
 .secondContentP{
-    display: flex;
+    position: relative;
+    display: inline-flex;
+    height: 8vh;
+    font-family: 'SDMiSaeng';
+    justify-content: space-between;
 }
 
-.yearCntP {
- justify-content: flex-start;
- width: 20vw;
- margin-right: 42vw;
- font-size: 4vh;
- text-align: center;  
- margin-top: 2vh; 
+.totalCntP {
+    position: relative;
+    width: 6vw;
+    height: 4vh;
+    top: 10vh;
+    font-size: 4vh;
+    left: 30vw;
+    /* margin-right: 35vw; */
+    font-size: 4vh;
+    text-align: center;
+}
+
+.yearCntP {    
+    position: relative;
+    width: 6vw;
+    height: 4vh;
+    top: 10vh;
+    font-size: 4vh;
+    left: 43vw;
+    /* margin-right: 35vw; */
+    font-size: 4vh;
+    text-align: center;
 }
 
 .monthCntP {
-    justify-content: flex-end;
+    position: relative;
+    width: 6vw;
+    height: 4vh;
+    top: 10vh;
     font-size: 4vh;
-    margin-right: 9vw;
-    margin-top: 2vh;
+    left: 54.5vw;
+    /* margin-right: 35vw; */
+    font-size: 4vh;
+    text-align: center;
 }
 
 .EmotionP {
+    position: relative;
+    top: 8vw;
+    left: 30vw;
     font-size: 4vh;
+    margin-right: 9vw;
+    margin-top: 2vh;
+    font-family: 'SDMiSaeng';
 }
 
-.EmotionCntP {
-    font-size: 4vh;
+.EgroupP{
+    position: relative;
+    display: flex;
+    left: 30.5vw;
+    top:12vh;
+    margin-top: 3vh;
+    font-family: 'SDMiSaeng';
 }
+
+.colorP{
+    width: 3vw;
+    margin: 2vw;
+}
+
+.CgroupP{
+    position: relative;
+    display: flex;
+    left: 33vw;
+    font-family: 'SDMiSaeng'; 
+    top:4vh;
+    left: 31vw;
+    /* margin-right: 60vw; */
+    /* margin-top: 3vh; */
+    /* justify-content: space-evenly; */
+    /* margin-left: 14vw; */
+}
+
+.colorCntP{
+    width: 3vw;
+    /* margin-top: -8vw; */
+    margin: 2vw;
+    font-size: 5vh;
+}
+
 .chartP {
+    position: relative;
+    top: 2vh;
+    left: 30vw;
     font-size: 4vh;
+    margin-right: 7vw;
+    margin-top: 3vh;
+    font-family: 'SDMiSaeng'; 
 }
 
 .chartCntP {
-
 }
 
 
@@ -90,89 +164,199 @@
 .firstContent{
     display: flex;
     justify-content: flex-start;
-    height: 8vh;
+    height: 4.5rem;
 }
 
 .total {
     position: relative;
-    top: 7vh;
-    width: 20vw;
-    height: 4vh;
-    left: -15vw;
-    font-size: 4vh;
+    /* justify-content: flex-start; */
+    top: 3.7rem;
+    width: 5.3rem;
+    height: 2.2rem;
+    left: -3.9rem;
+    font-size: 2.2rem;
     background-color: beige;
     text-align: center;
     color: steelblue;
-    border-radius: 20vh;
+    border-radius: 10rem;
 }
 
 .totalCnt {
     position: relative;
-    top: 7vh;
-    left: -15vw;
-    font-size: 4vh;
     /* justify-content: flex-start; */
-    width: 20vw;
+    top: 3.7rem;
+    left: -5rem;
+    font-size: 2.2rem;
+    /* justify-content: flex-start; */
+    width: 5.5rem;
     /* margin-right: 30vw; */
-    font-size: 4vh;
+    font-size: 2.2rem;
     text-align: center;
 }
 
 .year {
+    position: relative;
     justify-content: flex-start;
-    width: 20vw;
-    height: 4vh;
-    margin-right: 35vw;
+    width: 5.3rem;
+    height: 2.2rem;
+    left: -3.9rem;
+    top: 3.7rem;
+    /* margin-right: 35vw; */
 
-    font-size: 4vh;
+    font-size: 2.2rem;
     background-color: beige;
     text-align: center;
     color: steelblue;
-    border-radius: 20vh;
+    border-radius: 10rem;
 }
 
 .month {
+    position: relative;
     justify-content: flex-end;
-    margin-right: 1vw;
-    width: 20vw;
-    height: 4vh;
+    width: 5.3rem;
+    height: 2.2rem;
+    /* left: -3.9rem; */
+    top: 3.7rem;
+    right: -1rem;
+    /* margin-right: 1vw; */
 
-    font-size: 4vh;
+    font-size: 2.2rem;
     background-color: beige;
     text-align: center;
     color: steelblue;
-    border-radius: 20vh;
+    border-radius: 10rem;
 }
 
 .secondContent{
     display: flex;
+    justify-content: space-evenly;
 }
 
 .yearCnt {
- justify-content: flex-start;
- width: 20vw;
- margin-right: 42vw;
- font-size: 4vh;
- text-align: center;  
- margin-top: 2vh; 
+    position: relative;
+    top: 0.5rem;
+    left: 5.2rem;
+    width: 5.5rem;
+    margin-right: 10.6rem;
+    font-size: 2.2rem;
+    text-align: center;  
+    margin-top: 1rem; 
 }
 
 .monthCnt {
-    justify-content: flex-end;
-    font-size: 4vh;
-    margin-right: 9vw;
-    margin-top: 2vh;
+    position: relative;
+    top: 0.5rem;
+    right: -1rem;
+    font-size: 2.2rem;
+    margin-right: 2.5rem;
+    margin-top: 1rem;
 }
 
 .Emotion {
-    font-size: 4vh;
+    position: relative;
+    top: 1.5rem;
+    right: -1.8rem;
+    font-size: 2.2rem;
+    margin-right: 3.5rem;
+    margin-top: 1rem;
 }
 
 .EmotionCnt {
-    font-size: 4vh;
+    position: relative;
+    font-size: 2.2rem;
+    margin-right: 5rem;
+    margin-top: 2rem;
 }
+
+.Egroup{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.yellow{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.pink{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.purple{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.green{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.blue{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.red{
+    width: 2.7rem;
+    margin: 0.5rem;
+}
+
+.Cgroup{
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+    margin-right: 2rem;
+    justify-content: space-between;
+}
+
+.yellowCnt{
+    /* position: relative;
+    margin-top: -0.5rem;
+    font-size: 3rem; */
+    width: 3.5rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.pinkCnt{
+    width: 4rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.purpleCnt{
+    width: 4rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.greenCnt{
+    width: 3.5rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.blueCnt{
+    width: 3.5rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
+.redCnt{
+    width: 3.5rem;
+    margin-top: -2rem;
+    font-size: 2.5rem;
+}
+
 .chart {
-    font-size: 4vh;
+    position: relative;
+    top: -2rem;
+    right: -1.6rem;
+    font-size: 2.2rem;
+    margin-right: 3.5rem;
+    margin-top: 1.8rem;
 }
 
 .chartCnt {
