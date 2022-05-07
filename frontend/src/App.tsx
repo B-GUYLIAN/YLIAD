@@ -15,7 +15,7 @@ import Mypage from "./routes/Mypage";
 import Theme from "./routes/Theme";
 import BGM from "./routes/BGM";
 import FontChange from "./routes/FontChange";
-import PasswordChange from "./routes/PasswordChange";
+import InfoChange from "./routes/InfoChange";
 import Alarm from "./routes/Alarm";
 import MyStar from "./assets/audio/MyStar.mp3"
 import Paesaggio from "./assets/audio/Paesaggio.mp3"
@@ -78,7 +78,7 @@ function App() {
           <Route path="/theme" element={<Theme />}></Route>
           <Route path="/bgm" element={<BGM setChangeBGM={setChangeBGM} setbgmOn={setbgmOn}/>}></Route>
           <Route path="/fontchange" element={<FontChange />}></Route>
-          <Route path="/passwordchange" element={<PasswordChange />}></Route>
+          <Route path="/infochange" element={<InfoChange />}></Route>
           <Route path="/alarm" element={<Alarm />}></Route>
         </Routes>
       </BrowserRouter>

@@ -20,7 +20,7 @@ function Setting(){
             <Link to="/theme"><button id={styles.btn1_P}> 테마 변경 </button></Link>
             <Link to="/bgm"><button id={styles.btn1_P}> BGM 변경 </button></Link>
             <Link to="/fontchange"><button id={styles.btn1_P}> 폰트 변경 </button></Link>
-            <Link to="/passwordchange"><button id={styles.btn1_P}> 비밀번호 변경 </button></Link>
+            <Link to="/infochange"><button id={styles.btn1_P}> 개인정보 변경 </button></Link>
             <Link to="/alarm"><button id={styles.btn1_P}> 알림기능 </button></Link>
         </div>
         </BrowserView>
@@ -32,7 +32,7 @@ function Setting(){
             <Link to="/theme"><button id={styles.btn1_M}> 테마 변경 </button></Link>
             <Link to="/bgm"><button id={styles.btn1_M}> BGM 변경 </button></Link>
             <Link to="/fontchange"><button id={styles.btn1_M}> 폰트 변경 </button></Link>
-            <Link to="/passwordchange"><button id={styles.btn1_M}> 비밀번호 변경 </button></Link>
+            <Link to="/infochange"><button id={styles.btn1_M}> 개인정보 변경 </button></Link>
             <Link to="/alarm"><button id={styles.btn1_M}> 알림기능 </button></Link>
         </div>
 

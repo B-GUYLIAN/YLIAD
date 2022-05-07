@@ -6,7 +6,7 @@ import Stars2 from "../components/layout/Stars2"
 import Navbar from "../components/layout/Navbar";
 
 
-function PasswordChange(){
+function InfoChange(){
 
     return (
         <>
@@ -33,4 +33,4 @@ function PasswordChange(){
     );
 }
 
-export default PasswordChange;
+export default InfoChange;
