@@ -6,10 +6,21 @@
 }
 
 /* PC버전 */
+.nicknameP{
+    position: relative;
+    height: 8vh;
+    top: 15vh;
+    left: 30vw;
+    font-family: 'SDMiSaeng';
+    font-size: 5vh;
+    color: white;
+}
+
 .firstContentP{
     position: relative;
     display: inline-flex;
     height: 8vh;
+    top: 12vh;
     font-family: 'SDMiSaeng';
     justify-content: space-between;
 }
@@ -18,7 +29,7 @@
     position: relative;
     width: 6vw;
     height: 4vh;
-    top: 12vh;
+    /* top: 12vh; */
     font-size: 4vh;
     left: 30vw;
     background-color: beige;
@@ -31,7 +42,7 @@
     position: relative;
     width: 6vw;
     height: 4vh;
-    top: 12vh;
+    /* top: 12vh; */
     font-size: 4vh;
     left: 42.5vw;
     margin-right: 35vw;
@@ -46,7 +57,7 @@
     position: relative;
     width: 6vw;
     height: 4vh;
-    top: 12vh;
+    /* top: 12vh; */
     font-size: 4vh;
     left: 19.5vw;
     margin-right: 35vw;
@@ -63,6 +74,7 @@
     height: 8vh;
     font-family: 'SDMiSaeng';
     justify-content: space-between;
+    color: white;
 }
 
 .totalCntP {
@@ -109,6 +121,7 @@
     margin-right: 9vw;
     margin-top: 2vh;
     font-family: 'SDMiSaeng';
+    color: white;
 }
 
 .EgroupP{
@@ -118,6 +131,7 @@
     top:12vh;
     margin-top: 3vh;
     font-family: 'SDMiSaeng';
+    color: white;
 }
 
 .colorP{
@@ -132,6 +146,7 @@
     font-family: 'SDMiSaeng'; 
     top:4vh;
     left: 31vw;
+    color: white;
     /* margin-right: 60vw; */
     /* margin-top: 3vh; */
     /* justify-content: space-evenly; */
@@ -143,6 +158,7 @@
     /* margin-top: -8vw; */
     margin: 2vw;
     font-size: 5vh;
+    color: white;
 }
 
 .chartP {
@@ -153,6 +169,7 @@
     margin-right: 7vw;
     margin-top: 3vh;
     font-family: 'SDMiSaeng'; 
+    color: white;
 }
 
 .chartCntP {
@@ -161,10 +178,21 @@
 
 /* ///////////////////////////////////////////////////////////////////////// */
 /* 모바일버전 */
+.nickname{
+    position: relative;
+    top: 3.7rem;
+    height: 2.2rem;
+    left: -3.9rem;
+    font-family: 'SDMiSaeng';
+    font-size: 2.4rem;
+    color: white;
+}
+
 .firstContent{
     display: flex;
     justify-content: flex-start;
     height: 4.5rem;
+    color: white;
 }
 
 .total {
@@ -230,6 +258,7 @@
 .secondContent{
     display: flex;
     justify-content: space-evenly;
+    color: white;
 }
 
 .yearCnt {
@@ -259,6 +288,7 @@
     font-size: 2.2rem;
     margin-right: 3.5rem;
     margin-top: 1rem;
+    color: white;
 }
 
 .EmotionCnt {
@@ -266,11 +296,13 @@
     font-size: 2.2rem;
     margin-right: 5rem;
     margin-top: 2rem;
+    color: white;
 }
 
 .Egroup{
     display: flex;
     margin-top: 2rem;
+    color: white;
 }
 
 .yellow{
@@ -309,6 +341,7 @@
     margin-left: 3.5rem;
     margin-right: 2rem;
     justify-content: space-between;
+    color: white;
 }
 
 .yellowCnt{
@@ -357,6 +390,7 @@
     font-size: 2.2rem;
     margin-right: 3.5rem;
     margin-top: 1.8rem;
+    color: white;
 }
 
 .chartCnt {

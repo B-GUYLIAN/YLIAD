@@ -17,12 +17,14 @@ function TextDiary(){
     const params = useParams();
     const navigate = useNavigate();
 
+    //뒤로가기 버튼
     function moveselectDiary(){
         const date = params.date
         const color = params.color
         navigate(`/selectdiary/${date}/${color}`)
     }
     
+    //textarea 값 받기
     const [text, setText] = useState<string>("");
     console.log("1",text);
     // const [text, setText] = useState({textdiary: '' });
