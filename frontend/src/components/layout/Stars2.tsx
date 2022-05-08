@@ -1,4 +1,3 @@
-import exp from "constants";
 import Styles from "./Stars2.module.css";
 
 function Stars2(){

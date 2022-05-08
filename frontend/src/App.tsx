@@ -1,5 +1,5 @@
 import React, { useEffect, useState, } from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter,  Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Lobby from "./routes/Lobby";
 import CalendarPage from "./routes/CalendarPage";
@@ -58,7 +58,10 @@ function App() {
     }
     console.log(changeBGM)
   }
+  
+  
 
+ 
   return (
     <div>
       <BrowserRouter>

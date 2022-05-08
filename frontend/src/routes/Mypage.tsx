@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Stars2 from "../components/layout/Stars2";
 import base from "./Base.module.css";

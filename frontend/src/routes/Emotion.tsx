@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import base from "./Base.module.css"
 import { BrowserView, MobileView } from 'react-device-detect';
 import styles from "./Emotion.module.css"

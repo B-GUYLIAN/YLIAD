@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import base from "../routs/Base.module.css";
 import home from "../../assets/images/home32.png";
 import calender from "../../assets/images/calender32.png";
 import hospital from "../../assets/images/hospital32.png";

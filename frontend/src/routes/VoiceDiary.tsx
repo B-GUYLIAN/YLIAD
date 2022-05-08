@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import base from "./Base.module.css"
 import Styles from "./Voice.module.css"
