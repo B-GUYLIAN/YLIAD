@@ -12,8 +12,9 @@ module.exports = {
 
     output: {
     // 웹팩을 돌리고 난 결과물의 파일 경로
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'dist'),
+        filename: 'bundle.js',
+        publicPath: '/'
     },
     module: {
     // 웹팩으로 변환할 때 적용되는 loader들을 추가할 수 있다. 
@@ -71,8 +72,11 @@ module.exports = {
     // 로더랑 비교하면 로더는 파일을 해석하고 변환하는 과정에 관여하는 반면,
     // 플러그인은 해당 결과물의 형태를 바꾸는 역할 
 
+    
     devServer: {
-        historyApiFallback:true,
+        historyApiFallback: true,
+        hot: true,
+        port: 3000,
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],

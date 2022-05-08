@@ -38,8 +38,8 @@ function CalendarPage(){
 
     return (
         <>
-        <Stars2/>
         <Navbar />
+        <Stars2/>
         <div className={base.container}> 
             <BrowserView>
                 <div className='P_container'>
