@@ -33,19 +33,19 @@ public class userRepositoryTest {
         assertThat(savedUser.getPassword()).isEqualTo("1234");
     }
 
-    @Test
-    public void 회원조회() throws Exception{
-        User user = User.builder()
-                .id(1L)
-                .nickname("지환")
-                .password("1234")
-                .build();
-        repository.save(user);
-
-        User findUser = repository.findById(1L).orElseThrow(IllegalStateException::new);
-
-        assertThat(findUser.getId()).isEqualTo(1L);
-        assertThat(findUser.getNickname()).isEqualTo("지환");
-        assertThat(findUser.getPassword()).isEqualTo("1234");
-    }
+//    @Test
+//    public void 회원조회() throws Exception{
+//        User user = User.builder()
+//                .id(1L)
+//                .nickname("지환")
+//                .password("1234")
+//                .build();
+//        repository.save(user);
+//
+//        User findUser = repository.findById(1L).orElseThrow(IllegalStateException::new);
+//
+//        assertThat(findUser.getId()).isEqualTo(1L);
+//        assertThat(findUser.getNickname()).isEqualTo("지환");
+//        assertThat(findUser.getPassword()).isEqualTo("1234");
+//    }
 }
