@@ -6,11 +6,11 @@ import Styles from "./Voice.module.css"
 import { useNavigate, useParams } from "react-router-dom";
 import { BrowserView, MobileView } from 'react-device-detect';
 import Stars2 from "../components/layout/Stars2";
-import { useVoiceRecorder } from "use-voice-recorder";
-// import {Recorder} from "react-voice-recorder";
-import {ReactMediaRecorder, useReactMediaRecorder} from 'react-media-recorder';
+import { render } from "react-dom";
+import useRecorder from "./VoiceRecoder";
 
-function VoiceDiary(){
+
+function VoiceDiary4(){
     const params = useParams();
     const navigate = useNavigate();
     const color = params.color
@@ -22,13 +22,15 @@ function VoiceDiary(){
     }
 
     //recode css 바꾸기
-    const [recoding, setRecoding] = useState<boolean>(false);
+    // const [recoding, setRecoding] = useState<boolean>(false);
+    const [recoding, setRecoding] = useState(false);
     const getRecoding = () => {
         setRecoding(!recoding);
     }
 
     //replay css 바꾸기1
-    const [replay, setReplay] = useState<boolean>(false);
+    // const [replay, setReplay] = useState<boolean>(false);
+    const [replay, setReplay] = useState(false);
     const getReplay = () => {
         setReplay(true);
     }
@@ -38,15 +40,30 @@ function VoiceDiary(){
     }
 
     //녹음 관련 함수 시작
-    //방법 1
-    const [records, updateRecords] = useState<any>([]);
-    const {isRecording, stop, start} = useVoiceRecorder((data) => {
-        updateRecords([...records, window.URL.createObjectURL(data)]);
-    });
+    // type audioRecording = {
+    //     audioURL: string | boolean;
+    //     isRecording: string | boolean;
+    //     startRecording: string | boolean;
+    //     stopRecording: string | boolean;
+    // }
 
+    // let [audioURL, isRecording, startRecording, stopRecording] = useRecorder<audioRecording>();
+    let [audioURL, isRecording, startRecording, stopRecording] = useRecorder();
+    const audio = new Audio(audioURL);
+    const start = () => {
+        if(replay === false){
+            audio.play();
+            setReplay(true);
+        }
+        else if(replay === true){
+            audio.pause();
+            setReplay(false);
+            //false일때 음성 출력 어떻게 멈추지.
+        }
+    };
 
     return (
-        <div className={Styles.totalP}>
+        <>
             <Navbar />
             <Stars2 />
             <BrowserView >
@@ -55,19 +72,32 @@ function VoiceDiary(){
                     <div className={Styles.timeP}>
                         10 : 00
                     </div>
-                    <div className={Styles.recodeGroupP}>
-                        <button className={ recoding? Styles.recodingP : Styles.recodeP} onClick={getRecoding} > </button>
+                    {/* <div className={Styles.recodeGroupP}>
                         {isRecording?
-                            <button className={Styles.recodingP} onClick={stop} > </button>
+                            <button className={Styles.recodingP} onClick={stopRecording} disabled={isRecording} > </button>
                             :
-                            <button className={Styles.recodeP} onClick={start} > </button>
+                            <button className={Styles.recodeP} onClick={startRecording} disabled={!isRecording}> </button>
                         }
-                        
                         {replay?
                             <div className={Styles.stopP} onClick={getStop}></div>
                         :
                             <div id="replay" className={Styles.replayP} onClick={getReplay}></div>
                         }
+                    </div> */}
+                    <div className={Styles.recodeGroupP}>
+                        {isRecording?
+                            <button className={Styles.recodingP} onClick={stopRecording} > </button>
+                            :
+                            <button className={Styles.recodeP} onClick={startRecording} > </button>
+                        }
+                        {/* <div className={start.inactive? Styles.stopP: Styles.replayP} onClick={start}></div> */}
+                        {/* <div className={audioURL? Styles.replayP: Styles.stopP} onClick={start}></div> */}
+                        {audioURL?
+                            <div className={replay? Styles.stopP: Styles.replayP} onClick={start}></div>
+                            :
+                            <div className={Styles.replayP}></div>
+                        }
+                        {/* <div className={replay? Styles.stopP: Styles.replayP} onClick={start}></div> */}
                     </div>
                     <div className={Styles.buttonP}>
                         <img className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
@@ -99,8 +129,8 @@ function VoiceDiary(){
                     </div>
                 {/* </div> */}
             </MobileView>
-        </div>
+        </>
     );
 }
 
-export default VoiceDiary;
+export default VoiceDiary4;

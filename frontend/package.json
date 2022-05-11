@@ -20,6 +20,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^0.27.2",
     "chart.js": "^3.7.1",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "file-loader": "^6.2.0",
     "moment": "^2.29.3",
     "react": "^18.1.0",
@@ -27,11 +28,15 @@
     "react-chartjs-2": "^4.1.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.1.0",
+    "react-media-recorder": "^1.6.5",
     "react-redux": "^8.0.1",
     "react-responsive": "^9.0.0-beta.6",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-voice-recorder": "^2.1.2",
     "redux": "^4.2.0",
+    "use-voice-recorder": "^1.0.4",
+    "voice-recorder-react": "^1.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -24,6 +24,7 @@ import Music from "./assets/images/music6.png"
 import Musicoff from "./assets/images/mute7.png"
 import "./App.css";
 import { BrowserView, MobileView } from 'react-device-detect';
+import VoiceDiary4 from './routes/VoiceDiary4';
 
 
 function App() {
@@ -74,7 +75,8 @@ function App() {
           <Route path="/setting" element={<Setting />}></Route>
           <Route path="/emotion/:date" element={<Emotion />}></Route>
           <Route path="/selectdiary/:date/:color" element={<SelectDiary />}></Route>
-          <Route path="/voicediary/:date/:color" element={<VoiceDiary />}></Route>
+          {/* <Route path="/voicediary/:date/:color" element={<VoiceDiary />}></Route> */}
+          <Route path="/voicediary/:date/:color" element={<VoiceDiary4 />}></Route>
           <Route path="/textdiary/:date/:color" element={<TextDiary />}></Route>
           <Route path="/daydiary" element={<DayDiary />}></Route>
           <Route path="/mypage" element={<Mypage />}></Route>

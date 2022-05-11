@@ -115,7 +115,7 @@
 
 .EmotionP {
     position: relative;
-    top: 8vw;
+    top: 5.5vw;
     left: 30vw;
     font-size: 4vh;
     margin-right: 9vw;
@@ -128,7 +128,7 @@
     position: relative;
     display: flex;
     left: 30.5vw;
-    top:12vh;
+    top:6vh;
     margin-top: 3vh;
     font-family: 'SDMiSaeng';
     color: white;
@@ -144,7 +144,7 @@
     display: flex;
     left: 33vw;
     font-family: 'SDMiSaeng'; 
-    top:4vh;
+    top:-2vh;
     left: 31vw;
     color: white;
     /* margin-right: 60vw; */
@@ -163,11 +163,12 @@
 
 .chartP {
     position: relative;
-    top: 2vh;
-    left: 30vw;
+    /* position: absolute; */
+    /* top: 30vh; */
+    /* left: 30vw; */
     font-size: 4vh;
-    margin-right: 7vw;
-    margin-top: 3vh;
+    /* margin-right: 7vw; */
+    /* margin-top: -3vh; */
     font-family: 'SDMiSaeng'; 
     color: white;
 }

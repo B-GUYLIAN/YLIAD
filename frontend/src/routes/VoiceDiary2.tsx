@@ -1,5 +1,5 @@
 // import { useState, useCallback } from "react";
-import { useState} from "react";
+import { ClassAttributes, HTMLAttributes, MediaHTMLAttributes, useState} from "react";
 import Navbar from "../components/layout/Navbar";
 import base from "./Base.module.css"
 import Styles from "./Voice.module.css"
@@ -10,10 +10,18 @@ import { useVoiceRecorder } from "use-voice-recorder";
 // import {Recorder} from "react-voice-recorder";
 import {ReactMediaRecorder, useReactMediaRecorder} from 'react-media-recorder';
 
-function VoiceDiary(){
+// interface AudioHTMLAttributes<T> extends MediaHTMLAttributes<T> {
+interface AudioHTMLAttributes<DetailedHTMLProps> extends MediaHTMLAttributes<DetailedHTMLProps> {
+    src?: string | undefined,
+}
+
+type DetailedHTMLProps<E extends AudioHTMLAttributes<HTMLAudioElement>, HTMLAudioElement> = ClassAttributes<HTMLAudioElement> & E;
+
+function VoiceDiary2(){
     const params = useParams();
     const navigate = useNavigate();
     const color = params.color
+    // React.MediaHTMLAttributes<HTMLAudioElement>.src?: string | undefined
 
     //뒤로가기 버튼
     function moveselectDiary(){
@@ -38,15 +46,12 @@ function VoiceDiary(){
     }
 
     //녹음 관련 함수 시작
-    //방법 1
-    const [records, updateRecords] = useState<any>([]);
-    const {isRecording, stop, start} = useVoiceRecorder((data) => {
-        updateRecords([...records, window.URL.createObjectURL(data)]);
-    });
+    //방법 3
+    const {status, startRecording, stopRecording, mediaBlobUrl} = useReactMediaRecorder({audio:true});
 
 
     return (
-        <div className={Styles.totalP}>
+        <>
             <Navbar />
             <Stars2 />
             <BrowserView >
@@ -57,12 +62,22 @@ function VoiceDiary(){
                     </div>
                     <div className={Styles.recodeGroupP}>
                         <button className={ recoding? Styles.recodingP : Styles.recodeP} onClick={getRecoding} > </button>
-                        {isRecording?
+                        {/* {isRecording?
                             <button className={Styles.recodingP} onClick={stop} > </button>
                             :
                             <button className={Styles.recodeP} onClick={start} > </button>
-                        }
-                        
+                        } */}
+                        {/* <ReactMediaRecorder  */}
+                            {/* audio */}
+                            {/* render={({status, startRecording, stopRecording, mediaBlobUrl}) => ( */}
+                                <div>
+                                    <button className={Styles.recodeP} onClick={startRecording} > </button>
+                                    <button className={Styles.recodingP} onClick={stopRecording} > </button>
+                                    {/* src type 에러 발생 */}
+                                    {/* <audio src={mediaBlobUrl} controls autoPlay loop></audio> */}
+                                </div>
+                            {/* )} */}
+                        {/* /> */}
                         {replay?
                             <div className={Styles.stopP} onClick={getStop}></div>
                         :
@@ -99,8 +114,8 @@ function VoiceDiary(){
                     </div>
                 {/* </div> */}
             </MobileView>
-        </div>
+        </>
     );
 }
 
-export default VoiceDiary;
+export default VoiceDiary2;
