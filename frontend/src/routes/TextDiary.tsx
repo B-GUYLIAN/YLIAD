@@ -18,6 +18,7 @@ function TextDiary(){
     const navigate = useNavigate();
 
     //뒤로가기 버튼
+    const color = params.color
     function moveselectDiary(){
         const date = params.date
         const color = params.color
@@ -47,6 +48,15 @@ function TextDiary(){
     //     }); //초기화
     // };
 
+    //감정에 따라 일기 색 바꾸기
+    const [backcolor, setBackolor] = useState<string>("");
+    function Changecolor() {
+        if(color === 'pink'){
+            setBackolor("");
+        }
+    }
+
+    //일기 저장하기
     const SavaDiary = () =>{
 
     }
@@ -61,6 +71,7 @@ function TextDiary(){
                         <textarea name="textdiary" value={text} onChange={(
                             ev: React.ChangeEvent<HTMLTextAreaElement>,
                             ): void => setText(ev.target.value)} id={Styles.contentP} 
+                            style={{backgroundColor:`${color}`}}
                         >
                         </textarea>
                         <div className={Styles.buttonP}>
@@ -74,7 +85,8 @@ function TextDiary(){
                     {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
                         <textarea name="textdiary" value={text} onChange={(
                             ev: React.ChangeEvent<HTMLTextAreaElement>,
-                            ): void => setText(ev.target.value)} id={Styles.content} 
+                            ): void => setText(ev.target.value)} id={Styles.content}
+                            style={{backgroundColor:`${color}`}} 
                         >
                         </textarea>
                         <div className={Styles.button}>

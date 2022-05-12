@@ -47,15 +47,15 @@
       line-height: 3.6vh;
       /* font-family: 'Dancing Script', cursive; */
       font-family: 'SDMiSaeng';
-      /* font-size: 4vh; */
-      font-size: 4vw;
+      font-size: 2vw;
       color: white;
-      letter-spacing: 0.4vw;
-      word-spacing: 0.3vw;
+      /* letter-spacing: 0.4vw; */
+      /* word-spacing: 0.3vw; */
+      border-radius: 3vw;
       /* background-color: rgba(240, 248, 255, 0); */
       /* background-image: repeating-linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 24px, rgb(186, 253, 253) 25px); */
       background-color: rgba(173, 212, 246, 0);
-      background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px);
+      /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px); */
   }
   
   .buttonP {
@@ -112,24 +112,25 @@
 #content {
     position: absolute;
     display: flex;
-    width: 25rem;
+    width: 22.5rem;
     height: 33rem;
     top: 10rem;
     /* padding-top: 3vh; */
-    padding-left: 2rem;
-    padding-right: 2rem;
-    line-height: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.7rem;
     /* font-family: 'Dancing Script', cursive; */
     font-family: 'SDMiSaeng';
     font-size:2.3rem;
     /* font-style: white; */
     color: white;
-    letter-spacing: 0.05rem;
-    word-spacing: 0.3rem;
+    border-radius: 1rem;
+    /* letter-spacing: 0.05rem; */
+    /* word-spacing: 0.3rem; */
     /* background-color: rgba(240, 248, 255, 0); */
     /* background-image: repeating-linear-gradient(rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 24px, rgb(186, 253, 253) 25px); */
     background-color: rgba(173, 212, 246, 0);
-    background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 24px, rgb(113, 125, 250) 25px);
+    /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 24px, rgb(113, 125, 250) 25px); */
 }
 
 .button {

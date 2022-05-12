@@ -6,8 +6,9 @@ import Styles from "./Voice.module.css"
 import { useNavigate, useParams } from "react-router-dom";
 import { BrowserView, MobileView } from 'react-device-detect';
 import Stars2 from "../components/layout/Stars2";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import useRecorder from "./VoiceRecoder";
+import moment from "moment";
 
 
 function VoiceDiary4(){
@@ -28,18 +29,7 @@ function VoiceDiary4(){
         setRecoding(!recoding);
     }
 
-    //replay css 바꾸기1
-    // const [replay, setReplay] = useState<boolean>(false);
-    const [replay, setReplay] = useState(false);
-    const getReplay = () => {
-        setReplay(true);
-    }
-    //replay css 바꾸기2
-    const getStop = () => {
-        setReplay(false)
-    }
-
-    //녹음 관련 함수 시작
+    //***녹음 관련 함수 시작
     // type audioRecording = {
     //     audioURL: string | boolean;
     //     isRecording: string | boolean;
@@ -50,17 +40,36 @@ function VoiceDiary4(){
     // let [audioURL, isRecording, startRecording, stopRecording] = useRecorder<audioRecording>();
     let [audioURL, isRecording, startRecording, stopRecording] = useRecorder();
     const audio = new Audio(audioURL);
+    //녹음 내용 재생 && replay css 바꾸기1
+    // const [replay, setReplay] = useState<boolean>(false);
+    const [replay, setReplay] = useState(false);
+    //재생
+    const getReplay = () => {
+        audio.play();
+        setReplay(true);
+    }
+    //멈춤
+    // const getStop = () => {
+    function getStop() {
+        audio.pause();
+        setReplay(false);
+    }
+
+    //재생
     const start = () => {
-        if(replay === false){
             audio.play();
-            setReplay(true);
-        }
-        else if(replay === true){
-            audio.pause();
-            setReplay(false);
-            //false일때 음성 출력 어떻게 멈추지.
-        }
     };
+
+    //녹음 내용 정지
+    const stop = () => {
+            audio.pause();
+    };
+
+    //녹음 시간 표시
+    let recordlang = moment(audio.duration * 1000).format("mm:ss");
+
+    //녹음 내용 저장
+
 
     return (
         <>
@@ -70,7 +79,14 @@ function VoiceDiary4(){
                 <div className={base.container}> 
                     {/* <h1>음성 일기</h1> */}
                     <div className={Styles.timeP}>
-                        10 : 00
+                        {/* 00:00 */}
+                        {
+                            audioURL?
+                            // `${recordlang}`
+                            `${moment(audioURL.duration * 1000).format("mm:ss")}`
+                            :
+                            `00:00`
+                        }
                     </div>
                     {/* <div className={Styles.recodeGroupP}>
                         {isRecording?
@@ -86,24 +102,34 @@ function VoiceDiary4(){
                     </div> */}
                     <div className={Styles.recodeGroupP}>
                         {isRecording?
-                            <button className={Styles.recodingP} onClick={stopRecording} > </button>
+                            <button className={Styles.recodingP} onClick={stopRecording} style={{backgroundColor:`${color}`}}> </button>
                             :
-                            <button className={Styles.recodeP} onClick={startRecording} > </button>
+                            <button className={Styles.recodeP} onClick={startRecording} style={{backgroundColor:`${color}`}}> </button>
                         }
                         {/* <div className={start.inactive? Styles.stopP: Styles.replayP} onClick={start}></div> */}
                         {/* <div className={audioURL? Styles.replayP: Styles.stopP} onClick={start}></div> */}
-                        {audioURL?
-                            <div className={replay? Styles.stopP: Styles.replayP} onClick={start}></div>
+                        {/* {audioURL?
+                            (replay?
+                                <div className={Styles.stopP} onClick={stop}></div>
+                                :
+                                <div className={Styles.replayP} onClick={getReplay}></div>
+                            )   
                             :
                             <div className={Styles.replayP}></div>
-                        }
+                        } */}
                         {/* <div className={replay? Styles.stopP: Styles.replayP} onClick={start}></div> */}
                     </div>
                     <div className={Styles.buttonP}>
-                        <img className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
-                        <img onClick={moveselectDiary} className={Styles.backP} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                        <div className={Styles.audioP}>
+                            <img onClick={start} className={Styles.playP} src="https://img.icons8.com/ios-glyphs/35/FFFFFF/play--v1.png" alt="play"/>
+                            <img onClick={stop} className={Styles.stop2P} src="https://img.icons8.com/ios-glyphs/35/FFFFFF/stop.png" alt="stop"/>
+                        </div>
+                        <div className={Styles.fileP}>
+                            <img className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
+                            <img onClick={moveselectDiary} className={Styles.backP} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                        </div>
                     </div>
-                    <div className={Styles.infoP}> 녹음 시간은 최대 10분입니다. </div>
+                    {/* <div className={Styles.infoP}> 녹음 시간은 최대 10분입니다. </div> */}
                 </div>
             </BrowserView>
             <MobileView>
@@ -111,21 +137,42 @@ function VoiceDiary4(){
                     <div className={base.container} > 
                         {/* <h1>음성 일기</h1> */}
                         <div className={Styles.time}>
-                            10 : 00
+                            00 : 00
                         </div>
                         <div className={Styles.recodeGroup}>
-                            <button id="recode" className={ recoding? Styles.recoding : Styles.recode} onClick={getRecoding} > </button>
+                            {/* <button id="recode" className={ recoding? Styles.recoding : Styles.recode} onClick={getRecoding} > </button>
                             {replay?
                                 <div className={Styles.stop} onClick={getStop}></div>
                             :
                                 <div id="replay" className={Styles.replay} onClick={getReplay}></div>
+                            } */}
+                            {isRecording?
+                                <button className={Styles.recoding} onClick={stopRecording} style={{backgroundColor:`${color}`}}> </button>
+                            :
+                                <button className={Styles.recode} onClick={startRecording} style={{backgroundColor:`${color}`}}> </button>
                             }
+                            {/* <div className={start.inactive? Styles.stopP: Styles.replayP} onClick={start}></div> */}
+                            {/* <div className={audioURL? Styles.replayP: Styles.stopP} onClick={start}></div> */}
+                            {/* {audioURL?
+                                <div className={replay? Styles.stop: Styles.replay} onClick={start}></div>
+                                
+                                :
+                                <div className={Styles.replay}></div>
+                            } */}
                         </div>
                         <div className={Styles.button}>
-                            <img className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
-                            <img onClick={moveselectDiary} className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                            <div className={Styles.audio}>
+                                <img onClick={start} className={Styles.play} src="https://img.icons8.com/ios-glyphs/35/FFFFFF/play--v1.png" alt="play"/>
+                                <img onClick={stop} className={Styles.stop2} src="https://img.icons8.com/ios-glyphs/35/FFFFFF/stop.png" alt="stop"/>
+                            </div>
+                            <div className={Styles.file}>
+                                <img className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
+                                <img onClick={moveselectDiary} className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
+                            </div>
+                            {/* <img className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/> */}
+                            {/* <img onClick={moveselectDiary} className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/> */}
                         </div>
-                        <div className={Styles.info}> 녹음 시간은 최대 10분입니다. </div>
+                        {/* <div className={Styles.info}> 녹음 시간은 최대 10분입니다. </div> */}
                     </div>
                 {/* </div> */}
             </MobileView>

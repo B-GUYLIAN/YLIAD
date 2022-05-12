@@ -107,21 +107,47 @@
 
 .buttonP {
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-around;
+}
+
+.audioP{
+    position: relative;
+    left: -4vw;
+    padding-top: 1vh;
+    /* top: 75vh; */
+    top: 64vh;
+}
+
+.playP {
+    position: relative;
+    margin-right: 0.5vw;
+    padding-top: 1vh;
+}
+
+.stop2P {
+    position: relative;
+    padding-top: 1vh;
+}
+
+.fileP{
+    position: relative;
+    right: -4vw;
+    padding-top: 1vh;
+    top: 64vh;
 }
 
 .saveP {
-    position: absolute;
-    padding-right: 11vw;
+    position: relative;
+    /* left: -4vw; */
     padding-top: 1vh;
-    top: 75vh;
+    /* top: 75vh; */
+    /* top: 64vh; */
 }
 
 .backP {
-    position: absolute;
-    padding-left: 11vw;
+    position: relative;
+    margin-left: 0.5vw;
     padding-top: 1vh;
-    top: 75vh;
 }
 
 
@@ -234,18 +260,44 @@
     justify-content: center;
 }
 
-.save {
-    position: absolute;
-    /* justify-content: left; */
-    padding-right: 7rem;
+.audio{
+    position: relative;
     padding-top: 1rem;
-    top: 40rem;
+    left: -3rem;
+    top: 33rem;  
+}
+.play{
+    position: relative;
+    padding-top: 1rem;
+    margin-right: 0.5rem;
+    /* left: -3rem; */
+    /* top: 33rem;   */
+}
+.stop2{
+    position: relative;
+    padding-top: 1rem;
+    /* left: -3rem; */
+    /* top: 33rem;   */
+}
+.file{
+    position: relative;
+    padding-top: 1rem;
+    right: -3rem;
+    top: 33rem;  
+}
+
+.save {
+    z-index: 2;
+    position: relative;
+    padding-top: 1rem;
+    /* left: -3rem; */
+    /* top: 33rem; */
 }
 
 .back {
-    position: absolute;
-    /* justify-content: right; */
-    padding-left: 7rem;
+    position: relative;
     padding-top: 1rem;
-    top: 40rem;
+    margin-left: 0.5rem;
+    /* right: -3rem; */
+    /* top: 33rem; */
 }
