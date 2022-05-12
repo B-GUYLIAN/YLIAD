@@ -10,18 +10,22 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SaveUserRequestDto {
     @NotNull
+    private String loginid;
+    @NotNull
     private String nickname;
     @NotNull
     private String password;
 
     @Builder
-    public SaveUserRequestDto(String nickname, String password) {
+    public SaveUserRequestDto(String loginid, String nickname, String password) {
+        this.loginid = loginid;
         this.nickname = nickname;
         this.password = password;
     }
 
     public User toEntity(){
         User user = User.builder()
+                .loginid(loginid)
                 .nickname(nickname)
                 .password(password)
                 .build();

@@ -34,4 +34,18 @@ public class UserController {
         service.checkDuplicateUserNickname(nickname);
         return ResponseEntity.status(200).build();
     }
+
+    @GetMapping("/loginid/{loginid}")
+//    @ApiOperation(value = "닉네임 중복체크")
+    public ResponseEntity<Void> checkLoginId(@PathVariable("loginid") String loginid) {
+        service.checkDuplicateUserLoginId(loginid);
+        return ResponseEntity.status(200).build();
+    }
+
+//    @GetMapping("")
+////    @ApiOperation(value = "testcode")
+//    public ResponseEntity<String> portTest(String nickname) {
+//        String a = "test";
+//        return ResponseEntity.status(200).body(a);
+//    }
 }

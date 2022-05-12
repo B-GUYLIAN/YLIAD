@@ -22,7 +22,6 @@ public class userRepositoryTest {
     @Test
     public void 회원가입() throws Exception{
         User user = User.builder()
-                .id(1L)
                 .nickname("지환")
                 .password("1234")
                 .build();

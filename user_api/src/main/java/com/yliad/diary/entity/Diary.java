@@ -1,6 +1,7 @@
 package com.yliad.diary.entity;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -23,13 +24,17 @@ public class Diary {
 
     private String emotion;
 
+    private String voiceFilePath;
+
     private String diaryUUID;
 
-    public Diary(Long id, LocalDateTime diaryDate, String content, String emotion, String diaryUUID) {
+    @Builder
+    public Diary(Long id, LocalDateTime diaryDate, String content, String emotion, String voiceFilePath, String diaryUUID) {
         this.id = id;
         this.diaryDate = diaryDate;
         this.content = content;
         this.emotion = emotion;
+        this.voiceFilePath = voiceFilePath;
         this.diaryUUID = diaryUUID;
     }
 }

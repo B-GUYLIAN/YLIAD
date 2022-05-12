@@ -19,22 +19,24 @@ public class User {
     @Column(name = "userId")
     private Long id;
 
-    private String password;
+    private String loginid;
 
     private String nickname;
 
+    private String password;
+
     @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private final List<User_diary> user_diary = new ArrayList<>();
+    private final List<UserDiary> user_diary = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.PERSIST, orphanRemoval = true)
     @JoinColumn(name="settingId")
     private Setting setting;
 
     @Builder
-    public User(Long id, String password, String nickname) {
-        this.id = id;
-        this.password = password;
+    public User(String loginid, String nickname, String password) {
+        this.loginid = loginid;
         this.nickname = nickname;
+        this.password = password;
     }
 
     public void changeNickname(String nickname) {

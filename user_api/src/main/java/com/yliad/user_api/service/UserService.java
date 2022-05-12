@@ -51,6 +51,14 @@ public class UserService {
         }
     }
 
+    //로그인아이디 중복체크
+    public void checkDuplicateUserLoginId(String loginid) {
+        if(userRepository.existsByLoginid(loginid)){
+//            throw new Exception("");
+            //예외처리코드만들기
+        }
+    }
+
     private User getUser(Long userId){
         return userRepository.findById(userId)
                 .orElseThrow(IllegalArgumentException::new);

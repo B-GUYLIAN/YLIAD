@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User_diary {
+public class UserDiary {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -22,7 +22,7 @@ public class User_diary {
 
     private String diaryUUID;
 
-    public User_diary(Long id, User user, String diaryUUID) {
+    public UserDiary(Long id, User user, String diaryUUID) {
         this.id = id;
         this.user = user;
         this.diaryUUID = diaryUUID;
