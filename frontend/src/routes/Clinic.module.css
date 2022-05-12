@@ -1,0 +1,14 @@
+
+.title_P{
+    font-size: 3vw;
+    margin: auto;
+    
+}
+
+.massenger_P{
+    position: relative;
+    width: 35vw;
+    top: 10vw;
+    border: solid 3px white;
+    border-radius: 5px;
+}
