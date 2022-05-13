@@ -16,6 +16,7 @@
   "author": "Jaewon Ahn",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/storage": "^5.19.4",
     "actions-on-google": "^2.6.0",
     "body-parser": "^1.18.3",
     "dialogflow": "^0.8.2",

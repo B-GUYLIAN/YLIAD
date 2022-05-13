@@ -1,14 +1,409 @@
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ROKAFSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansBold.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .title_P{
-    font-size: 3vw;
-    margin: auto;
-    
+    position: relative;
+    font-size: 2vw;
+    text-align: center;
+    top: 10vh;
+    font-family: "ROKAFSansBold";
 }
 
 .massenger_P{
     position: relative;
-    width: 35vw;
+    width: 30vw;
+    height: 52vh;
     top: 10vw;
-    border: solid 3px white;
+    border: solid 8px rgb(238, 255, 0);
     border-radius: 5px;
+    
+    
 }
+
+#cure {
+    width: 4vw;
+    position: relative;
+    top: 3vh;
+    left: 1vw;
+}
+
+
+#text_read{
+    display: block;
+    width: 90%;
+    height: 50vh;
+    font-size: 1rem;
+    padding-left: 1vw;
+    
+    
+}
+
+
+#text_input{
+    width: 96%;
+    height: 4vh;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: 'SDMiSaeng';
+    background-color: transparent;
+    margin: 0;
+    color: white;
+    top: 1vh;
+    position: relative;
+    text-align: center;
+}
+
+
+#AD {
+    position: absolute;
+    width: 6vw;
+    top: 3vh;
+    /* left: 1vw; */
+}
+
+#USER {
+    position: absolute;
+    width: 2.5vw;
+    right: -3.5vw;
+    
+    /* left: 1vw; */
+}
+
+#MessageBox_P{
+    margin-bottom: 3vw;
+    width: 90%;
+}
+
+#imgtag{
+    position: relative;
+    right: 1vw;
+}
+
+#nametag{
+    position: relative;
+    left: 1.3vw;
+    font-size: 1.5rem;
+    top: 2.2vh;
+    color: #ffed54;
+}
+
+#texttag{
+    position: relative;
+    top: 2vw;
+    left: 5vw;
+    background-color: #e6710b;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 6px;
+
+}
+
+
+#imgtag2{
+    position: relative;
+    top: 2vw;
+    right: 0.7vw;
+}
+
+#nametag2{
+    position: relative;
+    font-size: 1.5rem;
+    text-align: right;
+    color: #ff474b;
+    top: 0.1vw;
+    right: -2.3vw;
+}
+
+#texttag2{
+    position: relative;
+    text-align: right;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-left: 3vw;
+    float: right;
+
+}
+
+#usertext{
+    position: relative;
+    right: 1vw;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 6px;
+    line-height: 4vh;
+    max-width: fit-content;
+    top: 0.9vw;
+}
+
+#nametag3{
+    position: relative;
+    left: 2.4vw;
+    font-size: 1.5rem;
+    color: #ffed54;
+    top: 2.3vh;
+}
+
+#nametag3_M{
+    position: relative;
+    left: 1.3rem;
+    font-size: 1.5rem;
+    color: #ffed54;
+    top: 1.5rem;
+}
+
+
+
+#cardimg{
+    position: relative;
+    width: 14vw;
+    left: 8vw;
+    bottom: 3vh;
+    margin-top: 1vw;
+
+}
+
+#cardimg_M{
+    position: relative;
+    width: 12rem;
+    left: 4.3rem;
+    bottom: 2rem;
+
+}
+
+#CardBox_P{
+    position: relative;
+    width: 90%;
+    top: 1vw;
+}
+
+#cardtext{
+    position: relative;
+    width: 20vw;
+    bottom: 2vh;
+    font-size: 1.3rem;
+
+}
+
+#cardtext_M{
+    position: relative;
+    width: 10rem;
+    bottom: 1.5rem;
+    font-size: 1.3rem;
+
+}
+
+#cardlink{
+    cursor: pointer;
+    position: relative;
+    left: 10.8vw;
+    color: red;
+    text-decoration: none;
+    bottom: 3vh;
+    font-size: 1.5rem;
+}
+
+#cardlink_M{
+    cursor: pointer;
+    position: relative;
+    left: 5rem;
+    color: red;
+    text-decoration: none;
+    bottom: 3.5rem;
+    font-size: 1.5rem;
+}
+
+
+
+#cardtextbox{
+    position: relative;
+    left: 5vw;
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+#cardtextbox_M{
+    position: relative;
+    left: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+.title_M{
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    top: 4rem;
+    font-family: "ROKAFSansBold";
+}
+
+#cure_M {
+    width: 3rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
+
+
+
+.massenger_M{
+    position: relative;
+    width: 18rem;
+    height: 35rem;
+    top: 7rem;
+    border: solid 8px rgb(238, 255, 0);
+    border-radius: 5px;
+    
+    
+}
+
+#MessageBox_M{
+    margin-bottom: 2rem;
+    width: 90%;
+}
+
+#text_input_M{
+    width: 92%;
+    height: 2rem;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 2rem;
+    font-family: 'SDMiSaeng';
+    background-color: transparent;
+    margin: 0;
+    color: white;
+    top: 0.7rem;
+    position: relative;
+    text-align: center;
+}
+
+#text_read_M{
+    display: block;
+    width: 90%;
+    height: 30rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-top: 2.5rem;   
+}
+
+
+#imgtag_M{
+    position: relative;
+    bottom: 2rem;
+}
+
+#imgtag2_M{
+    position: relative;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+#AD_M {
+    position: absolute;
+    width: 6rem;
+    left: -1rem;
+    top: 2rem;
+}
+
+#USER_M {
+    position: absolute;
+    width: 2.7rem;
+    right: -3.7rem;
+    top: 1.3rem;
+    
+    /* left: 1vw; */
+}
+
+#nametag_M{
+    position: relative;
+    left: 1.2rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #ffed54;
+}
+
+#texttag_M{
+    position: relative;
+    top: 1rem;
+    left: 4rem;
+    background-color: #e6710b;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 6px;
+
+}
+
+
+#nametag2_M{
+    position: relative;
+    font-size: 1.5rem;
+    text-align: right;
+    color: #ff474b;
+    bottom: 1.5rem;
+    right: -2.6rem;
+}
+
+#texttag2_M{
+    position: relative;
+    text-align: right;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-left: 3rem;
+    max-width: fit-content;
+    float: right;
+    
+    
+
+}
+
+#username_M{
+    position: relative;
+    right: 1.5rem;
+    bottom: 1rem;
+
+}
+
+#usertext_M{
+    position: relative;
+    right: 2rem;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 8px;
+    bottom: 2.5rem;
+    /* margin-bottom: 2rem; */
+    
+
+}
+
+#texttag3_M{
+    position: relative;
+    text-align: left;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding-right: 3rem;
+    max-width: fit-content;
+    bottom: 2rem;
+
+}
+
+/* #usertext2_M{
+    position: relative;
+    right: ;    
+
+} */
