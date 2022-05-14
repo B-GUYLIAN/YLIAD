@@ -55,7 +55,6 @@ function App() {
       audio.play();
       audio.loop = true;
     }
-    console.log(changeBGM);
   }
 
   return (

@@ -17,7 +17,7 @@
     border-color: white;
     border-color: #ffed54;
     border-width: 0.4vw;
-    margin-top: 10vh;
+    margin-top: 18vh;
 }
 
 .title_P {
@@ -70,7 +70,10 @@
   animation-delay: .5s;
 }
 
-
+#centerimage{
+  position: relative;
+  bottom: 8vh;
+}
 
 
 .subtitle_P {
@@ -86,7 +89,7 @@
     position: relative;
     left: 12vw;
     bottom: 14vh;
-    margin-bottom: 5vh;
+    margin-bottom: -3vh;
 }
 
 #fire_P {
@@ -94,7 +97,6 @@
     position: relative;
     top: 5vh;
     right: 2vw;
-    margin-bottom: 5vh;
 }
 
 #btn1_P {
@@ -114,6 +116,7 @@
     bottom: 10vh;
     transition: 0.4s all; 
     overflow:hidden;
+    margin-bottom: 3vh;
 }
 
 
@@ -253,10 +256,10 @@
 #modalbox {
     position: relative;
     margin: auto;
-    top: 19rem;
+    top: 16vw;
     background-color: #090b3b;
-    width: 22rem;
-    height: 24rem;
+    width: 20vw;
+    height: 20vw;
     border: 5px solid rgb(255, 255, 255);
     padding: 1vw;
     font-family: 'SDMiSaeng';
@@ -293,6 +296,15 @@
   margin-bottom: 2vh;
 }
 
+#formTitle2{
+  font-family: 'SDMiSaeng';
+  font-size: 2.5vw;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: double white;
+  margin-bottom: 3.5vh;
+}
+
 #formTitle_M{
   font-family: 'SDMiSaeng';
   font-size: 2.5rem;
@@ -316,7 +328,7 @@
   /* top: 4vh; */
   transition: 0.4s all; 
   overflow:hidden;
-  top: 0.8vw;
+  top: 0.7vw;
 }
 
 #btn7_P {
@@ -336,6 +348,23 @@
   margin-top: 1.5vw;
 }
 
+#btn7_M {
+  width: 9rem;
+  height: 2.5rem;
+  font-size: 2rem;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  margin-top: 1.5rem;
+}
+
 
 #formInput{
   margin-top: 1vh;
@@ -347,8 +376,13 @@
   margin-bottom: 0.7rem;
 }
 
+#formInput_M2{
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
 #btn3_P {
-  width: 3vw;
+  width: 3.3vw;
   height: 2vw;
   font-size: 1vw;
   font-family: 'SDMiSaeng';
@@ -363,7 +397,7 @@
   overflow:hidden;
   /* margin-left: 0.5vw; */
   position: relative;
-  left: 0.7vw;
+  left: 0.8vw;
 }
 
 #btn3_M {
@@ -391,7 +425,7 @@
   text-align: center;
   height: 3vh;
   width: 7vw;
-  left: 0.4vw;
+  left: 0.5vw;
 }
 
 #form_input1{
@@ -401,6 +435,16 @@
   height: 3vh;
   width: 10vw;
 }
+
+#form_input8{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2vw;
+  text-align: center;
+  height: 3vh;
+  width: 10vw;
+}
+
+
 #form_input4{
   font-family: 'SDMiSaeng';
   font-size: 1.2vw;
@@ -409,6 +453,16 @@
   width: 10vw;
   position: relative;
   left: 0.35vw;
+}
+
+#form_input4_M{
+  font-family: 'SDMiSaeng';
+  font-size: 1.5rem;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+  position: relative;
+  left: 0.35rem;
 }
 
 #form_input2{
@@ -434,6 +488,22 @@
 #form_input1_M{
   font-family: 'SDMiSaeng';
   font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+}
+
+#form_input8_M{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+}
+
+#form_input1_M2{
+  font-family: 'SDMiSaeng';
+  font-size: 1.5rem;
   text-align: center;
   height: 2rem;
   width: 10rem;
@@ -512,6 +582,11 @@
   font-size: 1vw;
 }
 
+#confirm3 {
+  color: #e6710b;
+  font-size: 1vw;
+}
+
 #confirm_M {
   color: greenyellow;
   font-size: 1.1rem;
@@ -519,6 +594,11 @@
 
 #confirm2_M {
   color: red;
+  font-size: 1.1rem;
+}
+
+#confirm3_M {
+  color: #e6710b;
   font-size: 1.1rem;
 }
 
@@ -570,10 +650,10 @@
 #modalbox_L {
   position: relative;
   margin: auto;
-  top: 23rem;
+  top: 20vw;
   background-color: #090b3b;
-  width: 20rem;
-  height: 17rem;
+  width: 17vw;
+  height: 15vw;
   border: 5px solid rgb(255, 255, 255);
   padding: 1vw;
   font-family: 'SDMiSaeng';
@@ -584,4 +664,32 @@
   align-items: center;
 }
 
+#modalbox_LM {
+  position: relative;
+  margin: auto;
+  top: 19rem;
+  background-color: #090b3b;
+  width: 17rem;
+  height: 17rem;
+  border: 5px solid rgb(255, 255, 255);
+  padding: 1rem;
+  font-family: 'SDMiSaeng';
+  color: #ffed54;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+
+#heart {
+  position: absolute;
+  width: 3rem;
+  right: 4.3rem;
+}
+
+#heart_P {
+  position: absolute;
+  width: 3vw;
+  right: 4vw;
+}

@@ -12,6 +12,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import Cute from "../assets/images/cute.png"
+import Heart from "../assets/images/heart.png"
 
 
 
@@ -41,6 +42,7 @@ function Home(){
         setuserPassword('')
         setuserPassword2('')
         setuserNickname('')
+        setuserIDCheck(false)
     }
 
 
@@ -50,21 +52,56 @@ function Home(){
 
     function handleClose2(){
         setModalOpen2(false);
+        setLoginID('')
+        setLoginPassword('')
     }
 
     function onSubmitSignin(e: any){
         e.preventDefault()
 
-        console.log(userID)
-        console.log(userPassword)
-        console.log(userNickname)
+        if (userID === '' || userPassword === '' || userNickname === '' || userPassword2 === ''){
+            toast.error('입력하지 않은 값이 있습니다.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+        }  else if (userIDCheck === false){
+            toast.error('ID 중복확인을 해주세요.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+        } else if (userPassword !== userPassword2){
+            toast.error('비밀번호가 일치하지 않습니다.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+        }
+        else if (userIDCheck && userPassword === userPassword2){
+
         // axios
         // .post(
         //   "https://j6a304.p.ssafy.io/api/members",
         //   {
-        //     loginID: {userID},
-        //     nickname: {userNickname},
-        //     Password: {userPassword}
+        //     loginID: userID,
+        //     nickname: userNickname,
+        //     Password: userPassword
         //   }
         // )
         // .then((res) => {
@@ -74,27 +111,59 @@ function Home(){
         // .catch((error) => {
         //   console.log("error", error.response);
         // });
+            toast.success('회원가입 완료!!', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+            handleClose();
+        }
+        
+        
 
-
-        toast.success('회원가입 완료!!', {
-            position: "top-center",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark"
-            });
-        handleClose();
+        
 
     }
 
     function onSubmitLogin(e: any){
         e.preventDefault()
-        console.log(loginID)
-        console.log(loginPassword)
+
+        if (loginID === '' || loginPassword === ''){
+            toast.error('입력하지 않은 값이 있습니다.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+        }  else {
+            // axios
+        // .get(
+        //   "https://j6a304.p.ssafy.io/api/members",
+        //   {
+        //     loginID: loginID,
+        //     Password: loginPassword
+        //   }
+        // )
+        // .then((res) => {
+        //   handleClose()
+        //   alert('로그인')
+        // })
+        // .catch((error) => {
+        //   console.log("error", error.response);
+        // });
+
         navigate('/lobby')
+        }
+    
     }
 
     const changeInputID=(e: any)=>{
@@ -135,6 +204,7 @@ function Home(){
         //       });
         //   }
         // };
+        setuserIDCheck(true);
     }
 
     function loginInputID(e: any){
@@ -164,7 +234,7 @@ function Home(){
                     <span className={styles.subtitle_P}>  
                         나의 하루, 나의 이야기
                     </span>
-                    <div>
+                    <div id={styles.centerimage}>
                         <Campfire ></Campfire>
                         <img id={styles.prince_P} src={man} alt="man" />
                     </div>
@@ -185,10 +255,10 @@ function Home(){
                                 <p id={styles.formInput}><label>비밀번호 </label> 
                                 <input id={styles.form_input1} type="password" onChange={changeInputPassword} name="Password" placeholder="비밀번호"/> </p>
                                 <p id={styles.formInput}><label>번호확인 </label> 
-                                <input id={styles.form_input1} type="password" onChange={changeInputPassword2} name="Password" placeholder="비밀번호 확인"/> </p>
+                                <input id={styles.form_input8} type="password" onChange={changeInputPassword2} name="Password" placeholder="비밀번호 확인"/> </p>
                                 { userPassword !== '' && userPassword === userPassword2 ? 
                                 <div id={styles.confirm}>비밀번호 일치</div> : 
-                                userPassword === ''? <div> </div> :
+                                userPassword === ''? <div id={styles.confirm3} ></div> :
                                 <div id={styles.confirm2}>비밀번호 불일치</div>} 
                                 <p id={styles.formInput}><label>닉네임 </label> 
                                  <input id={styles.form_input2} type="text" onChange={changeInputNickname} name="Nickname"  placeholder="닉네임"/> </p>
@@ -198,8 +268,9 @@ function Home(){
                  {/* 로그인 */}
                     <Modal open={modalOpen2} onClose={handleClose2}>
                         <div id={styles.modalbox_L}> 
+                        <img id={styles.heart_P} src={Heart} alt="heart" />
                         <form onSubmit={onSubmitLogin}></form>
-                          <div id={styles.formTitle}> 로그인 </div>
+                          <div id={styles.formTitle2}> 로그인 </div>
                           <p id={styles.formInput}><label> 아이디 </label> 
                                 <input id={styles.form_input4} type="text" onChange={loginInputID} name="ID"  placeholder="아이디"/> 
                                 </p>
@@ -229,8 +300,7 @@ function Home(){
                         <Campfire ></Campfire>
                         <img id={styles.prince_M} src={man} alt="man" />
                     </div>
-                    <Link to="/lobby"><button id={styles.btn1_M}> 로비로 이동 </button></Link>
-                    <button id={styles.btn1_M}>로그인</button>
+                    <button onClick={onClickLogin} id={styles.btn1_M}>로그인</button>
                     <button onClick={onClickSignin} id={styles.btn1_M}>회원가입</button>
                 </div>
 
@@ -248,14 +318,29 @@ function Home(){
                                 <p id={styles.formInput_M}><label>비밀번호 </label> 
                                 <input id={styles.form_input1_M} type="password" onChange={changeInputPassword} name="Password" placeholder="비밀번호"/> </p>
                                 <p id={styles.formInput_M}><label>번호확인 </label> 
-                                <input id={styles.form_input1_M} type="password" onChange={changeInputPassword2} name="Password" placeholder="비밀번호 확인"/> </p>
+                                <input id={styles.form_input8_M} type="password" onChange={changeInputPassword2} name="Password" placeholder="비밀번호 확인"/> </p>
                                 { userPassword !== '' && userPassword === userPassword2 ? 
                                 <div id={styles.confirm_M}>비밀번호 일치</div> : 
-                                userPassword === ''? <div> </div> :
+                                userPassword === ''? <div id={styles.confirm3_M} ></div> :
                                 <div id={styles.confirm2_M}>비밀번호 불일치</div>} 
                                 <p id={styles.formInput_M}><label>닉네임 </label> 
-                                 <input onClick={onClickLogin} id={styles.form_input2_M} type="text" onChange={changeInputNickname} name="Nickname"  placeholder="닉네임"/> </p>
+                                 <input id={styles.form_input2_M} type="text" onChange={changeInputNickname} name="Nickname"  placeholder="닉네임"/> </p>
                                 <button onClick={onSubmitSignin} id={styles.btn2_M}> 회원가입 </button>
+                        </div>
+                    </Modal>
+
+                    {/* 로그인 */}
+                    <Modal open={modalOpen2} onClose={handleClose2}>
+                        <div id={styles.modalbox_LM}> 
+                        <img id={styles.heart} src={Heart} alt="heart" />
+                        <form onSubmit={onSubmitLogin}></form>
+                          <div id={styles.formTitle_M}> 로그인 </div>
+                          <p id={styles.formInput_M2}><label> 아이디 </label> 
+                                <input id={styles.form_input4_M} type="text" onChange={loginInputID} name="ID"  placeholder="아이디"/> 
+                                </p>
+                                <p id={styles.formInput_M2}><label>비밀번호 </label> 
+                                <input id={styles.form_input1_M2} type="password" onChange={loginInputPassword} name="Password" placeholder="비밀번호"/> </p>
+                                <button onClick={onSubmitLogin} id={styles.btn7_M}> 로그인 </button>
                         </div>
                     </Modal>
 
