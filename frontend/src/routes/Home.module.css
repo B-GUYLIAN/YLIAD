@@ -24,7 +24,7 @@
     position: relative;
     font-size: 10vw;
     color: #ffed54;
-    left: 1vw;
+    /* left: 1vw; */
     bottom: 1vh;
     text-align: center;
     opacity: 0;
@@ -86,7 +86,7 @@
     position: relative;
     left: 12vw;
     bottom: 14vh;
-    /* margin-bottom: 5vh; */
+    margin-bottom: 5vh;
 }
 
 #fire_P {
@@ -245,3 +245,343 @@
 #btn1_M:hover:after {
     left: calc(100% + 50px); 
     opacity: 1;}
+
+
+
+
+
+#modalbox {
+    position: relative;
+    margin: auto;
+    top: 19rem;
+    background-color: #090b3b;
+    width: 22rem;
+    height: 24rem;
+    border: 5px solid rgb(255, 255, 255);
+    padding: 1vw;
+    font-family: 'SDMiSaeng';
+    color: #ffed54;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalbox_M {
+    position: relative;
+    margin: auto;
+    top: 15rem;
+    background-color: #090b3b;
+    width: 18rem;
+    height: 24rem;
+    border: 5px solid rgb(255, 255, 255);
+    padding: 1rem;
+    font-family: 'SDMiSaeng';
+    color: #ffed54;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formTitle{
+  font-family: 'SDMiSaeng';
+  font-size: 2.5vw;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: double white;
+  margin-bottom: 2vh;
+}
+
+#formTitle_M{
+  font-family: 'SDMiSaeng';
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: double white;
+  margin-bottom: 1.5rem;
+}
+
+#btn2_P {
+  width: 9vw;
+  height: 2vw;
+  font-size: 1.5vw;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  top: 0.8vw;
+}
+
+#btn7_P {
+  width: 9vw;
+  height: 2vw;
+  font-size: 1.5vw;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  margin-top: 1.5vw;
+}
+
+
+#formInput{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#formInput_M{
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+#btn3_P {
+  width: 3vw;
+  height: 2vw;
+  font-size: 1vw;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  /* margin-left: 0.5vw; */
+  position: relative;
+  left: 0.7vw;
+}
+
+#btn3_M {
+  width: 3.3rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  position: relative;
+  left: 1rem;
+}
+
+#form_input{
+  position: relative;
+  font-family: 'SDMiSaeng';
+  font-size: 1.2vw;
+  text-align: center;
+  height: 3vh;
+  width: 7vw;
+  left: 0.4vw;
+}
+
+#form_input1{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2vw;
+  text-align: center;
+  height: 3vh;
+  width: 10vw;
+}
+#form_input4{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2vw;
+  text-align: center;
+  height: 3vh;
+  width: 10vw;
+  position: relative;
+  left: 0.35vw;
+}
+
+#form_input2{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2vw;
+  text-align: center;
+  height: 3vh;
+  width: 10vw;
+  position: relative;
+  left: 0.5vw;
+}
+
+#form_input_M{
+  position: relative;
+  font-family: 'SDMiSaeng';
+  font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  width: 7rem;
+  left: 0.7rem;
+}
+
+#form_input1_M{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+}
+
+#form_input2_M{
+  font-family: 'SDMiSaeng';
+  font-size: 1.2rem;
+  text-align: center;
+  height: 2rem;
+  width: 10rem;
+  position: relative;
+  left: 0.5rem;
+}
+
+
+
+#btn2_P:hover{transform:scale(1.2);}
+#btn2_P:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn2_P:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}
+
+#btn3_P:hover{transform:scale(1.2);}
+#btn3_P:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn3_P:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}
+#btn7_P:hover{transform:scale(1.2);}
+#btn7_P:after{
+    content:''; 
+    position: absolute; 
+    top: calc(50% - 50px); 
+    left: -50px; width: 20px; 
+    height: 100px; 
+    background: white; 
+    -webkit-transform: rotate(30deg); 
+    transform:rotate(30deg); 
+    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
+    opacity: 0;}
+#btn7_P:hover:after {
+    left: calc(100% + 50px); 
+    opacity: 1;}
+
+
+#confirm {
+  color: greenyellow;
+  font-size: 1vw;
+}
+
+#confirm2 {
+  color: red;
+  font-size: 1vw;
+}
+
+#confirm_M {
+  color: greenyellow;
+  font-size: 1.1rem;
+}
+
+#confirm2_M {
+  color: red;
+  font-size: 1.1rem;
+}
+
+#btn2_M {
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1.8rem;
+  font-family: 'SDMiSaeng';
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  /* top: 4vh; */
+  transition: 0.4s all; 
+  overflow:hidden;
+  margin-top: 0.8rem;
+}
+
+
+#cute {
+  position: absolute;
+  width: 3vw;
+  left: 3vw;
+}
+
+#cute2 {
+  position: absolute;
+  width: 3vw;
+  right: 3vw;
+}
+
+#cute_M {
+  position: absolute;
+  width: 3rem;
+  left: 3rem;
+}
+
+#cute2_M {
+  position: absolute;
+  width: 3rem;
+  right: 3rem;
+}
+
+
+
+
+#modalbox_L {
+  position: relative;
+  margin: auto;
+  top: 23rem;
+  background-color: #090b3b;
+  width: 20rem;
+  height: 17rem;
+  border: 5px solid rgb(255, 255, 255);
+  padding: 1vw;
+  font-family: 'SDMiSaeng';
+  color: #ffed54;
+  font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+

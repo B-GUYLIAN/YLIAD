@@ -159,10 +159,10 @@ function Clinic(){
                 <img id={styles.AD} src={AD} alt='avatar' />
                 <div id={styles.nametag3}>{message.who}</div>
                 <div> {renderCards(message.content.payload.fields.card.listValue.values)}</div>
+            <div ref={divRef} />
             </div>
                 
             </div>
-            <div ref={divRef} />;
             </BrowserView>
             <MobileView>
             <div id={styles.CardBox_P}>
@@ -170,8 +170,8 @@ function Clinic(){
                 <img id={styles.AD_M} src={AD} alt='avatar' />
                 <div id={styles.nametag3_M}>{message.who}</div>
                 <div> {renderCards(message.content.payload.fields.card.listValue.values)}</div>
+                <div ref={divRef} />
                  </div>
-            <div ref={divRef} />
             </div>
             </MobileView>
             </>
@@ -211,7 +211,7 @@ function Clinic(){
                         <div id={styles.text_read}> 
                                 {renderMessage(messagesFromRedux)}
                         </div>
-                        <div ref={divRef} />;
+                        <div ref={divRef} />
                     </ReactScrollableFeed>
 
                 <input id={styles.text_input} type="text"
@@ -230,7 +230,7 @@ function Clinic(){
                         <div id={styles.text_read_M}> 
                                 {renderMessage(messagesFromRedux)}
                         </div>
-                        <div ref={divRef} />;
+                        <div ref={divRef} />
                     </ReactScrollableFeed>
 
                 <input id={styles.text_input_M} type="text"
