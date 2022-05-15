@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import base from "./Base.module.css"
 import styles from "./Home.module.css"
-import man from "../assets/images/man.png"
+import ard from "../assets/images/ardCape.png"
 import { BrowserView, MobileView } from 'react-device-detect';
 import Campfire from "../components/Campfire";
 import Stars2 from "../components/layout/Stars2"
@@ -236,7 +236,7 @@ function Home(){
                     </span>
                     <div id={styles.centerimage}>
                         <Campfire ></Campfire>
-                        <img id={styles.prince_P} src={man} alt="man" />
+                        <img id={styles.prince_P} src={ard} alt="man" />
                     </div>
                     <button onClick={onClickLogin} id={styles.btn1_P}>로그인</button>
                     <button onClick={onClickSignin} id={styles.btn1_P}>회원가입</button>
@@ -298,7 +298,8 @@ function Home(){
                     </span>
                     <div>
                         <Campfire ></Campfire>
-                        <img id={styles.prince_M} src={man} alt="man" />
+                        {/* <img id={styles.prince_M} src={man} alt="man" /> */}
+                        <img id={styles.prince_M} src={ard} alt="man" />
                     </div>
                     <button onClick={onClickLogin} id={styles.btn1_M}>로그인</button>
                     <button onClick={onClickSignin} id={styles.btn1_M}>회원가입</button>

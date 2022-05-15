@@ -5,6 +5,8 @@ import base from "./Base.module.css"
 import Styles from "./Text.module.css"
 import { useNavigate, useParams } from "react-router-dom";
 import { BrowserView, MobileView } from 'react-device-detect';
+import spring from "../assets/images/spring.png"
+import spring2 from "../assets/images/spring2.png"
 
 //form에서 받은 Props -> onSubmit 함수(인자로 form:{...}을 받음)
 //form의 textdiary는 문자
@@ -49,11 +51,21 @@ function TextDiary(){
     // };
 
     //감정에 따라 일기 색 바꾸기
-    const [backcolor, setBackolor] = useState<string>("");
-    function Changecolor() {
-        if(color === 'pink'){
-            setBackolor("");
-        }
+    let bgcolor :string|undefined = color;
+    //color 바꾸기
+    if(bgcolor === 'red'){
+        bgcolor = '#FB5E3B95'
+    } else if(bgcolor === 'pink'){
+        bgcolor = '#FFB7EB95'
+    } else if(bgcolor === 'purple'){
+        // bgcolor = '#DCA3FF95'
+        bgcolor = '#CA77FE95'
+    } else if(bgcolor === 'yellow'){
+        bgcolor = '#FFE69295'
+    } else if(bgcolor === 'blue'){
+        bgcolor = '#6AA6FF95'
+    } else if(bgcolor === 'green'){
+        bgcolor = '#D3FFB095'
     }
 
     //일기 저장하기
@@ -68,12 +80,20 @@ function TextDiary(){
             <BrowserView>
                 <div className={base.container}>
                     {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
+                        {/* <div className={Styles.cylinderP} style={{left:'29.9vw'}}></div> */}
+                        {/* <div className={Styles.cylinderP} style={{left:'29vw'}}></div> */}
+                        {/* <img src={spring} alt="spring" style={{width: '35vw', top:'16vh', position:'absolute', zIndex:'2'}} /> */}
+                        <img src={spring2} alt="spring" style={{width: '6.5vw', top:'19.5vh', position:'absolute', zIndex:'2', left:'27.6vw'}} />
                         <textarea name="textdiary" value={text} onChange={(
                             ev: React.ChangeEvent<HTMLTextAreaElement>,
-                            ): void => setText(ev.target.value)} id={Styles.contentP} 
-                            style={{backgroundColor:`${color}`}}
+                            ): void => setText(ev.target.value)} 
+                            id={Styles.contentP} 
+                            // className={Styles.timeP}
+                            style={{backgroundColor:`${bgcolor}`}}
                         >
                         </textarea>
+                        {/* <div className={Styles.cylinderP} style={{right:'29.9vw'}}></div> */}
+                        {/* <div className={Styles.cylinderP} style={{right:'29vw'}}></div> */}
                         <div className={Styles.buttonP}>
                             <img onClick={SavaDiary} className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
                             <img onClick={moveselectDiary} className={Styles.backP} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
@@ -83,10 +103,13 @@ function TextDiary(){
             <MobileView>
                 <s></s><div className={base.container}>
                     {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
+                        <div className={Styles.cylinder} style={{top: '8.5rem'}}></div>
                         <textarea name="textdiary" value={text} onChange={(
                             ev: React.ChangeEvent<HTMLTextAreaElement>,
-                            ): void => setText(ev.target.value)} id={Styles.content}
-                            style={{backgroundColor:`${color}`}} 
+                            ): void => setText(ev.target.value)} 
+                            id={Styles.content}
+                            style={{backgroundColor:`${bgcolor}`}}
+                            // className={Styles.timeP}
                         >
                         </textarea>
                         <div className={Styles.button}>

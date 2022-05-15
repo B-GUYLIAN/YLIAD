@@ -1,10 +1,127 @@
 /* PC 버전 */
+.cylinderP{
+    position:absolute;
+    /* left:31.34vw; */
+    top: 18vh;
+    /* width: 2.95vw; */
+    /* height:2vh; */
+    width: 1.9vw;
+    height:1.5vh;
+    /* border-radius: 50% / 25%; */
+    /* border-radius: 44% / 55%; */
+    border-radius: 105vw / 38vw;
+    /* background-color: rgb(0, 0, 255); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border: 1px solid transparent;
+}
+.cylinderP:after{
+    z-index: 1;
+    position: absolute;
+    /* width:3vw; */
+    width:2vw;
+    height:49vh;
+    left:0;
+    top:-0.3vh;
+    
+    /* background-color:  rgba(0, 0, 255, 0.8); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+      /* #FB5E3B95, */
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    /* border-radius: 100px / 37.5px; */
+    border-radius: 100vw / 37.5vw;
+    content: '';
+  }
+
 .timeP {
     position: absolute;
     justify-content: center;
-    font-size: 10vh;
-    top: 24vh;
+    /* top: 24vh; */
+    top: 20vh;
+    /* width: 30vw; */
+    /* width: 32vw; */
+    width: 34.64vw;
+    height: 45vh;
+    /* height: 5vh; */
+    /* border: 0.1vw solid #521cf4 ; */
+    border-left: none;
+    border: 0.2vw solid transparent ;
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #FFE69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image-slice: 1;
+    /* border-radius: 3vw; */
+    padding-left: 1vw;
+    font-size: 3.3vh;
     color: white;
+    /* scroll-behavior: auto; */
+    overflow: auto;
+}
+
+.timeP::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.timeP::-webkit-scrollbar-thumb {
+    background-color: azure;
+}
+
+.timeP::-webkit-scrollbar-track {
+    background-color: aliceblue;
 }
 
 .recodeGroupP{
@@ -16,9 +133,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    top: 45vh;
+    top: 70vh;
     width: 5vw;
-    height: 10vh;
+    height: 9vh;
     border-radius: 50%;
     background-color: red;
     border: 1.5vh solid aliceblue;
@@ -28,9 +145,9 @@
     position: relative;
     display: flex;
     justify-content: center;
-    top: 45vh;
+    top: 70vh;
     width: 5vw;
-    height: 10vh;
+    height: 9vh;
     border-radius: 50%;
     background-color: red;
     border: 1.5vh solid aliceblue;
@@ -112,7 +229,7 @@
 
 .audioP{
     position: relative;
-    left: -4vw;
+    left: -9vw;
     padding-top: 1vh;
     /* top: 75vh; */
     top: 64vh;
@@ -128,10 +245,16 @@
     position: relative;
     padding-top: 1vh;
 }
+.resetP {
+    position: relative;
+    margin-left: 0.6vw;
+    margin-bottom: 0.5vh;
+    /* padding-top: -1vh; */
+}
 
 .fileP{
     position: relative;
-    right: -4vw;
+    right: -9vw;
     padding-top: 1vh;
     top: 64vh;
 }
@@ -153,12 +276,120 @@
 
 /* //////////////////////////////////////////////////////// */
 /* 모바일 버전 */
+.cylinder{
+    position:absolute;
+    left:23.4rem;
+    top: 8.5rem;
+    width: 1.85rem;
+    height:0.6rem;
+    transform: rotate( 90deg );
+    /* border-radius: 50% / 25%; */
+    /* border-radius: 44% / 55%; */
+    border-radius: 105rem / 38rem;
+    /* background-color: rgb(0, 0, 255); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border: 0.11rem solid transparent;
+}
+.cylinder:after{
+    z-index: 1;
+    position: absolute;
+    width:2rem;
+    height:24rem;
+    left:0;
+    top:-0.2rem;
+    
+    /* background-color:  rgba(0, 0, 255, 0.8); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    /* border-radius: 100px / 37.5px; */
+    border-radius: 100rem / 37.5rem;
+    content: '';
+  }
+
 .time {
     position: absolute;
     justify-content: center;
-    font-size: 6rem;
-    top: 14rem;
+    top: 9.94rem;
+    width: 20rem;
+    height: 25rem;
+    font-size: 2.2rem;
     color: white;
+    border: 0.3rem solid transparent ;
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #FFE69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image-slice: 1;
+    /* border-radius: 3rem; */
+    padding-left: 1.5rem;
+    /* scroll-behavior: auto; */
+    overflow: auto;
+}
+
+.timeP::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.timeP::-webkit-scrollbar-thumb {
+    background-color: azure;
+}
+
+.timeP::-webkit-scrollbar-track {
+    background-color: aliceblue;
 }
 
 .recodeGroup{
@@ -168,9 +399,11 @@
 
 .recode{
     position: relative;
-    top: 26rem;
-    width: 5rem;
-    height: 5rem;
+    display: flex;
+    justify-content: center;
+    top: 36rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: red;
     border: 0.7rem solid aliceblue;
@@ -178,9 +411,11 @@
 
 .recoding {
     position: relative;
-    top: 26rem;
-    width: 5rem;
-    height: 5rem;
+    display: flex;
+    justify-content: center;
+    top: 36rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     background-color: red;
     border: 0.7rem solid aliceblue;
@@ -263,8 +498,8 @@
 .audio{
     position: relative;
     padding-top: 1rem;
-    left: -3rem;
-    top: 33rem;  
+    left: -5rem;
+    top: 37rem;  
 }
 .play{
     position: relative;
@@ -279,15 +514,21 @@
     /* left: -3rem; */
     /* top: 33rem;   */
 }
+
+.reset{
+    position: relative;
+    margin-left: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
 .file{
     position: relative;
     padding-top: 1rem;
-    right: -3rem;
-    top: 33rem;  
+    right: -5rem;
+    top: 37rem;  
 }
 
 .save {
-    z-index: 2;
     position: relative;
     padding-top: 1rem;
     /* left: -3rem; */
