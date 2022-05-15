@@ -94,40 +94,32 @@ function Home(){
                 });
         }
         else if (userIDCheck && userPassword === userPassword2){
-
-        // axios
-        // .post(
-        //   "https://j6a304.p.ssafy.io/api/members",
-        //   {
-        //     loginID: userID,
-        //     nickname: userNickname,
-        //     Password: userPassword
-        //   }
-        // )
-        // .then((res) => {
-        //   handleClose()
-        //   alert('회원가입완료')
-        // })
-        // .catch((error) => {
-        //   console.log("error", error.response);
-        // });
-            toast.success('회원가입 완료!!', {
-                position: "top-center",
-                autoClose: 1500,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored"
-                });
+        axios
+        .post(
+          "http://k6a308.p.ssafy.io:8001/user-service/api/users",
+          {
+            loginId: userID,
+            nickname: userNickname,
+            password: userPassword
+          })
+        .then(() => {
+          toast.success('회원가입 완료!!', {
+            position: "top-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored"
+            });
             handleClose();
-        }
-        
-        
 
-        
-
+        })
+        .catch((error) => {
+          console.log("error", error.response);
+        });            
+        } 
     }
 
     function onSubmitLogin(e: any){
@@ -145,23 +137,29 @@ function Home(){
                 theme: "colored"
                 });
         }  else {
-            // axios
-        // .get(
-        //   "https://j6a304.p.ssafy.io/api/members",
-        //   {
-        //     loginID: loginID,
-        //     Password: loginPassword
-        //   }
-        // )
-        // .then((res) => {
-        //   handleClose()
-        //   alert('로그인')
-        // })
-        // .catch((error) => {
-        //   console.log("error", error.response);
-        // });
-
-        navigate('/lobby')
+            axios
+            .post(
+              "http://k6a308.p.ssafy.io:8001/user-service/api/auth",
+              {
+                loginId: userID,
+                password: userPassword
+              })
+            .then(() => {
+              toast.success('로그인', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+                navigate('/lobby')
+            })
+            .catch((error) => {
+              console.log("error", error.response);
+            });            
         }
     
     }
@@ -182,31 +180,57 @@ function Home(){
     }
 
     function idcheck(){
-        // if (nickname === "") {
-        //     alert('닉네임을 입력하세요.')
-        //   } else {
-        //     axios
-        //       .get(
-        //         `https://j6a304.p.ssafy.io/api/members/nickname/${nickname}`,
-        //         {
-        //           n: nickname,
-        //         }
-        //       )
-        //       .then((res) => {
-        //         usenick();
-        //         setChecknick(true);
-        //       })
-        //       .catch((error) => {
-        //         if (error.code === 409) {
-        //           samenick();
-        //         }
-        //         setNickname("");
-        //       });
-        //   }
-        // };
-        setuserIDCheck(true);
-    }
+        if (userID === "") {
+            
+            toast.error('아이디를 입력해주세요.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+          } else {
+            axios
+              .get(
+                `http://k6a308.p.ssafy.io:8001/user-service/api/users/loginid/${userID}`
+              )
+              .then((res) => {
+                console.log(res)
+                if (res.statusText === "OK")
+                {
+                    toast.success('사용가능한 아이디입니다.', {
+                        position: "top-center",
+                        autoClose: 1500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored"
+                        });
+                    setuserIDCheck(true);
+                } else {
+                    toast.error('사용할 수 없는 아이디입니다.', {
+                        position: "top-center",
+                        autoClose: 1500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored"
+                        });
+                }
+              })
+              .catch(error => {
+                console.log("error", error.response);
+            });
+          }
 
+        };
     function loginInputID(e: any){
         setLoginID(e.target.value)
     }
