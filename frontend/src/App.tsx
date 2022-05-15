@@ -25,6 +25,7 @@ import "./App.css";
 import { BrowserView, MobileView } from 'react-device-detect';
 import VoiceDiary4 from './routes/VoiceDiary4';
 import STT from './routes/STT';
+import Sentiment from "./routes/Sentiment";
 
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
           <Route path="/infochange" element={<InfoChange />}></Route>
           <Route path="/alarm" element={<Alarm />}></Route>
           <Route path="/stt" element={<STT />}></Route>
+          <Route path="/sentiment" element={<Sentiment />}></Route>
         </Routes>
       </BrowserRouter>
 

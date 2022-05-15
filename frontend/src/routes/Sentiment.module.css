@@ -1,0 +1,86 @@
+
+@font-face {
+    font-family: 'ROKAFSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ROKAFSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.P_container2{
+    margin-top: 7rem;
+    font-size: 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bitter', serif !important;
+}
+
+
+#senti_input{
+    font-family: 'SDMiSaeng';
+    width: 20vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    text-align: center;
+    position: relative;
+}
+
+
+#btn1_P2 {
+    width: 8vw;
+    height: 4.5vh;
+    font-size: 2vw;
+    font-family: 'SDMiSaeng';
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #ffed54;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    transition: 0.4s all; 
+    overflow:hidden;
+    margin-top: 2vw;
+}
+
+
+
+#testbox {
+    margin-top: 2vw;
+    font-family: 'SDMiSaeng';
+    color: white;
+    font-size: 2vw;
+}
+
+#anal_result{
+    font-family: 'ROKAFSansMedium';
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+#anal_posi{
+    font-family: 'ROKAFSansMedium';
+    font-size: 1.5vw;
+    margin-top: 1vh;
+    color: blue;
+}
+#anal_neu{
+    font-family: 'ROKAFSansMedium';
+    font-size: 1.5vw;
+    margin-top: 1vh;
+    color: #ffed54;
+}
+#anal_nega{
+    font-family: 'ROKAFSansMedium';
+    font-size: 1.5vw;
+    margin-top: 1vh;
+    color: red;
+}
