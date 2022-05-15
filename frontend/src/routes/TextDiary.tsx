@@ -69,6 +69,22 @@ function TextDiary(){
         bgcolor = '#D3FFB095'
     }
 
+
+    let fontstyle = Font;
+    if (fontstyle === 'Font1'){
+        fontstyle = 'Donoun-Medium'
+    } else if(fontstyle === "Font2"){
+        fontstyle = 'GangwonEdu_OTFBoldA'
+    } else if(fontstyle === "Font3"){
+        fontstyle = 'Pretendard'
+    } else if(fontstyle === "Font4"){
+        fontstyle = 'CookieRun-Regular'
+    } else if(fontstyle === "Font5"){
+        fontstyle = 'SDMiSaeng'
+    } else {
+        fontstyle = 'SDMiSaeng'
+    }
+
     //일기 저장하기
     const SavaDiary = () =>{
 
@@ -85,67 +101,16 @@ function TextDiary(){
                         {/* <div className={Styles.cylinderP} style={{left:'29vw'}}></div> */}
                         {/* <img src={spring} alt="spring" style={{width: '35vw', top:'16vh', position:'absolute', zIndex:'2'}} /> */}
                         <img src={spring2} alt="spring" style={{width: '6.5vw', top:'19.5vh', position:'absolute', zIndex:'2', left:'27.6vw'}} />
-                       
-                    {Font ==='Font1' ? 
+
                     <textarea name="textdiary" value={text} onChange={(
                         ev: React.ChangeEvent<HTMLTextAreaElement>,
                         ): void => setText(ev.target.value)} 
                         id={Styles.contentP} 
                         // className={Styles.timeP}
                         style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'Donoun-Medium'}}
+                    fontFamily:`${fontstyle}`}}
                     > 
                     </textarea>
-                    : Font ==='Font2' ? 
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.contentP} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'GangwonEdu_OTFBoldA'}}
-                    > 
-                    </textarea>
-                    : Font ==='Font3'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.contentP} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'Pretendard'}}
-                    > 
-                    </textarea>
-                    : Font === 'Font4'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.contentP} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'CookieRun-Regular'}}
-                    > 
-                    </textarea>
-                    : Font === 'Font5'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.contentP} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}
-                    > 
-                    </textarea> : 
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.contentP} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}
-                    > 
-                    </textarea>
-                    }
                         
                         {/* <div className={Styles.cylinderP} style={{right:'29.9vw'}}></div> */}
                         {/* <div className={Styles.cylinderP} style={{right:'29vw'}}></div> */}
@@ -159,66 +124,17 @@ function TextDiary(){
                 <s></s><div className={base.container}>
                     {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
                         <div className={Styles.cylinder} style={{top: '8.5rem'}}></div>
-                        {Font ==='Font1' ? 
+                      
                     <textarea name="textdiary" value={text} onChange={(
                         ev: React.ChangeEvent<HTMLTextAreaElement>,
                         ): void => setText(ev.target.value)} 
                         id={Styles.content} 
                         // className={Styles.timeP}
                         style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'Donoun-Medium'}}
+                        fontFamily:`${fontstyle}`}}
                     > 
                     </textarea>
-                    : Font ==='Font2' ? 
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.content} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'GangwonEdu_OTFBoldA'}}
-                    > 
-                    </textarea>
-                    : Font ==='Font3'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.content} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'Pretendard'}}
-                    > 
-                    </textarea>
-                    : Font === 'Font4'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.content} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'CookieRun-Regular'}}
-                    > 
-                    </textarea>
-                    : Font === 'Font5'?
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.content} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}
-                    > 
-                    </textarea> : 
-                    <textarea name="textdiary" value={text} onChange={(
-                        ev: React.ChangeEvent<HTMLTextAreaElement>,
-                        ): void => setText(ev.target.value)} 
-                        id={Styles.content} 
-                        // className={Styles.timeP}
-                        style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}
-                    > 
-                    </textarea>
-                    }
+                  
                         <div className={Styles.button}>
                             <img onClick={SavaDiary} className={Styles.save} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
                             <img onClick={moveselectDiary} className={Styles.back} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>

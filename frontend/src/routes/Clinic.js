@@ -202,7 +202,7 @@ function Clinic(){
         <Stars2 />
         <div className={base.container}> 
         <BrowserView>
-            <div className={styles.title_P}> 아드 심리 치료소 
+            <div className={styles.title_P}> 아드 심리 상담소 
             <img id={styles.cure} src={cure} alt="cure" />
             </div>
             
@@ -221,7 +221,7 @@ function Clinic(){
             </div>
         </BrowserView>
         <MobileView>
-            <div className={styles.title_M}> 아드 심리 치료소 
+            <div className={styles.title_M}> 아드 심리 상담소 
             <img id={styles.cure_M} src={cure} alt="cure" />
             </div>
             
@@ -236,7 +236,7 @@ function Clinic(){
                 <input id={styles.text_input_M} type="text"
                 onKeyPress={keyPressHanlder}
                 placeholder="메세지를 입력해주세요."
-                maxLength="9" />
+                maxLength="10" />
             </div>
             
         </MobileView>

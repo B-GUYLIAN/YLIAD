@@ -79,7 +79,7 @@ function App() {
             element={<VoiceDiary4 />}
           ></Route>
           <Route path="/textdiary/:date/:color" element={<TextDiary />}></Route>
-          <Route path="/daydiary" element={<DayDiary />}></Route>
+          <Route path="/daydiary/:date" element={<DayDiary />}></Route>
           <Route path="/mypage" element={<Mypage />}></Route>
           <Route path="/theme" element={<Theme />}></Route>
           <Route

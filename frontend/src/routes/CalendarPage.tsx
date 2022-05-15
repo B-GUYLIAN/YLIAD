@@ -28,7 +28,8 @@ function CalendarPage(){
     }
 
     function readDiary(){
-        navigate('/dayDiary')
+        const selectdate: number = Number(moment(date).format("YYYYMMDD"))
+        navigate(`/dayDiary/${selectdate}`)
     }
 
     function writeDiary(){

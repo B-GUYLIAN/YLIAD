@@ -45,6 +45,24 @@ function VoiceDiary4(){
         bgcolor = '#D3FFB095'
     }
 
+    //font  바꾸기
+    let fontstyle = Font;
+    if (fontstyle === 'Font1'){
+        fontstyle = 'Donoun-Medium'
+    } else if(fontstyle === "Font2"){
+        fontstyle = 'GangwonEdu_OTFBoldA'
+    } else if(fontstyle === "Font3"){
+        fontstyle = 'Pretendard'
+    } else if(fontstyle === "Font4"){
+        fontstyle = 'CookieRun-Regular'
+    } else if(fontstyle === "Font5"){
+        fontstyle = 'SDMiSaeng'
+    } else {
+        fontstyle = 'SDMiSaeng'
+    }
+
+
+
     //recode css 바꾸기
     // const [recoding, setRecoding] = useState<boolean>(false);
     const [recoding, setRecoding] = useState(false);
@@ -176,36 +194,11 @@ function VoiceDiary4(){
                     {/* <img src={spring} alt="spring" style={{width: '35vw', top:'15.5vh', position:'absolute', zIndex:'2'}} /> */}
                     <img src={spring2} alt="spring" style={{width: '5.5vw', top:'19.5vh', position:'absolute', zIndex:'2', left:'29.2vw'}} />
                     
-                    {Font ==="Font1"? 
+                 
                     <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'Donoun-Medium'}}>
+                    fontFamily:`${fontstyle}`}}>
                         <p>{transcript}</p>
-                    </div>:
-                    Font ==="Font2"?
-                    <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily:'GangwonEdu_OTFBoldA'}}>
-                        <p>{transcript}</p>
-                    </div>:
-                    Font ==="Font3"?
-                    <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'Pretendard'}}>
-                        <p>{transcript}</p>
-                    </div>:
-                    Font ==="Font4"?
-                    <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'CookieRun-Regular'}}>
-                        <p>{transcript}</p>
-                    </div>:
-                    Font ==="Font5"?
-                    <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}>
-                        <p>{transcript}</p>
-                    </div>:
-                    <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
-                    fontFamily: 'SDMiSaeng'}}>
-                    <p>{transcript}</p>
-                     </div>
-                    }
+                    </div>
                     
                     {/* <div className={Styles.cylinderP} style={{right:'31.34vw'}}></div> */}
                     {/* <div className={Styles.cylinderP} style={{right:'30vw'}}></div> */}
@@ -248,36 +241,10 @@ function VoiceDiary4(){
                     <div className={base.container} > 
                         {/* <h1>음성 일기</h1> */}
                         <div className={Styles.cylinder}></div>
-                        {Font ==="Font1"? 
                         <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily:'Donoun-Medium'}}>
+                        fontFamily:`${fontstyle}`}}>
                             <p>{transcript}</p>
-                        </div>:
-                        Font ==="Font2"?
-                        <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily:'GangwonEdu_OTFBoldA'}}>
-                            <p>{transcript}</p>
-                        </div>:
-                        Font ==="Font3"?
-                        <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily: 'Pretendard'}}>
-                            <p>{transcript}</p>
-                        </div>:
-                        Font ==="Font4"?
-                        <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily: 'CookieRun-Regular'}}>
-                            <p>{transcript}</p>
-                        </div>:
-                        Font ==="Font5"?
-                        <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily: 'SDMiSaeng'}}>
-                            <p>{transcript}</p>
-                        </div>:
-                        <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
-                        fontFamily: 'SDMiSaeng'}}>
-                        <p>{transcript}</p>
                         </div>
-                        }
                         <div className={Styles.recodeGroup}>
                             {isRecording?
                                 <button className={Styles.recoding} onClick={stopRecording} > </button>
