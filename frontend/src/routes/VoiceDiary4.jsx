@@ -12,7 +12,6 @@ import moment from "moment";
 // import spring from "../assets/images/spring.png"
 import spring2 from "../assets/images/spring2.png"
 import AWS from 'aws-sdk';
-import dotenv from 'dotenv';
 import { v1, v3, v4, v5} from 'uuid';
 import axios from "axios";
 import {toast, ToastContainer} from 'react-toastify';
@@ -94,22 +93,22 @@ function VoiceDiary4(){
     //녹음 내용 s3에 저장. 
     //s3 정보
     //process.env~가 붙은 것은 환경변수. 개발자 도구를 통하여 보여지는 js 코드에서 고유 s3 정보 노출안하기 위함
-    const s3 = new AWS.S3({
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-        region: process.env.AWS_DEFAULT_REGION,
-    });
+    // const s3 = new AWS.S3({
+    //     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    //     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    //     region: process.env.AWS_DEFAULT_REGION,
+    // });
 
     //어떤 파일 업로드할것인지.
-    const uploadParams = {
-        Bucket: process.env.AWS_BUCKET,
-        Body: audioURL,
-        Key: `image/${v1().toString().replace("-", "")}.${
-            audioURL.type.split("/")[1]
-        }`,
-        ContentType: audioURL.type,
-        ACL: "public-read",
-    };
+    // const uploadParams = {
+    //     Bucket: process.env.AWS_BUCKET,
+    //     Body: audioURL,
+    //     Key: `image/${v1().toString().replace("-", "")}.${
+    //         audioURL.type.split("/")[1]
+    //     }`,
+    //     ContentType: audioURL.type,
+    //     ACL: "public-read",
+    // };
     //전송 성공
     function send() {
         toast.success("저장 완료!", {
@@ -158,7 +157,7 @@ function VoiceDiary4(){
 
     function confirm(){
         console.log(dailytext);
-        uploadParams();
+        // uploadParams();
         uploadStt();
     }
 

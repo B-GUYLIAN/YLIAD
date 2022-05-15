@@ -83,7 +83,16 @@ module.exports = {
         alias: {
           '@': path.resolve(__dirname, '../src/'),
         },
+        fallback: {
+          util: require.resolve("util/"),
+          // "fs": false
+        }
       },
+    // target : 'node',
+    // node :{
+    //   fs:'empty',
+    //   net: 'empty',
+    // },
     devtool: "source-map"
     // resolve: {
     //     alias: {

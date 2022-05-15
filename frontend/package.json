@@ -19,7 +19,7 @@
     "@types/react-responsive": "^8.0.5",
     "@types/react-router-dom": "^5.3.3",
     "antd": "^4.20.4",
-    "aws-sdk": "^2.1134.0",
+    "aws-sdk": "^2.1135.0",
     "axios": "^0.27.2",
     "chart.js": "^3.7.1",
     "dotenv": "^16.0.1",
@@ -45,6 +45,7 @@
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.4.1",
     "use-voice-recorder": "^1.0.4",
+    "util": "^0.12.4",
     "uuid": "^8.3.2",
     "voice-recorder-react": "^1.1.1",
     "web-vitals": "^2.1.4"
