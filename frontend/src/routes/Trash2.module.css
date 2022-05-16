@@ -8,6 +8,13 @@
 }
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Open+Sans+Condensed:300i");
 
+@font-face {
+  font-family: 'KOTRAHOPE';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 svg {
   z-index: -1;
 }
@@ -250,7 +257,7 @@ svg {
   color: transparent;
   font-weight: bold;
   font-size: 55px;
-  font-family: "SDMiSaeng";
+  font-family: 'KOTRAHOPE';
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -270,7 +277,7 @@ svg {
   padding-bottom: 0.35rem;
   letter-spacing: 0.2rem;
   color: #ff9807;
-  font-family: "SDMiSaeng";
+  font-family: 'KOTRAHOPE';
   border: 0.1rem solid #ff9807;
   position: absolute;
   border-radius: 0.5rem;
@@ -311,7 +318,7 @@ svg {
   margin: 2rem 0 0;
   letter-spacing: 0.2rem;
   color: #ff6e07;
-  font-family: "SDMiSaeng";
+  font-family: 'KOTRAHOPE';
   border: 0.1rem solid #ff6e07;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -615,9 +622,10 @@ svg {
 .input {
   position: absolute;
   left: 50%;
-  top: 44%;
+  top: 48%;
   transform: translate(-50%, -50%);
   text-align: center;
+  
   z-index: 2;
 }
 .input p {

@@ -52,7 +52,7 @@ function DayDiary(){
     } else if(fontstyle === "Font5"){
         fontstyle = 'SDMiSaeng'
     } else {
-        fontstyle = 'SDMiSaeng'
+        fontstyle = 'KOTRAHOPE'
     }
 
     function analyzeSentiment(){

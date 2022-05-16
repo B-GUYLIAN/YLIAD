@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&display=swap');
 
 .P_container{
-    margin-top: 10rem;
+    margin-top: 7rem;
     font-size: 3rem;
     text-align: center;
     font-family: 'Bitter', serif !important;
@@ -165,7 +165,7 @@
 
 
 .M_container {
-    margin-top: 3rem;
+    margin-top: 6rem;
     font-size: 3rem;
     text-align: center;
     font-family: 'Bitter', serif !important;
@@ -182,8 +182,8 @@
     padding: 8px;
     color: white;
 
-    top: 10rem;
-    left: 2rem;
+    top: 15rem;
+    left: 3.5rem;
 }
 
 
@@ -199,8 +199,8 @@
     padding: 8px;
     color: white;
 
-    top: 40rem;
-    right: 2rem;
+    top: 41rem;
+    right: 3.5rem;
 }
 
 #purplebox_M{
@@ -214,8 +214,8 @@
     padding: 8px;
     color: white;
 
-    top: 23rem;
-    left: 2rem;
+    top: 28rem;
+    left: 3.5rem;
 }
 
 #yellowbox_M{
@@ -229,8 +229,8 @@
     padding: 8px;
     color: white;
 
-    top: 27rem;
-    right: 2rem;
+    top: 28rem;
+    right: 3.5rem;
 }
 
 #bluebox_M{
@@ -244,8 +244,8 @@
     padding: 8px;
     color: white;
 
-    top: 36rem;
-    left: 2rem;
+    top: 41rem;
+    left: 3.5rem;
 }
 
 
@@ -260,8 +260,8 @@
     padding: 8px;
     color: white;
 
-    top: 14rem;
-    right: 2rem;
+    top: 15rem;
+    right: 3.5rem;
 }
 
 #borderR {

@@ -82,6 +82,7 @@ function CalendarPage() {
         <div className={base.container}>
           <div className="M_container">
             <Calendar
+              locale="ko"
               onChange={setDate}
               value={date}
               formatDay={(locale, date) => moment(date).format("DD")}

@@ -11,7 +11,7 @@ import axios from "axios";
 
 function FontChange(){
 
-    // const token = sessionStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
 
     function changeFont1(){
         sessionStorage.setItem("Font", "Font1");
@@ -178,6 +178,39 @@ function FontChange(){
           });     
     }
 
+    function changeFont6(){
+        sessionStorage.setItem("Font", "Font6");
+        axios
+        .patch(
+            "http://k6a308.p.ssafy.io:8001/user-service/api/users/font",
+            {
+                "fontName": "Font6"
+            },
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                    // "Authorization": token,
+                    "Accept" : "*/*",
+                } 
+            }
+            )
+          .then(() => {
+            toast.success('Font 변경완료', {
+              position: "top-center",
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored"
+              });  
+          })
+          .catch((error) => {
+            console.log("error", error.response);
+          });     
+    }
+
 
 
 
@@ -196,6 +229,7 @@ function FontChange(){
             <button onClick={changeFont3} id={styles.btn2_P} > <span id={styles.fontchange3}>프리텐다드</span> </button>
             <button onClick={changeFont4} id={styles.btn2_P} > <span id={styles.fontchange4}>쿠키런</span> </button>
             <button onClick={changeFont5} id={styles.btn2_P} > <span id={styles.fontchange5}>미생체</span> </button>
+            <button onClick={changeFont6} id={styles.btn2_P} > <span id={styles.fontchange6}>코트라 희망체</span> </button>
             
             
             <Link to="/setting"><button id={styles.btn1_P}> 돌아가기 </button></Link>
@@ -212,6 +246,7 @@ function FontChange(){
             <button onClick={changeFont3} id={styles.btn2_M} > <span id={styles.fontchange3}>프리텐다드</span> </button>
             <button onClick={changeFont4} id={styles.btn2_M} > <span id={styles.fontchange4}>쿠키런</span> </button>
             <button onClick={changeFont5} id={styles.btn2_M} > <span id={styles.fontchange5}>미생체</span> </button>
+            <button onClick={changeFont6} id={styles.btn2_M} > <span id={styles.fontchange6}>코트라 희망체</span> </button>
             
             <Link to="/setting"><button id={styles.btn1_M}> 돌아가기 </button></Link>
         </div>

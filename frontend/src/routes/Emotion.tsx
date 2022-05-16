@@ -27,8 +27,8 @@ function Emotion(){
         <>
         <Stars />
         <Navbar />
-        <div className={base.container}> 
             <BrowserView>
+            <div className={base.container}> 
                 <div className={styles.P_container}>
                 <p> Emotion </p>
                     <div onClick={()=>{
@@ -63,6 +63,7 @@ function Emotion(){
                         <img id={styles.icon} src={Love} alt="love" />
                         </div> </div>
                 </div>
+            </div>
             </BrowserView>
 
 
@@ -104,7 +105,7 @@ function Emotion(){
             </div>
             </MobileView>
 
-        </div>
+       
         </>
     );
 }

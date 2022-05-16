@@ -98,7 +98,7 @@ function TextDiary(){
     } else if(fontstyle === "Font5"){
         fontstyle = 'SDMiSaeng'
     } else {
-        fontstyle = 'SDMiSaeng'
+        fontstyle = 'KOTRAHOPE';
     }
 
     //일기 저장하기

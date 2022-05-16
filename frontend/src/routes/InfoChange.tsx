@@ -15,6 +15,8 @@ function InfoChange(){
     const [NewPassword, setNewPassword] = useState('')
     const [NewPassword2, setNewPassword2] = useState('')
 
+    const token = sessionStorage.getItem("token");
+
     function onchangeNick(e: any){
         setuserNickname(e.target.value)
     }
@@ -38,32 +40,39 @@ function InfoChange(){
                 theme: "colored"
                 });
         } else {
-        // axios
-        // .post(
-        //   "https://j6a304.p.ssafy.io/api/members",
-        //   {
-        //     loginID: userID,
-        //     nickname: userNickname,
-        //     Password: userPassword
-        //   }
-        // )
-        // .then((res) => {
-        //   handleClose()
-        //   alert('회원가입완료')
-        // })
-        // .catch((error) => {
-        //   console.log("error", error.response);
-        // });
-        toast.success('닉네임이 변경되었습니다.', {
-            position: "top-center",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored"
-            });
+        axios
+        .patch(
+          `http://k6a308.p.ssafy.io:8001/user-service/api/users/nickname/update/${token}`,
+          {
+            "nickname": userNickname,
+          })
+        .then(() => {
+            console.log('닉네임 변경 성공!')
+            toast.success('닉네임이 변경되었습니다.', {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+        })
+        .catch((error) => {
+            console.log("error", error.response);
+            toast.error(error.response.data.message, {
+                position: "top-center",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+                });
+          });   
+        
         }
         
     }
@@ -93,32 +102,39 @@ function InfoChange(){
                 theme: "colored"
                 });
         } else {
-         // axios
-        // .post(
-        //   "https://j6a304.p.ssafy.io/api/members",
-        //   {
-        //     loginID: userID,
-        //     nickname: userNickname,
-        //     Password: userPassword
-        //   }
-        // )
-        // .then((res) => {
-        //   handleClose()
-        //   alert('회원가입완료')
-        // })
-        // .catch((error) => {
-        //   console.log("error", error.response);
-        // });
-        toast.success('비밀번호가 변경되었습니다.', {
-            position: "top-center",
-            autoClose: 1500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored"
-            });
+            axios
+            .patch(
+              `http://k6a308.p.ssafy.io:8001/user-service/api/users/password/update/${token}`,
+              {
+                "password": NewPassword
+              })
+            .then(() => {
+                console.log('비밀번호 변경 성공!')
+                toast.success('비밀번호가 변경되었습니다.', {
+                    position: "top-center",
+                    autoClose: 1500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                    });
+            })
+            .catch((error) => {
+                console.log("error", error.response);
+                toast.error(error.response.data.message, {
+                    position: "top-center",
+                    autoClose: 1500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                    });
+              });   
+        
         }
        
     }

@@ -5,13 +5,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /* PC버전 */
 .nicknameP{
     position: relative;
     height: 8vh;
     top: 15vh;
     left: 30vw;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     font-size: 5vh;
     color: white;
 }
@@ -21,7 +28,7 @@
     display: inline-flex;
     height: 8vh;
     top: 12vh;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     justify-content: space-between;
 }
 
@@ -72,7 +79,7 @@
     position: relative;
     display: inline-flex;
     height: 8vh;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     justify-content: space-between;
     color: white;
 }
@@ -120,7 +127,7 @@
     font-size: 4vh;
     margin-right: 9vw;
     margin-top: 2vh;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     color: white;
 }
 
@@ -130,7 +137,7 @@
     left: 30.5vw;
     top:6vh;
     margin-top: 3vh;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     color: white;
 }
 
@@ -143,7 +150,7 @@
     position: relative;
     display: flex;
     left: 33vw;
-    font-family: 'SDMiSaeng'; 
+    font-family: 'KOTRAHOPE'; 
     top:-2vh;
     left: 31vw;
     color: white;
@@ -169,7 +176,7 @@
     font-size: 4vh;
     /* margin-right: 7vw; */
     /* margin-top: -3vh; */
-    font-family: 'SDMiSaeng'; 
+    font-family: 'KOTRAHOPE'; 
     color: white;
 }
 
@@ -184,7 +191,7 @@
     top: 3.7rem;
     height: 2.2rem;
     left: -3.9rem;
-    font-family: 'SDMiSaeng';
+    font-family: 'KOTRAHOPE';
     font-size: 2.4rem;
     color: white;
 }

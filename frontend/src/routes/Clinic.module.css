@@ -13,12 +13,20 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
 .title_P{
     position: relative;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: center;
     top: 15vh;
-    font-family: "ROKAFSansBold";
+    font-family: 'KOTRAHOPE';
 }
 
 .massenger_P{
@@ -56,8 +64,8 @@
     height: 4vh;
     border-radius: 4px;
     padding: 10px;
-    font-size: 1.5rem;
-    font-family: 'SDMiSaeng';
+    font-size: 2rem;
+    font-family: 'KOTRAHOPE';
     background-color: transparent;
     margin: 0;
     color: white;
@@ -178,8 +186,8 @@
 
 #cardimg_M{
     position: relative;
-    width: 12rem;
-    left: 4.3rem;
+    width: 10rem;
+    left: 5.2rem;
     bottom: 2rem;
 
 }
@@ -202,7 +210,7 @@
     position: relative;
     width: 10rem;
     bottom: 1.5rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 
 }
 
@@ -223,7 +231,7 @@
     color: red;
     text-decoration: none;
     bottom: 3.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 
@@ -246,10 +254,10 @@
 
 .title_M{
     position: relative;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
-    top: 4rem;
-    font-family: "ROKAFSansBold";
+    top: 6rem;
+    font-family: 'KOTRAHOPE';
 }
 
 #cure_M {
@@ -265,7 +273,7 @@
     position: relative;
     width: 18rem;
     height: 35rem;
-    top: 7rem;
+    top: 9rem;
     border: solid 8px rgb(238, 255, 0);
     border-radius: 5px;
     
@@ -282,8 +290,8 @@
     height: 2rem;
     border-radius: 4px;
     padding: 10px;
-    font-size: 2rem;
-    font-family: 'SDMiSaeng';
+    font-size: 1.5rem;
+    font-family: 'KOTRAHOPE';
     background-color: transparent;
     margin: 0;
     color: white;
@@ -296,7 +304,7 @@
     display: block;
     width: 90%;
     height: 30rem;
-    font-size: 2rem;
+    font-size: 1.3rem;
     padding: 0.5rem;
     padding-top: 2.5rem;   
 }
@@ -333,7 +341,7 @@
     position: relative;
     left: 1.2rem;
     bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #ffed54;
 }
 
@@ -343,7 +351,7 @@
     left: 4rem;
     background-color: #e6710b;
     border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 6px;
 
 }
@@ -351,7 +359,7 @@
 
 #nametag2_M{
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: right;
     color: #ff474b;
     bottom: 1.5rem;
@@ -383,7 +391,7 @@
     right: 2rem;
     background-color: red;
     border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 8px;
     bottom: 2.5rem;
     /* margin-bottom: 2rem; */

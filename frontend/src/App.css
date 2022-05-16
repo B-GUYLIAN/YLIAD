@@ -9,9 +9,9 @@
 
 .Bgm_M {
   position: absolute;
-  width: 1.6rem;
-  top: 1.5rem;
-  right: 1.95rem;
+  width: 2rem;
+  top: 2.9rem;
+  right: 1.6rem;
   cursor: pointer;
   z-index: 100;
 }

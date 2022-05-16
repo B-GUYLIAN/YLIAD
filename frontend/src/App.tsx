@@ -15,7 +15,6 @@ import Theme from "./routes/Theme";
 import BGM from "./routes/BGM";
 import FontChange from "./routes/FontChange";
 import InfoChange from "./routes/InfoChange";
-import Alarm from "./routes/Alarm";
 import MyStar from "./assets/audio/MyStar.mp3";
 import Paesaggio from "./assets/audio/Paesaggio.mp3";
 import Summer from "./assets/audio/Summer.mp3";
@@ -52,7 +51,7 @@ function App() {
       audio.pause();
     } else {
       setbgmOn(true);
-      audio.volume = 0.2;
+      audio.volume = 0.5;
       audio.play();
       audio.loop = true;
     }
@@ -88,7 +87,6 @@ function App() {
           ></Route>
           <Route path="/fontchange" element={<FontChange />}></Route>
           <Route path="/infochange" element={<InfoChange />}></Route>
-          <Route path="/alarm" element={<Alarm />}></Route>
           <Route path="/stt" element={<STT />}></Route>
           <Route path="/sentiment" element={<Sentiment />}></Route>
         </Routes>

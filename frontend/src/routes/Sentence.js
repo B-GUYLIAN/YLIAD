@@ -30,7 +30,7 @@ function Sentence({sentence}){
         <>
             <div style={{color:`${textcolor}`}}>
                 {content} 
-                <br/> ⇨ &nbsp;  [ {textsenti} : {percent} ]
+                <br/> [ {textsenti} : {percent} ]
             </div>
         </>
     );

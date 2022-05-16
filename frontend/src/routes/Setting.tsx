@@ -27,9 +27,7 @@ function Setting() {
             <Link to="/infochange">
               <button id={styles.btn1_P}> 개인정보 변경 </button>
             </Link>
-            <Link to="/alarm">
-              <button id={styles.btn1_P}> 알림기능 </button>
-            </Link>
+
           </div>
         </div>
       </BrowserView>
@@ -51,9 +49,7 @@ function Setting() {
             <Link to="/infochange">
               <button id={styles.btn1_M}> 개인정보 변경 </button>
             </Link>
-            <Link to="/alarm">
-              <button id={styles.btn1_M}> 알림기능 </button>
-            </Link>
+  
           </div>
         </div>
       </MobileView>
