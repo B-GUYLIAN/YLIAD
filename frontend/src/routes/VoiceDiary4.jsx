@@ -9,7 +9,7 @@ import Stars2 from "../components/layout/Stars2";
 // import { render } from "react-dom";
 import useRecorder from "./VoiceRecoder";
 import moment from "moment";
-// import spring from "../assets/images/spring.png"
+import spring from "../assets/images/spring.png"
 import spring2 from "../assets/images/spring2.png"
 import AWS from 'aws-sdk';
 import { v1, v3, v4, v5} from 'uuid';
@@ -33,12 +33,14 @@ function VoiceDiary4(){
     if(bgcolor === 'red'){
         bgcolor = '#FB5E3B95'
     } else if(bgcolor === 'pink'){
-        bgcolor = '#FFB7EB95'
+        // bgcolor = '#FFB7EB95'
+        bgcolor = '#FEA0E495'
     } else if(bgcolor === 'purple'){
         // bgcolor = '#DCA3FF95'
         bgcolor = '#CA77FE95'
     } else if(bgcolor === 'yellow'){
-        bgcolor = '#FFE69295'
+        // bgcolor = '#FFE69295'
+        bgcolor = '#FDD03B95'
     } else if(bgcolor === 'blue'){
         bgcolor = '#6AA6FF95'
     } else if(bgcolor === 'green'){
@@ -82,19 +84,7 @@ function VoiceDiary4(){
     let [resetTranscript, dailytext, transcript, audioURL, isRecording, startRecording, stopRecording] = useRecorder();
     const audio = new Audio(audioURL);
     //녹음 내용 재생 && replay css 바꾸기1
-    // const [replay, setReplay] = useState<boolean>(false);
-    const [replay, setReplay] = useState(false);
-    //재생
-    const getReplay = () => {
-        audio.play();
-        setReplay(true);
-    }
-    //멈춤
-    // const getStop = () => {
-    function getStop() {
-        audio.pause();
-        setReplay(false);
-    }
+    // const [replay, setReplay] = useState(false);
 
     //재생
     const start = () => {
@@ -103,11 +93,14 @@ function VoiceDiary4(){
 
     //녹음 내용 정지
     const stop = () => {
+        if (audio.state !== " inactive " ){
+            // audio.stop();
             audio.pause();
+        }    
     };
 
     //녹음 시간 표시
-    let recordlang = moment(audio.duration * 1000).format("mm:ss");
+    // let recordlang = moment(audio.duration * 1000).format("mm:ss");
 
     //녹음 내용 s3에 저장. 
     //s3 정보
@@ -128,7 +121,8 @@ function VoiceDiary4(){
     //     ContentType: audioURL.type,
     //     ACL: "public-read",
     // };
-    //전송 성공
+
+    //전송 성공 alert
     function send() {
         toast.success("저장 완료!", {
             position: 'top-center',
@@ -140,7 +134,7 @@ function VoiceDiary4(){
         });
     };
 
-    //전송 실패
+    //전송 실패 alert
     function fail() {
         toast.error("저장 실패!", {
             position: 'top-center',
@@ -151,12 +145,31 @@ function VoiceDiary4(){
             draggable:true,
         });
     };
+    //색 감정으로 변환하기
+    let emotion = "";
+    if(color === 'red'){
+        emotion = 'anger';
+    } else if(color === 'pink'){
+        emotion = 'love';
+    } else if(color === 'purple'){
+        emotion = 'fear';
+    } else if(color === 'yellow'){
+        emotion = 'joy';
+    } else if(color === 'blue'){
+        emotion = 'sad';
+    } else if(color === 'green'){
+        emotion = 'disgust';
+    };
+
 
     //text 백엔드에 전송
     const uploadStt = () => {
-        axios.post("",
+        axios.post("http://localhost:8080/api/diary",
                 {
-                    
+                    "content" : dailytext,
+                    "emotion" : emotion,
+                    "userID": 1,
+                    "voiceFilePath": ""
                 },
                 {
                     headers: {
@@ -172,10 +185,10 @@ function VoiceDiary4(){
                 console.log("저장 실패!")
                 fail();
             })
-    }
+    };
 
     function confirm(){
-        console.log(dailytext);
+        console.log("stt2",dailytext);
         // uploadParams();
         uploadStt();
     }
@@ -193,8 +206,6 @@ function VoiceDiary4(){
                     {/* <div className={Styles.cylinderP} style={{left:'30vw'}}></div> */}
                     {/* <img src={spring} alt="spring" style={{width: '35vw', top:'15.5vh', position:'absolute', zIndex:'2'}} /> */}
                     <img src={spring2} alt="spring" style={{width: '5.5vw', top:'19.5vh', position:'absolute', zIndex:'2', left:'29.2vw'}} />
-                    
-                 
                     <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
                     fontFamily:`${fontstyle}`}}>
                         <p>{transcript}</p>
@@ -240,7 +251,8 @@ function VoiceDiary4(){
                 {/* <div style={{backgroundImage:"linear-gradient(#F2789F, #FEE3EC)"}}>     */}
                     <div className={base.container} > 
                         {/* <h1>음성 일기</h1> */}
-                        <div className={Styles.cylinder}></div>
+                        {/* <div className={Styles.cylinder}></div> */}
+                        <img src={spring} alt="spring" style={{width: '22rem', top:'8.7rem', position:'absolute', zIndex:'2'}} />
                         <div className={Styles.time} style={{backgroundColor:`${bgcolor}`,
                         fontFamily:`${fontstyle}`}}>
                             <p>{transcript}</p>

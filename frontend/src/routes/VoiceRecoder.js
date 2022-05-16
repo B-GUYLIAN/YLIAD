@@ -46,8 +46,8 @@ const useRecorder = () => {
 
   //받아적히는 글 저장하는 함수
   function saveDailyText(){
-    setDailyText({transcript})
-  }
+    setDailyText({transcript});
+  };
 
   //저정되었는지 확인
   function confirm(){

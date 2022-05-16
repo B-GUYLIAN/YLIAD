@@ -104,7 +104,9 @@
   );
     border-image-slice: 1;
     /* border-radius: 3vw; */
-    padding-left: 2vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    /* padding-left: 2vw; */
     font-size: 3.3vh;
     color: white;
     /* scroll-behavior: auto; */
@@ -375,6 +377,7 @@
     border-image-slice: 1;
     /* border-radius: 3rem; */
     padding-left: 1.5rem;
+    padding-right: 1.0rem;
     /* scroll-behavior: auto; */
     overflow: auto;
 }

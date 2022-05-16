@@ -12,15 +12,17 @@ import yellow from "../assets/images/yellow.png";
 import { Pie } from 'react-chartjs-2';
 import { useEffect, useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import axios from "axios";
+import {toast, ToastContainer} from 'react-toastify';
 
 function Mypage(){
     ChartJS.register(ArcElement, Tooltip, Legend);
 
     //그래프 만들기
-    // const [graph, setGraph] = useState<any>({
-    //     labels: ['anger', 'love', 'fear', 'joy', 'sad', 'disgust'],
-    //     data: [],
-    // });
+    const [graph, setGraph] = useState<any>({
+        // labels: ['anger', 'love', 'fear', 'joy', 'sad', 'disgust'],
+        data: [],
+    });
 
     // const graphData = [
     //     {
@@ -50,22 +52,60 @@ function Mypage(){
     // ];
 
     // //데이터 담기
-    // useEffect(() => {
-    //     const labels: String[] = [];
-    //     const data: number[] = [];
+    //일기 전체 개수
+    let totalCount:number = 0;
 
-    //     // graphData?.map((v:any) => {
-    //     graphData?.map((v:any) => {
-    //         labels.push(v?.label);
-    //         data.push(v?.value);
-    //     });
+    //일기 연 개수
+    let yearCount:number = 0;
 
-    //     setGraph({
-    //         labels: labels,
-    //         data: data,
-    //     });
+    //일기 이번달 개수
+    let monthCount:number = 0;
 
-    // },[]);
+    // 각각의 감정 개수
+    let anger:number = 0;
+    let love:number = 0;
+    let fear:number = 0;
+    let joy:number = 0;
+    let sad:number = 0;
+    let disgust:number = 0;
+
+    useEffect(() => {
+        // const labels: String[] = [];
+        
+
+        axios.post("http://localhost:8080/api/diary/mypage",
+                {
+                    "currentTime":"",
+                    "userID": 1,
+                },
+                {
+                    headers: {
+                    //   "Authorization":
+                    },
+                }
+            )
+            .then((res) => {
+                console.log("값 출력", res);
+
+            })
+            .catch(error => {
+                console.log("값 불러오기 실패", error)
+            });
+        
+        const data: number[] = [anger, love, fear, joy, sad, disgust];
+
+        // graphData?.map((v:any) => {
+        // graphData?.map((v:any) => {
+        //     labels.push(v?.label);
+        //     data.push(v?.value);
+        // });
+
+        setGraph({
+            // labels: labels,
+            data: data,
+        });
+
+    },[]);
 
     const data = {
         // labels: graph,
@@ -74,8 +114,8 @@ function Mypage(){
             {
                 label: '# of Votes',
                 // data: graph.data,
-                data:[10,30,5,25,20,10],
                 //data 값만 axios에서 받아오면 될듯?
+                data:[10,30,5,25,20,10],
                 backgroundColor: [
                     // 'rgba(255, 99, 132)',
                     // 'rgba(255, 159, 64)',
@@ -119,9 +159,9 @@ function Mypage(){
                         <p className={Styles.monthP}>Month</p>
                     </div>
                     <div className={Styles.secondContentP}>
-                        <p className={Styles.totalCntP}>{""} 3</p>
-                        <p className={Styles.yearCntP}>{""} 3 &nbsp;</p>
-                        <p className={Styles.monthCntP}>{""} 3</p>
+                        <p className={Styles.totalCntP}>{totalCount} 3</p>
+                        <p className={Styles.yearCntP}>{yearCount} 3 &nbsp;</p>
+                        <p className={Styles.monthCntP}>{monthCount} 3</p>
                     </div>
 
                     <div className={Styles.EmotionP}> &lt; 이번달 기분 통계 &gt; </div>
@@ -136,12 +176,12 @@ function Mypage(){
                     </div>
                     <div className={Styles.CgroupP}>
                         {/* 10보다 크면 그냥, 작으면 &nbsp;를 붙이도록 삼항 만들기. */}
-                        <p className={Styles.colorCntP}>{""} 25 </p>
-                        <p className={Styles.colorCntP}>{""} 30 </p>
-                        <p className={Styles.colorCntP}>{""} &nbsp;5 </p>
-                        <p className={Styles.colorCntP}>{""} 10 </p>
-                        <p className={Styles.colorCntP}>{""} 20 </p>
-                        <p className={Styles.colorCntP}>{""} 10 </p>
+                        <p className={Styles.colorCntP}>{joy} </p>
+                        <p className={Styles.colorCntP}>{love} </p>
+                        <p className={Styles.colorCntP}>{fear} </p>
+                        <p className={Styles.colorCntP}>{disgust} </p>
+                        <p className={Styles.colorCntP}>{sad} </p>
+                        <p className={Styles.colorCntP}>{anger} </p>
                     </div>
 
                     {/* 차트 */}
@@ -160,15 +200,15 @@ function Mypage(){
                     <div className={Styles.nickname}> &#60; {""}해씨볼 님의 일지 &#62;</div>
                     <div className={Styles.firstContent}>
                         <p className={Styles.total}>전체</p>
-                        <p className={Styles.totalCnt}>{""} 3</p>
+                        <p className={Styles.totalCnt}>{totalCount} 3</p>
                     </div>
                     <div className={Styles.firstContent}>
                         <p className={Styles.year}>올해</p>
                         <p className={Styles.month}>이번달</p>
                     </div>
                     <div className={Styles.secondContent}>
-                        <p className={Styles.yearCnt}>{""} 3 &nbsp;</p>
-                        <p className={Styles.monthCnt}>{""} 3</p>
+                        <p className={Styles.yearCnt}>{yearCount} 3 &nbsp;</p>
+                        <p className={Styles.monthCnt}>{monthCount} 3</p>
                     </div>
 
                     <div className={Styles.Emotion}> &lt; 이번달 기분 통계 &gt; </div>
@@ -183,12 +223,12 @@ function Mypage(){
                     </div>
                     <div className={Styles.Cgroup}>
                         {/* 10보다 크면 그냥, 작으면 &nbsp;를 붙이도록 삼항 만들기. */}
-                        <p className={Styles.yellowCnt}>{""} 25 </p>
-                        <p className={Styles.pinkCnt}>{""} 30 </p>
-                        <p className={Styles.purpleCnt}> &nbsp;5 </p>
-                        <p className={Styles.greenCnt}>{""} 10 </p>
-                        <p className={Styles.blueCnt}>{""} 20 </p>
-                        <p className={Styles.redCnt}>{""} 10 </p>
+                        <p className={Styles.yellowCnt}>{joy} </p>
+                        <p className={Styles.pinkCnt}>{love} </p>
+                        <p className={Styles.purpleCnt}> {fear} </p>
+                        <p className={Styles.greenCnt}>{disgust} </p>
+                        <p className={Styles.blueCnt}>{sad} </p>
+                        <p className={Styles.redCnt}>{anger} </p>
                     </div>
                     {/* <div className={Styles.Egroup}>
                         <div>
