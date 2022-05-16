@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { BrowserView, MobileView } from "react-device-detect";
-import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import base from "./Base.module.css";
 import styles from "./Trash2.module.css";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Trash2() {
   const [text, setText] = useState<string>("");
@@ -14,7 +14,14 @@ function Trash2() {
   function burn() {
     // 앞뒤 공백제거 후 문자 없으면 alert
     if (text.trim() === "") {
-      alert("안 좋았던 기억을 입력하세요!");
+      toast.error("잊고 싶은 일을 써보세요", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+      });
     } else {
       setIsburned(true);
     }
@@ -27,12 +34,11 @@ function Trash2() {
   }
   return (
     <>
-      <ToastContainer />
       <Navbar />
+      <ToastContainer />
       <BrowserView>
         <div className={base.container}>
           <div className={styles.backP}></div>
-          <div className={styles.lightP}></div>
           <div className={styles.contentP}>
             <div className={styles.fireP}>
               <div className={styles.bottomP}></div>
@@ -63,16 +69,49 @@ function Trash2() {
               <div></div>
             </div>
           </div>
-          <p className={styles.inputP}>
-            지우고 싶은 기억을 입력하고 불태우세요..
-            <br />
-            <textarea />
-            <button>불태워 지우기</button>
-            <span className={styles.authorP}>Burn it</span>
-            <Link to="/lobby">
-              <button> 로비로 이동 </button>
-            </Link>
-          </p>
+          <div className={styles.inputP}>
+            {isburned ? (
+              <p>
+                태우는중입니다..
+                <br />
+                모두 잊어버리세요!
+              </p>
+            ) : (
+              <p>
+                지우고 싶은 기억
+                <br />
+                여기에 놓고 가세요
+              </p>
+            )}
+            <div className={styles.letterContainerP}>
+              {isburned && (
+                <div
+                  id={styles.addButtonP}
+                  onClick={addTrash}
+                  className={isburned ? styles.showButtonP : undefined}
+                >
+                  추가하기
+                </div>
+              )}
+              <textarea
+                id={styles.textP}
+                name="textdiary"
+                value={text}
+                onChange={(ev: React.ChangeEvent<HTMLTextAreaElement>): void =>
+                  setText(ev.target.value)
+                }
+                className={isburned ? styles.burnP : undefined}
+                spellCheck="false"
+              />
+              <div
+                id={styles.burnButtonP}
+                onClick={burn}
+                className={isburned ? styles.hideButtonP : undefined}
+              >
+                태우기
+              </div>
+            </div>
+          </div>
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>
               <filter id="goo">
@@ -97,7 +136,6 @@ function Trash2() {
       <MobileView>
         <div className={base.container}>
           <div className={styles.back}></div>
-          <div className={styles.light}></div>
           <div className={styles.content}>
             <div className={styles.fire}>
               <div className={styles.bottom}></div>
@@ -129,9 +167,6 @@ function Trash2() {
             </div>
           </div>
           <div className={styles.input}>
-            <Link to="/lobby">
-              <button> 로비로 이동 </button>
-            </Link>
             {isburned ? (
               <p>
                 태우는중입니다..
@@ -163,6 +198,7 @@ function Trash2() {
                   setText(ev.target.value)
                 }
                 className={isburned ? styles.burn : undefined}
+                spellCheck="false"
               />
               <div
                 id={styles.burnButton}
@@ -172,7 +208,6 @@ function Trash2() {
                 태우기
               </div>
             </div>
-            <ToastContainer />
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
             <defs>
