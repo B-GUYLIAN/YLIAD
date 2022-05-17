@@ -17,6 +17,7 @@ import {toast, ToastContainer} from 'react-toastify';
 
 function Mypage(){
     ChartJS.register(ArcElement, Tooltip, Legend);
+    const token = sessionStorage.getItem("token");
 
     //그래프 만들기
     const [graph, setGraph] = useState<any>({
@@ -73,23 +74,19 @@ function Mypage(){
         // const labels: String[] = [];
         
 
-        axios.post("http://localhost:8080/api/diary/mypage",
-                {
-                    "currentTime":"",
-                    "userID": 1,
+        axios.get("http://localhost:8080/api/diary/mypage",
+            {
+                headers: {
+                //   "Authorization":
+                    // userID: token,
                 },
-                {
-                    headers: {
-                    //   "Authorization":
-                    },
-                }
-            )
+            })
             .then((res) => {
                 console.log("값 출력", res);
 
             })
             .catch(error => {
-                console.log("값 불러오기 실패", error)
+                console.log("값 불러오기 실패", error.response)
             });
         
         const data: number[] = [anger, love, fear, joy, sad, disgust];
@@ -159,9 +156,9 @@ function Mypage(){
                         <p className={Styles.monthP}>Month</p>
                     </div>
                     <div className={Styles.secondContentP}>
-                        <p className={Styles.totalCntP}>{totalCount} 3</p>
-                        <p className={Styles.yearCntP}>{yearCount} 3 &nbsp;</p>
-                        <p className={Styles.monthCntP}>{monthCount} 3</p>
+                        <p className={Styles.totalCntP}>{totalCount} </p>
+                        <p className={Styles.yearCntP}>{yearCount} </p>
+                        <p className={Styles.monthCntP}>{monthCount} </p>
                     </div>
 
                     <div className={Styles.EmotionP}> &lt; 이번달 기분 통계 &gt; </div>
@@ -187,7 +184,7 @@ function Mypage(){
                     {/* 차트 */}
                     {/* <div className={Styles.chartP}>차트 자리</div> */}
                     {/* <Pie data={data} /> */}
-                    <div className={Styles.chartP} style={{ height:'20vh',width:'20vw',margin:'0 auto', top:'-5vh' }}>
+                    <div className={Styles.chartP} style={{ width:'20vw',margin:'0 auto', top:'-2vh' }}>
                       {/* <Pie data={data} height="5vh" width="5vw" /> */}
                       <Pie data={data} />
                     </div>
@@ -200,15 +197,15 @@ function Mypage(){
                     <div className={Styles.nickname}> &#60; {""}해씨볼 님의 일지 &#62;</div>
                     <div className={Styles.firstContent}>
                         <p className={Styles.total}>전체</p>
-                        <p className={Styles.totalCnt}>{totalCount} 3</p>
+                        <p className={Styles.totalCnt}>{totalCount} </p>
                     </div>
                     <div className={Styles.firstContent}>
                         <p className={Styles.year}>올해</p>
                         <p className={Styles.month}>이번달</p>
                     </div>
                     <div className={Styles.secondContent}>
-                        <p className={Styles.yearCnt}>{yearCount} 3 &nbsp;</p>
-                        <p className={Styles.monthCnt}>{monthCount} 3</p>
+                        <p className={Styles.yearCnt}>{yearCount} </p>
+                        <p className={Styles.monthCnt}>{monthCount} </p>
                     </div>
 
                     <div className={Styles.Emotion}> &lt; 이번달 기분 통계 &gt; </div>

@@ -180,9 +180,6 @@
     color: white;
 }
 
-.chartCntP {
-}
-
 
 /* ///////////////////////////////////////////////////////////////////////// */
 /* 모바일버전 */
@@ -272,7 +269,7 @@
 .yearCnt {
     position: relative;
     top: 0.5rem;
-    left: 5.2rem;
+    left: 4.9rem;
     width: 5.5rem;
     margin-right: 10.6rem;
     font-size: 2.2rem;

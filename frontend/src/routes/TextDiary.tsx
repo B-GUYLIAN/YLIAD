@@ -21,6 +21,7 @@ function TextDiary(){
     const params = useParams();
     const navigate = useNavigate();
     const Font = sessionStorage.getItem("Font");
+    const token:string|null = sessionStorage.getItem("token");
 
     //뒤로가기 버튼
     const color = params.color
@@ -102,7 +103,7 @@ function TextDiary(){
     }
 
     //일기 저장하기
-    const SavaDiary = () =>{
+    // const SavaDiary = () =>{
 
     //전송 실패 alert
     function fail() {
@@ -133,29 +134,25 @@ function TextDiary(){
 
 
     //text 백엔드에 전송
-    const SavaDiary = () => {
-        axios.post("http://localhost:8080/api/diary",
+    function SavaDiary(){
+        axios.post("http://k6a308.p.ssafy.io:8001/user-service/api/diary",
                 {
                     "content" : text,
                     "emotion" : emotion,
-                    "userID": 1,
+                    "userID": token,
                     "voiceFilePath": "text"
                 },
-                {
-                    headers: {
-                    //   "Authorization":
-                    },
-                }
+
             )
             .then((res) => {
-                console.log("저장 완료!")
+                console.log("저장 완료!", res)
                 send();
             })
             .catch(error => {
-                console.log("저장 실패!")
+                console.log("저장 실패!", error.response)
                 fail();
             })
-    }}
+    }
 
     return (
         <>
@@ -168,7 +165,7 @@ function TextDiary(){
                         {/* <div className={Styles.cylinderP} style={{left:'29.9vw'}}></div> */}
                         {/* <div className={Styles.cylinderP} style={{left:'29vw'}}></div> */}
                         {/* <img src={spring} alt="spring" style={{width: '35vw', top:'16vh', position:'absolute', zIndex:'2'}} /> */}
-                        <img src={spring2} alt="spring" style={{width: '6.5vw', top:'19.5vh', position:'absolute', zIndex:'2', left:'27.6vw'}} />
+                        <img src={spring2} alt="spring" style={{width: '6.5vw', top:'24vh', position:'absolute', zIndex:'2', left:'27.6vw'}} />
 
                     <textarea name="textdiary" value={text} onChange={(
                         ev: React.ChangeEvent<HTMLTextAreaElement>,
@@ -191,8 +188,8 @@ function TextDiary(){
             <MobileView>
                 <s></s><div className={base.container}>
                     {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
-                        <div className={Styles.cylinder} style={{top: '8.5rem'}}></div>
-                      
+                    {/* <div className={Styles.cylinder} style={{top: '8.5rem'}}></div> */}
+                    <img src={spring} alt="spring" style={{width: '22rem', top:'8.7rem', position:'absolute', zIndex:'2'}} />
                     <textarea name="textdiary" value={text} onChange={(
                         ev: React.ChangeEvent<HTMLTextAreaElement>,
                         ): void => setText(ev.target.value)} 

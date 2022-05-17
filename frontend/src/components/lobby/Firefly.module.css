@@ -1,0 +1,244 @@
+/* PC 버전 */
+.moon{
+    position: absolute;
+    width: 3vw;
+    left: 28vw;
+    top: 18vh;
+}
+
+/* 클래식별 노랑 */
+.star1{
+    position: absolute;
+    width: 2vw;
+    right: 18vw;
+    top: 20vh;
+}
+
+/* 트윙클별 */
+.star2{
+    position: absolute;
+    width: 1.5vw;
+    left: 39vw;
+    top: 10vh;
+}
+
+/* 흰색 별사탕 */
+.star3{
+    position: absolute;
+    width: 2vw;
+    right: 15vw;
+    top: 13vh;
+}
+
+/* 작은 별사탕 하얀거 */
+.star4{
+    position: absolute;
+    width: 0.9vw;
+    /* height: 1.5vh; */
+    left: 15vw;
+    top: 25vh;
+}
+
+/* 노랑 별사탕 작은거 */
+.star5{
+    position: absolute;
+    width: 1.5vw;
+    /* height: 1.5vh; */
+    left: 37vw;
+    top: 20vh;
+}
+
+/* 흰별 클래식 */
+.star6{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 30vw;
+    top: 21vh;
+}
+
+.firefly{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 30vw;
+    top: 21vh;
+}
+
+.basictree1R{
+    z-index: 20;
+    position: relative;
+    width: 20vw;
+    top: 30vh;
+    right: -46vw
+}
+.bubbletreeR{
+    z-index: 19;
+    position: relative;
+    width: 15vw;
+    top: 25vh;
+    right: -20vw
+}
+
+.basictree1L{
+    z-index: 20;
+    position: relative;
+    width: 20vw;
+    top: -17vh;
+    left: -32vw
+}
+.bubbletreeL{
+    z-index: 19;
+    position: relative;
+    width: 15vw;
+    top: -22vh;
+    left: -40.5vw
+}
+
+.ground{
+    position: fixed;
+    width: 130vw;
+    /* height: 120vh; */
+    top: 32vh
+}
+
+.ad{
+    z-index: 20;
+    position: relative;
+    width: 15vw;
+    top: -40vh;
+    right: -25vw;
+}
+
+.Cactus{
+    z-index: 20;
+    position: relative;
+    width: 10vw;
+    top: -23vh;
+    left: -25vw
+    /* z-index: 20;
+    position: relative;
+    width: 10vw;
+    top: -20vh;
+    right: -28vw;
+    transform: scaleX(-1); */
+}
+.Cactus2{
+    z-index: 20;
+    position: relative;
+    width: 10vw;
+    top: -40vh;
+    right: -35vw;
+    transform: scaleX(-1);
+}
+.pyramid{
+    z-index: 20;
+    position: relative;
+    width: 13vw;
+    top: -53vh;
+    left: -42vw
+}
+
+/* 모바일 버전 ///////////////////////////////////////////////// */
+/* PC 버전 */
+.moonM{
+    position: absolute;
+    width: 3rem;
+    left: 4rem;
+    top: 6rem;
+}
+
+/* 클래식별 노랑 */
+.star1M{
+    position: absolute;
+    width: 1.5rem;
+    right: 6rem;
+    top: 14rem;
+}
+
+/* 트윙클별 */
+.star2M{
+    position: absolute;
+    width: 1.5rem;
+    left: 9rem;
+    top: 5rem;
+}
+
+/* 흰색 별사탕 */
+.star3M{
+    position: absolute;
+    width: 1.5rem;
+    right: 3rem;
+    top: 6rem;
+}
+
+/* 작은 별사탕 하얀거 */
+.star4M{
+    position: absolute;
+    width: 0.9rem;
+    /* height: 1.5vh; */
+    left: 4rem;
+    top: 15rem;
+}
+
+/* 노랑 별사탕 작은거 */
+.star5M{
+    position: absolute;
+    width: 1.2rem;
+    /* height: 1.5vh; */
+    left: 10rem;
+    top: 11rem;
+}
+
+/* 흰별 클래식 */
+.star6M{
+    position: absolute;
+    width: 1.2rem;
+    /* height: 3vh; */
+    right: 10rem;
+    top: 7rem;
+}
+
+.fireM{
+    position: relative;
+    z-index: 10;
+    top: 38vh;
+}
+
+.groundM{
+    position: fixed;
+    width: 60rem;
+    height: 40rem;
+    bottom: -5rem;
+}
+
+.adM{
+    z-index: 20;
+    position: relative;
+    width: 13rem;
+    top: 9rem;
+    right: -9rem;
+}
+
+.CactusM{
+    z-index: 20;
+    position: relative;
+    width: 5rem;
+    top: 8.5rem;
+    left: -9.5rem
+}
+.Cactus2M{
+    z-index: 20;
+    position: relative;
+    width: 4rem;
+    top: 5rem;
+    left: -8rem;
+    /* transform: scaleX(-1); */
+}
+.pyramidM{
+    z-index: 20;
+    position: relative;
+    width: 6rem;
+    top: -12rem;
+    left: -9.5rem
+}
