@@ -6,11 +6,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "paybooc-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "paybooc-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Medium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* PC 버전 */
+
 .section1,
 .section2,
 .section3,
 .section4 {
-  font-family: "GowunDodum-Regular";
+  font-family: "paybooc-Medium";
   letter-spacing: 1px;
 }
 
@@ -24,11 +42,11 @@
 .section1 {
   padding-bottom: 100px;
   border-bottom: 1px solid #fcf18c;
-  background-color: #0e1397;
+  background-color: #131554;
 }
 
 .wrapper_intro {
-  max-width: 80em;
+  max-width: 88em;
   margin: 0 auto;
 }
 
@@ -46,6 +64,7 @@
   display: flex;
   align-items: center;
   color: #ffed54;
+  cursor: pointer;
 }
 
 .icon img {
@@ -63,11 +82,13 @@
 .menu li {
   list-style: none;
   margin: 12px 36px;
+  cursor: pointer;
 }
 
 .header p {
-  font-size: 54px;
+  font-size: 56px;
   margin-bottom: 20px;
+  font-family: "paybooc-Bold";
 }
 
 .header span {
@@ -108,9 +129,10 @@
   border-left: 5px solid #ffed54;
   background-color: transparent;
   color: #ffed54;
+  font-family: "paybooc-Medium";
 }
 
-::placeholder {
+.subscribe input::placeholder {
   font-size: 18px;
   color: #ffed54;
 }
@@ -122,21 +144,23 @@
   padding: 2px 7px 2px 7px;
   box-sizing: content-box;
   background-color: #ffed54;
-  color: #1c24bc;
+  color: #161da3;
   font-size: 20px;
-  font-weight: bold;
   cursor: pointer;
+  font-family: "paybooc-Bold";
+  border: none;
 }
 
 /* 섹션 2 - UCC */
 .section2 {
   padding: 80px 0;
   border-bottom: 1px solid #fcf18c;
-  background-color: #1318ad;
+  background-color: #161a64;
+  font-family: "paybooc-Bold";
 }
 
 .wrapper_video {
-  max-width: 80em;
+  max-width: 88em;
   margin: 0 auto;
   text-align: center;
   font-size: 70px;
@@ -151,12 +175,12 @@
 
 .section3 {
   padding: 80px 0;
-  background-color: #0e1397;
+  background-color: #131554;
   border-bottom: 1px solid #fcf18c;
 }
 
 .wrapper_body {
-  max-width: 80em;
+  max-width: 88em;
   margin: 0 auto;
 }
 
@@ -176,6 +200,7 @@
 
 .feature_text p {
   font-size: 40px;
+  font-family: "paybooc-Bold";
 }
 
 .feature_text span {
@@ -185,13 +210,218 @@
 /* 섹션 4 - 푸터 */
 .section4 {
   padding: 80px 0;
-  background-color: #1318ad;
+  background-color: #161a64;
 }
 
 .wrapper_footer {
-  max-width: 80em;
+  max-width: 88em;
   margin: 0 auto;
   text-align: center;
   font-size: 26px;
+  color: #b0b0d8;
+}
+
+/* 모바일 버전 */
+
+.section1M,
+.section2M,
+.section3M,
+.section4M {
+  font-family: "paybooc-Medium";
+  letter-spacing: 1px;
+}
+
+/* alert */
+.toastM {
+  width: 480px;
+}
+
+/* 섹션 1 */
+
+.section1M {
+  border-bottom: 1px solid #fcf18c;
+  background-color: #131554;
+}
+
+/* 내비게이션 바 */
+
+.navbarM {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+}
+
+.iconM {
+  font-size: 24px;
+  font-weight: bold;
+  /* 아이콘과 제목 수직 가운데 정렬 */
+  display: flex;
+  align-items: center;
+  color: #ffed54;
+  cursor: pointer;
+}
+
+.iconM img {
+  width: 52px;
+  height: 52px;
+  margin-right: 10px;
+}
+
+.menuM {
+  display: flex;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.menuM li {
+  list-style: none;
+  margin: 12px 8px;
+  cursor: pointer;
+}
+
+.headerM p {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "paybooc-Bold";
+}
+
+.headerM span {
+  font-size: 22px;
+}
+
+.downsubsM img {
+  margin-top: 50px;
+  height: 83px;
+  width: auto;
+}
+
+.mobileWeb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#web_availableM {
+  cursor: pointer;
+}
+
+#android_availableM {
+  cursor: pointer;
+  width: 240px;
+  height: auto;
+  margin-right: 30px;
+}
+
+#ios_NAM {
+  filter: opacity(0.4);
+  width: 240px;
+  height: auto;
+}
+
+.subscribeM {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribeM input {
+  width: 380px;
+  height: 55px;
+  margin: 50px 0 10px 0;
+  font-size: 20px;
+  padding-left: 10px;
+  border: 2px solid #ffed54;
+  border-left: 5px solid #ffed54;
+  background-color: transparent;
+  color: #ffed54;
+  font-family: "paybooc-Medium";
+}
+
+.subscribeM input::placeholder {
+  font-size: 18px;
+  color: #ffed54;
+}
+
+.subscribeM button {
+  width: 387px;
+  height: 55px;
+  margin-bottom: 20px;
+  box-sizing: content-box;
+  background-color: #ffed54;
+  color: #161da3;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: "paybooc-Bold";
+  border: none;
+}
+
+#movingAd {
+  width: 312px;
+}
+/* 섹션 2 - UCC */
+.section2M {
+  padding: 80px 0;
+  border-bottom: 1px solid #fcf18c;
+  background-color: #161a64;
+  font-family: "paybooc-Bold";
+}
+
+.wrapper_videoM {
+  text-align: center;
+  font-size: 40px;
+}
+
+.wrapper_videoM video {
+  width: 460px;
+  height: auto;
+}
+
+/* 섹션 3 - 서비스 기능 */
+
+.section3M {
+  padding: 80px 0;
+  background-color: #131554;
+  border-bottom: 1px solid #fcf18c;
+}
+
+.feature1M,
+.feature2M,
+.feature3M,
+.feature4M {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.feature1M img,
+.feature2M img,
+.feature3M img,
+.feature4M img {
+  width: 300px;
+  height: auto;
+}
+
+.feature_textM {
+  text-align: center;
+}
+
+.feature_textM p {
+  font-size: 38px;
+  font-family: "paybooc-Bold";
+}
+
+.feature_textM span {
+  font-size: 22px;
+}
+
+/* 섹션 4 - 푸터 */
+.section4M {
+  padding: 80px 0;
+  background-color: #161a64;
+}
+
+.wrapper_footerM {
+  text-align: center;
+  font-size: 22px;
   color: #b0b0d8;
 }
