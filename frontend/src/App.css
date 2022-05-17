@@ -1,5 +1,5 @@
 .Bgm {
-  position: absolute;
+  position: fixed;
   width: 1.7rem;
   bottom: 3.5vw;
   right: 14.5vw;
@@ -8,7 +8,7 @@
 }
 
 .Bgm_M {
-  position: absolute;
+  position: fixed;
   width: 2rem;
   top: 2.9rem;
   right: 1.6rem;
