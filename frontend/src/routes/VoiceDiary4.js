@@ -23,6 +23,7 @@ function VoiceDiary4(){
     let bgcolor = color;
     const Font = sessionStorage.getItem("Font");
     const token = sessionStorage.getItem("token");
+    const userid = sessionStorage.getItem("userid");
 
     //뒤로가기 버튼
     function moveselectDiary(){
@@ -163,14 +164,15 @@ function VoiceDiary4(){
     };
 
 
-    //text 백엔드에 전송
-    const uploadStt = () => {
-        axios.post("http://localhost:8080/api/diary",
+    //text 백엔드에 전송 위한 함수
+    // const uploadStt = () => {
+    function uploadStt(){
+        axios.post("https://k6a308.p.ssafy.io/api-diary/api/diary",
                 {
-                    "content" : dailytext,
+                    "content" : dailytext.transcript,
                     "emotion" : emotion,
-                    "userID": token,
-                    "voiceFilePath": ""
+                    "userID": userid,
+                    "voiceFilePath": "voice"
                 },{
                     headers: {
                         "Authorization": token,
@@ -179,14 +181,17 @@ function VoiceDiary4(){
             )
             .then((res) => {
                 console.log("저장 완료!", res)
+                console.log(dailytext.transcript);
                 send();
             })
             .catch(error => {
                 console.log("저장 실패!", error.response)
+                console.log(dailytext.transcript);
                 fail();
             })
     };
 
+    //저장버튼 누를떄 실행
     function confirm(){
         console.log("stt2",dailytext);
         // uploadParams();
@@ -240,7 +245,7 @@ function VoiceDiary4(){
                             <img onClick={resetTranscript} className={Styles.resetP} src="https://img.icons8.com/ios-filled/28/FFFFFF/recurring-appointment.png" alt="reset"/>
                         </div>
                         <div className={Styles.fileP}>
-                            <img onClick={confirm} className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
+                            <img onClick={uploadStt} className={Styles.saveP} src="https://img.icons8.com/ios-filled/32/FFFFFF/installing-updates--v1.png" alt="SavaDiary"/>
                             <img onClick={moveselectDiary} className={Styles.backP} src="https://img.icons8.com/office/30/FFFFFF/undo.png" alt="selectDiary"/>
                         </div>
                     </div>

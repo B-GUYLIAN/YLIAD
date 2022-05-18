@@ -22,6 +22,7 @@ function TextDiary(){
     const navigate = useNavigate();
     const Font = sessionStorage.getItem("Font");
     const token:any = sessionStorage.getItem("token");
+    const userid = sessionStorage.getItem("userid");
 
     //뒤로가기 버튼
     const color = params.color
@@ -135,11 +136,11 @@ function TextDiary(){
 
     //text 백엔드에 전송
     function SavaDiary(){
-        axios.post("http://k6a308.p.ssafy.io:8001/user-service/api/diary",
+        axios.post("https://k6a308.p.ssafy.io/api-diary/api/diary",
                 {
                     "content" : text,
                     "emotion" : emotion,
-                    "userID": token,
+                    "userID": userid,
                     "voiceFilePath": "text"
                 },
                 {

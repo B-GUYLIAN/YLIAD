@@ -231,24 +231,24 @@
 
 .CactusM{
     z-index: 20;
-    position: relative;
+    position: fixed;
     width: 5rem;
-    top: 43.5rem;
-    left: -9.5rem;
+    top: 45.2rem;
+    left: 1rem;
 }
 .Cactus2M{
     z-index: 20;
-    position: relative;
+    position: fixed;
     width: 4rem;
-    top: 39.5rem;
-    left: -8rem;
+    top: 46rem;
+    left: 2.9rem;
     /* transform: scaleX(-1); */
 }
 .pyramidM{
     z-index: 20;
-    position: relative;
+    position: fixed;
     width: 6rem;
-    top: 25.1rem;
-    left: -9.5rem;
+    top: 36.3rem;
+    left: 1.3rem;
     transform: rotate(-10deg)
 }

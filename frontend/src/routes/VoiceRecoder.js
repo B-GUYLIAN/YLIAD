@@ -48,7 +48,7 @@ const useRecorder = () => {
   function saveDailyText(){
     setDailyText({transcript});
   };
-
+  
   //저정되었는지 확인
   function confirm(){
     console.log(dailytext)

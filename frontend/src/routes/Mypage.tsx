@@ -17,96 +17,55 @@ import {toast, ToastContainer} from 'react-toastify';
 
 function Mypage(){
     ChartJS.register(ArcElement, Tooltip, Legend);
-    const token:any = sessionStorage.getItem("token");
+    // const token:any = sessionStorage.getItem("token");
     const userid:any = sessionStorage.getItem("userid");
-
-    //그래프 만들기
-    const [graph, setGraph] = useState<any>({
-        // labels: ['anger', 'love', 'fear', 'joy', 'sad', 'disgust'],
-        data: [],
-    });
-
-    // const graphData = [
-    //     {
-    //         label: 'anger',
-    //         value: 10
-    //     },
-    //     {
-    //         label: 'love',
-    //         value: 30
-    //     },
-    //     {
-    //         label: 'fear',
-    //         value: 5
-    //     },
-    //     {
-    //         label: 'joy',
-    //         value: 25
-    //     },
-    //     {
-    //         label: 'sad',
-    //         value: 20
-    //     },
-    //     {
-    //         label: 'disgust',
-    //         value: 10
-    //     },
-    // ];
+    const token:any = sessionStorage.getItem("token");
+    const nickname = sessionStorage.getItem("nickname");
 
     // //데이터 담기
     //일기 전체 개수
-    let totalCount:number = 0;
+    const [totalCount, setTotalCount] = useState(0);
 
     //일기 연 개수
-    let yearCount:number = 0;
+    const [yearCount, setYearCount] = useState(0);
 
     //일기 이번달 개수
-    let monthCount:number = 0;
+    const [monthCount, setMonthCount] = useState(0);
 
     // 각각의 감정 개수
-    const [anger, setAnger] = useState('');
-    const [love, setLove] = useState('');
-    const [fear, setFear] = useState('');
-    const [joy, setJoy] = useState('');
-    const [sad, setSad] = useState('');
-    const [disgust, setDisgust] = useState('');
+    const [anger, setAnger] = useState(0);
+    const [love, setLove] = useState(0);
+    const [fear, setFear] = useState(0);
+    const [joy, setJoy] = useState(0);
+    const [sad, setSad] = useState(0);
+    const [disgust, setDisgust] = useState(0);
 
     useEffect(() => {
-        // const labels: String[] = [];
-        
-
-        axios.get("https://k6a308.p.ssafy.io/api-diary/api/diary/mypage",
-            {
-                headers: {
-                //   "Authorization": token,
-                    userID: userid,
+        axios.post("https://k6a308.p.ssafy.io/api-diary/api/diary/mypage",
+                {
+                    "userID": userid,
                 },
-            })
+                // {
+                //     headers:{
+                //         "Authorization" : token,
+                //     }
+                // }
+            )
             .then((res) => {
                 console.log("값 출력", res);
+                setTotalCount(res.data.totalCount);
+                setYearCount(res.data.yearCount);
+                setMonthCount(res.data.monthCount);
                 setAnger(res.data.anger);
-                setLove(res.data.anger);
-                setFear(res.data.anger);
-                setJoy(res.data.anger);
-                setSad(res.data.anger);
-                setDisgust(res.data.anger);
+                setLove(res.data.love);
+                setFear(res.data.fear);
+                setJoy(res.data.joy);
+                setSad(res.data.sad);
+                setDisgust(res.data.disgust);
             })
             .catch(error => {
                 console.log("값 불러오기 실패", error.response)
             });
-        
-        const data: string[] = [anger, love, fear, joy, sad, disgust];
-
-        // graphData?.map((v:any) => {
-        // graphData?.map((v:any) => {
-        //     labels.push(v?.label);
-        //     data.push(v?.value);
-        // });
-
-        setGraph({
-            // labels: labels,
-            data: data,
-        });
 
     },[]);
 
@@ -116,16 +75,8 @@ function Mypage(){
         datasets: [
             {
                 label: '# of Votes',
-                data: graph.data,
-                //data 값만 axios에서 받아오면 될듯?
-                // data:[10,30,5,25,20,10],
+                data: [anger, love, fear, joy, sad, disgust],
                 backgroundColor: [
-                    // 'rgba(255, 99, 132)',
-                    // 'rgba(255, 159, 64)',
-                    // 'rgba(153, 102, 255)',
-                    // 'rgba(255, 206, 86)',
-                    // 'rgba(54, 162, 235)',
-                    // 'rgba(75, 192, 192)',
                     '#FB5E3B',
                     '#FEA0E4',
                     '#CA77FE',
@@ -154,8 +105,7 @@ function Mypage(){
             <Stars2 />
             <BrowserView>
                 <div className={base.containerP} style={{overflowX:'hidden'}}> 
-                    {/* <h1>마이 페이지</h1> */}
-                    <div className={Styles.nicknameP}> &#60; {""}해씨볼 님의 일지 &#62;</div>
+                    <div className={Styles.nicknameP}> &#60; {nickname}님의 일지 &#62;</div>
                     <div className={Styles.firstContentP}>
                         <p className={Styles.totalP}>Total</p>
                         <p className={Styles.yearP}>Year</p>
