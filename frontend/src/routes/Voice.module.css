@@ -141,6 +141,7 @@
     border-radius: 50%;
     background-color: red;
     border: 1.5vh solid aliceblue;
+    cursor: pointer;
 }
 
 .recodingP {
@@ -150,6 +151,7 @@
     top: 70vh;
     width: 5vw;
     height: 9vh;
+    cursor: pointer;
     border-radius: 50%;
     background-color: red;
     border: 1.5vh solid aliceblue;
@@ -241,17 +243,20 @@
     position: relative;
     margin-right: 0.5vw;
     padding-top: 1vh;
+    cursor: pointer;
 }
 
 .stop2P {
     position: relative;
     padding-top: 1vh;
+    cursor: pointer;
 }
 .resetP {
     position: relative;
     margin-left: 0.6vw;
     margin-bottom: 0.5vh;
     /* padding-top: -1vh; */
+    cursor: pointer;
 }
 
 .fileP{
@@ -259,12 +264,14 @@
     right: -9vw;
     padding-top: 1vh;
     top: 64vh;
+    cursor: pointer;
 }
 
 .saveP {
     position: relative;
     /* left: -4vw; */
     padding-top: 1vh;
+    cursor: pointer;
     /* top: 75vh; */
     /* top: 64vh; */
 }
@@ -273,6 +280,7 @@
     position: relative;
     margin-left: 0.5vw;
     padding-top: 1vh;
+    cursor: pointer;
 }
 
 

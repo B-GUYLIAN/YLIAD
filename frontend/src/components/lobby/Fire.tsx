@@ -11,6 +11,7 @@ import star6 from "../../assets/images/lobby/star6.png";
 import ground from "../../assets/images/lobby/ground4.png";
 import pyramid from "../../assets/images/lobby/pyramid_night.png";
 import Cactus from "../../assets/images/lobby/Cactus_night.png";
+import camping from "../../assets/images/lobby/camping_night.png";
 import ad from "../../assets/images/adCape_move_left2.gif";
 import { BrowserView, MobileView } from 'react-device-detect';
 import Campfire from "../Campfire";
@@ -33,6 +34,7 @@ function Fire(){
                         <Campfire />
                     </div>
                     <img src={ad} className={Styles.ad} alt="ad"/>
+                    <img src={camping} className={Styles.camping} alt="camping"/>
                     <img src={Cactus} className={Styles.Cactus} alt="Cactus" />
                     <img src={Cactus} className={Styles.Cactus2} alt="Cactus" />
                     <img src={pyramid} className={Styles.pyramid} alt="pyramid" />
@@ -53,6 +55,7 @@ function Fire(){
                         <Campfire />
                     </div>
                     <img src={ad} className={Styles.adM} alt="ad"/>
+                    <img src={camping} className={Styles.campingM} alt="camping"/>
                     <img src={Cactus} className={Styles.CactusM} alt="Cactus" />
                     <img src={Cactus} className={Styles.Cactus2M} alt="Cactus" />
                     <img src={pyramid} className={Styles.pyramidM} alt="pyramid" />

@@ -6,138 +6,160 @@
     top: 18vh;
 }
 
-/* 클래식별 노랑 */
-.star1{
-    position: absolute;
-    width: 2vw;
-    right: 18vw;
-    top: 20vh;
-}
-
-/* 트윙클별 */
-.star2{
-    position: absolute;
-    width: 1.5vw;
-    left: 39vw;
-    top: 10vh;
-}
-
-/* 흰색 별사탕 */
-.star3{
-    position: absolute;
-    width: 2vw;
-    right: 15vw;
-    top: 13vh;
-}
-
-/* 작은 별사탕 하얀거 */
-.star4{
-    position: absolute;
-    width: 0.9vw;
-    /* height: 1.5vh; */
-    left: 15vw;
-    top: 25vh;
-}
-
-/* 노랑 별사탕 작은거 */
-.star5{
-    position: absolute;
-    width: 1.5vw;
-    /* height: 1.5vh; */
-    left: 37vw;
-    top: 20vh;
-}
-
-/* 흰별 클래식 */
-.star6{
-    position: absolute;
-    width: 2vw;
-    /* height: 3vh; */
-    right: 30vw;
-    top: 21vh;
-}
-
+/* 반딧불이 밭 */
 .firefly{
     position: absolute;
     width: 2vw;
     /* height: 3vh; */
     right: 30vw;
     top: 21vh;
+    transform: rotate(-10deg);
+}
+
+.firefly2{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 30vw;
+    top: 30vh;
+    transform: rotate(20deg);
+}
+
+.firefly3{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 35vw;
+    top: 54vh;
+    transform: rotate(70deg);
+}
+
+.firefly4{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 35vw;
+    top: 55vh;
+    transform: rotate(-100deg);
+}
+
+.firefly5{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 50vw;
+    top: 31vh;
+    transform: rotate(-180deg);
 }
 
 .basictree1R{
     z-index: 20;
-    position: relative;
+    /* position: relative;
     width: 20vw;
     top: 30vh;
-    right: -46vw
+    right: -46vw; */
+    position: fixed;
+    width: 20vw;
+    top: 35vh;
+    right: 2vw;
 }
 .bubbletreeR{
     z-index: 19;
-    position: relative;
+    position: fixed;
+    width: 15vw;
+    top: 36vh;
+    right: 13vw;
+    /* position: relative;
     width: 15vw;
     top: 25vh;
-    right: -20vw
+    right: -20vw; */
 }
 
 .basictree1L{
     z-index: 20;
-    position: relative;
+    /* position: relative;
     width: 20vw;
     top: -17vh;
-    left: -32vw
+    left: -29vw */
+    position: fixed;
+    width: 20vw;
+    top: 35vh;
+    left: 2vw;
 }
 .bubbletreeL{
     z-index: 19;
-    position: relative;
+    /* position: relative;
     width: 15vw;
     top: -22vh;
-    left: -40.5vw
+    left: -37vw */
+    position: fixed;
+    width: 15vw;
+    top: 36vh;
+    left: 13vw;
+}
+.stone2{
+    z-index: 19;
+    /* position: relative;
+    width: 5vw;
+    top: -5vh;
+    left: -50.5vw */
+    position: fixed;
+    width: 5vw;
+    top: 85vh;
+    left: 15vw
 }
 
 .ground{
     position: fixed;
     width: 130vw;
     /* height: 120vh; */
-    top: 32vh
+    top: 40vh;
+    
 }
 
 .ad{
     z-index: 20;
+    position: fixed;
+    width: 15vw;
+    top: 55vh;
+    right: 25vw;
+    /* z-index: 20;
     position: relative;
     width: 15vw;
     top: -40vh;
-    right: -25vw;
+    right: -25vw; */
 }
 
-.Cactus{
-    z-index: 20;
-    position: relative;
-    width: 10vw;
-    top: -23vh;
-    left: -25vw
-    /* z-index: 20;
-    position: relative;
-    width: 10vw;
-    top: -20vh;
-    right: -28vw;
-    transform: scaleX(-1); */
+.stone{
+    z-index: 19;
+    /* position: relative;
+    top: -40vh; 
+    right: -19vw;
+    */
+    width: 15vw;
+    position: fixed;
+    top: 70vh;
+    right: 16vw;
 }
-.Cactus2{
-    z-index: 20;
-    position: relative;
-    width: 10vw;
-    top: -40vh;
-    right: -35vw;
-    transform: scaleX(-1);
+
+.woods{
+    position: fixed;
+    z-index: 22;
+    width: 6vw;
+    top: 70vh;
+    left: 20.5vw;
+    transform: rotate(-5deg)
 }
-.pyramid{
-    z-index: 20;
-    position: relative;
-    width: 13vw;
-    top: -53vh;
-    left: -42vw
+
+.woods2{
+    position: fixed;
+    z-index: 22;
+    width: 6vw;
+    top: 75vh;
+    right: 4vw;
+    transform: rotate(5deg)
 }
+
 
 /* 모바일 버전 ///////////////////////////////////////////////// */
 /* PC 버전 */
@@ -148,97 +170,155 @@
     top: 6rem;
 }
 
-/* 클래식별 노랑 */
-.star1M{
+/* 반딧불이 밭 */
+.fireflyM{
     position: absolute;
-    width: 1.5rem;
-    right: 6rem;
-    top: 14rem;
-}
-
-/* 트윙클별 */
-.star2M{
-    position: absolute;
-    width: 1.5rem;
-    left: 9rem;
-    top: 5rem;
-}
-
-/* 흰색 별사탕 */
-.star3M{
-    position: absolute;
-    width: 1.5rem;
-    right: 3rem;
-    top: 6rem;
-}
-
-/* 작은 별사탕 하얀거 */
-.star4M{
-    position: absolute;
-    width: 0.9rem;
-    /* height: 1.5vh; */
-    left: 4rem;
-    top: 15rem;
-}
-
-/* 노랑 별사탕 작은거 */
-.star5M{
-    position: absolute;
-    width: 1.2rem;
-    /* height: 1.5vh; */
-    left: 10rem;
-    top: 11rem;
-}
-
-/* 흰별 클래식 */
-.star6M{
-    position: absolute;
-    width: 1.2rem;
+    width: 2rem;
     /* height: 3vh; */
-    right: 10rem;
-    top: 7rem;
+    right: 4rem;
+    top: 10rem;
+    transform: rotate(-10deg);
 }
 
-.fireM{
-    position: relative;
-    z-index: 10;
-    top: 38vh;
+.firefly2M{
+    position: absolute;
+    width: 1.5rem;
+    /* height: 3vh; */
+    left: 3rem;
+    top: 15rem;
+    transform: rotate(20deg);
+}
+
+.firefly3M{
+    position: absolute;
+    width: 1.5rem;
+    /* height: 3vh; */
+    right: 5rem;
+    top: 20rem;
+    transform: rotate(70deg);
+}
+
+.firefly4M{
+    position: absolute;
+    width: 2rem;
+    /* height: 3vh; */
+    left: 8rem;
+    top: 25rem;
+    transform: rotate(-100deg);
+}
+
+.firefly5M{
+    position: absolute;
+    width: 2rem;
+    /* height: 3vh; */
+    right: 12rem;
+    top: 18rem;
+    transform: rotate(-180deg);
+}
+
+.basictree1RM{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: 30vh;
+    right: -46vw; */
+    position: fixed;
+    width: 10rem;
+    top: 29rem;
+    right: -1rem;
+}
+.bubbletreeRM{
+    z-index: 19;
+    position: fixed;
+    width: 8rem;
+    top: 29rem;
+    right: 3rem;
+    /* position: relative;
+    width: 15vw;
+    top: 25vh;
+    right: -20vw; */
+}
+
+.basictree1LM{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: -17vh;
+    left: -29vw */
+    position: fixed;
+    width: 10rem;
+    top: 29rem;
+    left: -1rem;
+}
+.bubbletreeLM{
+    z-index: 19;
+    /* position: relative;
+    width: 15vw;
+    top: -22vh;
+    left: -37vw */
+    position: fixed;
+    width: 8rem;
+    top: 29rem;
+    left: 4rem;
+}
+.stone2M{
+    z-index: 19;
+    /* position: relative;
+    width: 5vw;
+    top: -5vh;
+    left: -50.5vw */
+    position: fixed;
+    width: 3rem;
+    top: 38rem;
+    left: 8rem;
 }
 
 .groundM{
     position: fixed;
     width: 60rem;
     height: 40rem;
-    bottom: -5rem;
+    bottom: -13rem;
 }
 
 .adM{
     z-index: 20;
-    position: relative;
+    position: fixed;
     width: 13rem;
-    top: 9rem;
-    right: -9rem;
+    top: 38rem;
+    right: 6rem;
+    /* z-index: 20;
+    position: relative;
+    width: 15vw;
+    top: -40vh;
+    right: -25vw; */
 }
 
-.CactusM{
-    z-index: 20;
-    position: relative;
+.stoneM{
+    z-index: 19;
+    /* position: relative;
+    top: -40vh; 
+    right: -19vw;
+    */
+    position: fixed;
+    width: 13rem;
+    top: 44rem;
+    right: -1.5rem;
+}
+
+.woodsM{
+    position: fixed;
+    z-index: 22;
     width: 5rem;
-    top: 8.5rem;
-    left: -9.5rem
+    top: 44rem;
+    left: 1.5rem;
+    transform: rotate(-5deg)
 }
-.Cactus2M{
-    z-index: 20;
-    position: relative;
-    width: 4rem;
-    top: 5rem;
-    left: -8rem;
-    /* transform: scaleX(-1); */
-}
-.pyramidM{
-    z-index: 20;
-    position: relative;
-    width: 6rem;
-    top: -12rem;
-    left: -9.5rem
+
+.woods2M{
+    position: fixed;
+    z-index: 22;
+    width: 3rem;
+    top: 71vh;
+    right: 0rem;
+    transform: rotate(5deg)
 }

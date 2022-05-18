@@ -211,11 +211,13 @@
   .saveP {
       padding-right: 3vw;
       padding-top: 1vh;
+      cursor: pointer;
   }
   
   .backP {
       padding-left: 7vw;
       padding-top: 1vh;
+      cursor: pointer;
   }
 
 
@@ -385,6 +387,7 @@
     justify-content: left;
     padding-right: 3rem;
     padding-top: 1rem;
+    cursor: pointer;
 }
 
 .back {

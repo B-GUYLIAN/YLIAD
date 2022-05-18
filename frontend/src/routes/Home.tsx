@@ -97,7 +97,8 @@ function Home(){
         else if (userIDCheck && userPassword === userPassword2){
         axios
         .post(
-          "http://k6a308.p.ssafy.io:8001/user-service/api/users",
+        //   "http://k6a308.p.ssafy.io:8001/user-service/api/users",
+          "https://k6a308.p.ssafy.io/user-service/api/users",
           {
             loginId: userID,
             nickname: userNickname,
@@ -140,7 +141,8 @@ function Home(){
         }  else {
             axios
             .post(
-              "http://k6a308.p.ssafy.io:8001/user-service/api/auth",
+            //   "http://k6a308.p.ssafy.io:8001/user-service/api/auth",
+              "https://k6a308.p.ssafy.io/user-service/api/auth",
               {
                 "loginId": loginID,
                 "password": loginPassword

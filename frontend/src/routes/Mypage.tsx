@@ -17,7 +17,8 @@ import {toast, ToastContainer} from 'react-toastify';
 
 function Mypage(){
     ChartJS.register(ArcElement, Tooltip, Legend);
-    const token = sessionStorage.getItem("token");
+    const token:any = sessionStorage.getItem("token");
+    const userid:any = sessionStorage.getItem("userid");
 
     //그래프 만들기
     const [graph, setGraph] = useState<any>({
@@ -63,33 +64,38 @@ function Mypage(){
     let monthCount:number = 0;
 
     // 각각의 감정 개수
-    let anger:number = 0;
-    let love:number = 0;
-    let fear:number = 0;
-    let joy:number = 0;
-    let sad:number = 0;
-    let disgust:number = 0;
+    const [anger, setAnger] = useState('');
+    const [love, setLove] = useState('');
+    const [fear, setFear] = useState('');
+    const [joy, setJoy] = useState('');
+    const [sad, setSad] = useState('');
+    const [disgust, setDisgust] = useState('');
 
     useEffect(() => {
         // const labels: String[] = [];
         
 
-        axios.get("http://localhost:8080/api/diary/mypage",
+        axios.get("https://k6a308.p.ssafy.io/api-diary/api/diary/mypage",
             {
                 headers: {
-                //   "Authorization":
-                    // userID: token,
+                //   "Authorization": token,
+                    userID: userid,
                 },
             })
             .then((res) => {
                 console.log("값 출력", res);
-
+                setAnger(res.data.anger);
+                setLove(res.data.anger);
+                setFear(res.data.anger);
+                setJoy(res.data.anger);
+                setSad(res.data.anger);
+                setDisgust(res.data.anger);
             })
             .catch(error => {
                 console.log("값 불러오기 실패", error.response)
             });
         
-        const data: number[] = [anger, love, fear, joy, sad, disgust];
+        const data: string[] = [anger, love, fear, joy, sad, disgust];
 
         // graphData?.map((v:any) => {
         // graphData?.map((v:any) => {
@@ -110,9 +116,9 @@ function Mypage(){
         datasets: [
             {
                 label: '# of Votes',
-                // data: graph.data,
+                data: graph.data,
                 //data 값만 axios에서 받아오면 될듯?
-                data:[10,30,5,25,20,10],
+                // data:[10,30,5,25,20,10],
                 backgroundColor: [
                     // 'rgba(255, 99, 132)',
                     // 'rgba(255, 159, 64)',
@@ -147,7 +153,7 @@ function Mypage(){
             <Navbar />
             <Stars2 />
             <BrowserView>
-                <div className={base.containerP}> 
+                <div className={base.containerP} style={{overflowX:'hidden'}}> 
                     {/* <h1>마이 페이지</h1> */}
                     <div className={Styles.nicknameP}> &#60; {""}해씨볼 님의 일지 &#62;</div>
                     <div className={Styles.firstContentP}>

@@ -171,7 +171,11 @@ function VoiceDiary4(){
                     "emotion" : emotion,
                     "userID": token,
                     "voiceFilePath": ""
-                },
+                },{
+                    headers: {
+                        "Authorization": token,
+                    }
+                }
             )
             .then((res) => {
                 console.log("저장 완료!", res)
@@ -201,7 +205,7 @@ function VoiceDiary4(){
                     {/* <div className={Styles.cylinderP} style={{left:'31.34vw'}}></div> */}
                     {/* <div className={Styles.cylinderP} style={{left:'30vw'}}></div> */}
                     {/* <img src={spring} alt="spring" style={{width: '35vw', top:'15.5vh', position:'absolute', zIndex:'2'}} /> */}
-                    <img src={spring2} alt="spring" style={{width: '5.5vw', top:'22.5vh', position:'absolute', zIndex:'2', left:'28.7vw'}} />
+                    <img src={spring2} alt="spring" style={{width: '5.5vw', top:'22.5vh', position:'absolute', zIndex:'2', left:'28.4vw'}} />
                     <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
                     fontFamily:`${fontstyle}`}}>
                         <p style={{ padding:'1.7vw'}}>{transcript}</p>

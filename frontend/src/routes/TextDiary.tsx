@@ -21,7 +21,7 @@ function TextDiary(){
     const params = useParams();
     const navigate = useNavigate();
     const Font = sessionStorage.getItem("Font");
-    const token:string|null = sessionStorage.getItem("token");
+    const token:any = sessionStorage.getItem("token");
 
     //뒤로가기 버튼
     const color = params.color
@@ -142,6 +142,11 @@ function TextDiary(){
                     "userID": token,
                     "voiceFilePath": "text"
                 },
+                {
+                    headers:{
+                        "Authorization" : token,
+                    }
+                }
 
             )
             .then((res) => {
@@ -165,7 +170,7 @@ function TextDiary(){
                         {/* <div className={Styles.cylinderP} style={{left:'29.9vw'}}></div> */}
                         {/* <div className={Styles.cylinderP} style={{left:'29vw'}}></div> */}
                         {/* <img src={spring} alt="spring" style={{width: '35vw', top:'16vh', position:'absolute', zIndex:'2'}} /> */}
-                        <img src={spring2} alt="spring" style={{width: '6.5vw', top:'24vh', position:'absolute', zIndex:'2', left:'27.6vw'}} />
+                        <img src={spring2} alt="spring" style={{width: '6.5vw', top:'24vh', position:'absolute', zIndex:'2', left:'27.4vw'}} />
 
                     <textarea name="textdiary" value={text} onChange={(
                         ev: React.ChangeEvent<HTMLTextAreaElement>,
