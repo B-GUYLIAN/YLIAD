@@ -35,21 +35,69 @@
 }
 
 .firefly4{
+    z-index: 20;
     position: absolute;
     width: 2vw;
     /* height: 3vh; */
     left: 35vw;
-    top: 55vh;
-    transform: rotate(-100deg);
+    top: 77vh;
+    transform: rotate(-70deg);
 }
 
 .firefly5{
     position: absolute;
     width: 2vw;
     /* height: 3vh; */
-    right: 50vw;
+    right: 55vw;
+    top: 47vh;
+    transform: rotate(-140deg);
+}
+
+.firefly6{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 9vw;
+    top: 34vh;
+    transform: rotate(-80deg);
+}
+
+.firefly7{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 15vw;
     top: 31vh;
-    transform: rotate(-180deg);
+    transform: rotate(60deg);
+}
+
+.firefly8{
+    z-index: 22;
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 15vw;
+    top: 70vh;
+    transform: rotate(30deg);
+}
+
+.firefly9{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 17vw;
+    top: 31vh;
+    transform: rotate(-50deg);
+}
+
+.firefly10{
+    z-index: 22;
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 18vw;
+    top: 59vh;
+    transform: rotate(-80deg);
 }
 
 .basictree1R{

@@ -138,13 +138,9 @@ function Mypage(){
                     </div>
 
                     {/* 차트 */}
-                    {/* <div className={Styles.chartP}>차트 자리</div> */}
-                    {/* <Pie data={data} /> */}
                     <div className={Styles.chartP} style={{ width:'20vw',margin:'0 auto', top:'-2vh' }}>
-                      {/* <Pie data={data} height="5vh" width="5vw" /> */}
                       <Pie data={data} />
                     </div>
-                    {/* <Link to="/lobby"><button> 로비로 이동 </button></Link> */}
                 </div>
             </BrowserView>
             <MobileView>
@@ -183,32 +179,6 @@ function Mypage(){
                         <p className={Styles.blueCnt}>{sad} </p>
                         <p className={Styles.redCnt}>{anger} </p>
                     </div>
-                    {/* <div className={Styles.Egroup}>
-                        <div>
-                            <img className={Styles.yellow} src={yellow} alt=""></img>
-                            <p className={Styles.yellowCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 10 </p>
-                        </div>
-                        <div>
-                            <img className={Styles.pink} src={pink} alt=""></img>
-                            <p className={Styles.pinkCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 10 </p>
-                        </div>
-                        <div>
-                            <img className={Styles.purple} src={purple} alt=""></img>
-                            <p className={Styles.purpleCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 10 </p>
-                        </div>
-                        <div>
-                            <img className={Styles.green} src={green} alt=""></img>
-                            <p className={Styles.greenCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 10 </p>
-                        </div>
-                        <div>
-                            <img className={Styles.blue} src={blue} alt=""></img>
-                            <p className={Styles.blueCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 10 </p>
-                        </div>
-                        <div>
-                            <img className={Styles.red} src={red} alt=""></img>
-                            <p className={Styles.redCnt} style={3 >= 10? {left:"0.8rem"}: {left:"1.2rem"}}>{""} 3 </p>
-                        </div>
-                    </div> */}
 
                     {/* 차트 */}
                     {/* <div className={Styles.chart}>차트 자리</div> */}

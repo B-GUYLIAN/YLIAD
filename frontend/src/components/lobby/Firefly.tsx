@@ -30,6 +30,11 @@ function Firefly(){
                     <img src={firefly} className={Styles.firefly3} alt="firefly"></img>
                     <img src={firefly} className={Styles.firefly4} alt="firefly"></img>
                     <img src={firefly} className={Styles.firefly5} alt="firefly"></img>
+                    <img src={firefly} className={Styles.firefly6} alt="firefly"></img>
+                    <img src={firefly} className={Styles.firefly7} alt="firefly"></img>
+                    <img src={firefly} className={Styles.firefly8} alt="firefly"></img>
+                    <img src={firefly} className={Styles.firefly9} alt="firefly"></img>
+                    <img src={firefly} className={Styles.firefly10} alt="firefly"></img>
                     <div style={{marginTop:'10vh'}}>
                         <img src={basictree3} className={Styles.basictree1R} alt="basictree3"></img>
                         <img src={bubbletree} className={Styles.bubbletreeR} alt="bubbletreeR"></img>

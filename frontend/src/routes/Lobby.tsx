@@ -6,6 +6,7 @@ import Stars2 from "../components/layout/Stars2";
 import { BrowserView, MobileView } from 'react-device-detect';
 import Fire from "../components/lobby/Fire";
 import Firefly from "../components/lobby/Firefly";
+import SuperMan from "../components/lobby/SuperMan";
 
 
 function Lobby(){
@@ -22,7 +23,7 @@ function Lobby(){
             {theme === 'modak'?
             <Fire /> : theme ==='bandi'?
             <Firefly/>: theme ==='super'?
-            <Fire/>: <Fire/>
+            <SuperMan/>: <Fire/>
         }
             {/* <Firefly /> */}
                 {/* <img className={Styles.earthP} src="https://img.icons8.com/officel/400/000000/globe-asia.png" alt="earth"/> */}
