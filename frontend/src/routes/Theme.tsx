@@ -4,7 +4,9 @@ import styles from "./Theme.module.css"
 import { BrowserView, MobileView } from 'react-device-detect';
 import Stars2 from "../components/layout/Stars2"
 import Navbar from "../components/layout/Navbar";
-import Modak from "../assets/images/modak.gif"
+import Modak from "../assets/images/modak.gif";
+import bandi from "../assets/images/bandi.gif";
+import Super from "../assets/images/super.gif";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
@@ -139,11 +141,11 @@ function Theme(){
                 </div>
                 <div id={styles.themebox2}>
                     <button  onClick={changeBandi} id={styles.btn2_P} > 반딧불</button>
-                    <img id={styles.modak} src={Modak} alt="modak" />
+                    <img id={styles.modak} src={bandi} alt="bandi" />
                 </div>
                 <div id={styles.themebox3}>
                     <button  onClick={changeSuper} id={styles.btn2_P} > 슈퍼맨</button>
-                    <img id={styles.modak} src={Modak} alt="modak" />
+                    <img id={styles.modak} src={Super} alt="Super" />
                 </div>
             </div>
             <Link to="/setting"><button id={styles.btn1_P}> 돌아가기 </button></Link>
@@ -161,11 +163,11 @@ function Theme(){
                 </div>
                 <div id={styles.themebox2M}>
                     <button  onClick={changeBandi} id={styles.btn2_M} > 반딧불</button>
-                    <img id={styles.modakM} src={Modak} alt="modak" />
+                    <img id={styles.modakM} src={bandi} alt="bandi" />
                 </div>
                 <div id={styles.themebox3M}>
                     <button  onClick={changeSuper} id={styles.btn2_M} > 슈퍼맨</button>
-                    <img id={styles.modakM} src={Modak} alt="modak" />
+                    <img id={styles.modakM} src={Super} alt="Super" />
                 </div>
             </div>
             <Link to="/setting"><button id={styles.btn1_M}> 돌아가기 </button></Link>

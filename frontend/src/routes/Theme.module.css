@@ -20,7 +20,8 @@
 
 #title_P{
     position: relative;
-    margin-bottom: 8vw;
+    /* margin-bottom: 9vw; */
+    margin-top: 5vh;
     left: 0.5vw;
 }
 
@@ -112,6 +113,7 @@
     bottom: 2vh;
 }
 
+
 #themebox{
     display: flex;
     text-align: center;
@@ -147,7 +149,7 @@
 
 #title_M{
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     left: 0.2rem;
 }
 
@@ -249,15 +251,15 @@
 #themebox1M {
     position: relative;
     right: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 #themebox2M {
     position: relative;
     right: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 #themebox3M {
     position: relative;
     right: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }

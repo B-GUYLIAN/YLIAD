@@ -20,7 +20,6 @@ function DayDiary(){
     const day = date?.slice(-2);
 
     // const[content, setContent] = useState('오늘의 일기를 써보도록 하자. 오늘은 너무나도 즐겁고 행복한 하루였다. 모든게 힘들고 짜증나며, 포기하고 싶어진다.')
-    const[content, setContent] = useState<string>('')
     const[senti, setSenti] = useState('없음')
     const[positive, setPositive] = useState<number>(0)
     const[neutral, setNeutral] = useState<number>(0)
@@ -38,6 +37,7 @@ function DayDiary(){
     const location= useLocation();
 
     const diary = location.state as {emotion: string, content:string};
+    // setContent(diary.content);
 
     useEffect(() => {
 
@@ -82,7 +82,7 @@ function DayDiary(){
       .post(
         "/sentiment-analysis/v1/analyze",
         {
-          content: content,
+          content: diary.content,
         },
         {
           headers: {

@@ -75,7 +75,8 @@ function Mypage(){
         datasets: [
             {
                 label: '# of Votes',
-                data: [anger, love, fear, joy, sad, disgust],
+                // data: [anger, love, fear, joy, sad, disgust],
+                data: [3, 1, 2, 5, 2, 1],
                 backgroundColor: [
                     '#FB5E3B',
                     '#FEA0E4',
