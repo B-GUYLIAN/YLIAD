@@ -5,6 +5,7 @@ import ipa from "../assets/images/downloadipa.png";
 import moving from "../assets/images/movingad.gif";
 import read from "../assets/images/read.png";
 import web from "../assets/images/chrome.png";
+import ucc from "../assets/videos/YLIAD2.mp4";
 import { toast, ToastContainer } from "react-toastify";
 import { useState } from "react";
 import { styled } from "@mui/material/styles";
@@ -155,12 +156,18 @@ function Intro() {
         </section>
 
         {/* 섹션 2 - UCC */}
-        {/* <section className={styles.section2}>
+        <section className={styles.section2}>
           <div className={styles.wrapper_video}>
             <p>Welcome to YLIAD</p>
-            <video src={ucc} itemType="video/mp4" controls loop></video>
+            <video
+              src={ucc}
+              itemType="video/mp4"
+              preload="none"
+              controls
+              loop
+            ></video>
           </div>
-        </section> */}
+        </section>
 
         {/* 섹션 3 - 서비스 기능 */}
         <section className={styles.section3}>
@@ -306,12 +313,18 @@ function Intro() {
         </section>
 
         {/* 섹션 2 - UCC */}
-        {/* <section className={styles.section2M}>
+        <section className={styles.section2M}>
           <div className={styles.wrapper_videoM}>
             <p>Welcome to YLIAD</p>
-            <video src={ucc} itemType="video/mp4" controls loop></video>
+            <video
+              src={ucc}
+              itemType="video/mp4"
+              preload="none"
+              controls
+              loop
+            ></video>
           </div>
-        </section> */}
+        </section>
 
         {/* 섹션 3 - 서비스 기능 */}
         <section className={styles.section3M}>

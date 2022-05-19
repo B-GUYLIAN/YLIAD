@@ -1,334 +1,324 @@
 @font-face {
-    font-family: 'SDMiSaeng';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-  font-family: 'Donoun-Medium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Donoun-Medium.woff2') format('woff2');
+  font-family: "SDMiSaeng";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'GangwonEdu_OTFBoldA';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-
-
-@font-face {
-  font-family: 'CookieRun-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-family: "Donoun-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Donoun-Medium.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-    font-family: 'KOTRAHOPE';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
+@font-face {
+  font-family: "CookieRun-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
-
-
-
+@font-face {
+  font-family: "KOTRAHOPE";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 #contentP {
-    /* z-index: -1; */
-      position: relative;
-      justify-content: center;
-      /* display: flex; */
-      top: 18vh;
-      /* width: 30vw; */
-      /* width: 31.7vw; */
-      width: 30vw;
-      /* height: 45vh; */
-      height: 30vh;
-      /* padding-top: 3vh; */
-      padding-top: 1.5vh;
-      padding-left: 2vw;
-      padding-right: 2vw;
-      /* line-height: 3.6vh; */
-      /* font-family: 'Dancing Script', cursive; */
-      font-family: 'KOTRAHOPE';
-      font-size: 1.5vw;
-      color: white;
-      resize: none;
-      margin-bottom: 1vh;
-      border: 0.2vw solid transparent ;
-      border-image: linear-gradient(
-      120deg,
-      /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
-      #FFE69295,
-      /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
-      #FFB7EB95,
-      /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
-      #DCA3FF95,
-      /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
-        #FBB03B95,
-      /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
-      #D3FFB095,
-      /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
-      #6AA6FF95
-    );
-      border-image-slice: 1;
-      /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px); */
-      overflow: auto;
-    }
+  /* z-index: -1; */
+  position: relative;
+  justify-content: center;
+  /* display: flex; */
+  top: 18vh;
+  /* width: 30vw; */
+  /* width: 31.7vw; */
+  width: 30vw;
+  /* height: 45vh; */
+  height: 30vh;
+  /* padding-top: 3vh; */
+  padding-top: 1.5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  /* line-height: 3.6vh; */
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: "KOTRAHOPE";
+  font-size: 1.5vw;
+  color: white;
+  resize: none;
+  margin-bottom: 1vh;
+  border: 0.2vw solid transparent;
+  border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/ #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/ #ffb7eb95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/ #dca3ff95,
+    /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/ #fbb03b95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/ #d3ffb095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/ #6aa6ff95
+  );
+  border-image-slice: 1;
+  /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px); */
+  overflow: auto;
+}
 
 #contentP ::-webkit-scrollbar {
-        width: 0.5vw;
-        background-color: rgba(255, 255, 255, 0);
-    }
-    
-#contentP ::-webkit-scrollbar-thumb {
-        background-color: azure;
-    }
-    
- #contentP ::-webkit-scrollbar-track {
-        background-color: aliceblue;
-    }
+  width: 0.5vw;
+  background-color: rgba(255, 255, 255, 0);
+}
 
+#contentP ::-webkit-scrollbar-thumb {
+  background-color: azure;
+}
+
+#contentP ::-webkit-scrollbar-track {
+  background-color: aliceblue;
+}
 
 #contentM {
-    /* z-index: -1; */
-      position: relative;
-      justify-content: center;
-      /* display: flex; */
-      top: 7rem;
-      /* width: 30vw; */
-      /* width: 31.7vw; */
-      width: 17rem;
-      /* height: 45vh; */
-      height: 13rem;
-      /* padding-top: 3vh; */
-      padding-top: 1rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      /* line-height: 3.6vh; */
-      /* font-family: 'Dancing Script', cursive; */
-      font-family: 'KOTRAHOPE';
-      font-size: 1.7rem;
-      color: white;
-      resize: none;
-      margin-bottom: 1rem;
-      border: 0.2vw solid transparent ;
-      border-image: linear-gradient(
-      120deg,
-      /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
-      #FFE69295,
-      /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
-      #FFB7EB95,
-      /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
-      #DCA3FF95,
-      /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
-        #FBB03B95,
-      /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
-      #D3FFB095,
-      /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
-      #6AA6FF95
-    );
-      border-image-slice: 1;
-      /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px); */
-      overflow: auto;
-    }
+  /* z-index: -1; */
+  position: relative;
+  justify-content: center;
+  /* display: flex; */
+  top: 7rem;
+  /* width: 30vw; */
+  /* width: 31.7vw; */
+  width: 17rem;
+  /* height: 45vh; */
+  height: 13rem;
+  /* padding-top: 3vh; */
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* line-height: 3.6vh; */
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: "KOTRAHOPE";
+  font-size: 1.7rem;
+  color: white;
+  resize: none;
+  margin-bottom: 1rem;
+  border: 0.2vw solid transparent;
+  border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/ #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/ #ffb7eb95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/ #dca3ff95,
+    /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/ #fbb03b95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/ #d3ffb095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/ #6aa6ff95
+  );
+  border-image-slice: 1;
+  /* background-image: repeating-linear-gradient(rgba(119, 191, 246, 0) 0px, rgba(119, 191, 246, 0) 25px, rgb(113, 125, 250) 26px); */
+  overflow: auto;
+}
 
 #contentP ::-webkit-scrollbar {
-        width: 0.5rem;
-        background-color: rgba(255, 255, 255, 0);
-    }
-    
+  width: 0.5rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+
 #contentP ::-webkit-scrollbar-thumb {
-        background-color: azure;
-    }
-    
- #contentP ::-webkit-scrollbar-track {
-        background-color: aliceblue;
-    }
+  background-color: azure;
+}
 
-
+#contentP ::-webkit-scrollbar-track {
+  background-color: aliceblue;
+}
 
 #date {
-    position: relative;
-    font-size: 2vw;
-    top: 16vh;
-    color: #ffed54;
+  position: relative;
+  font-size: 2vw;
+  top: 16vh;
+  color: #ffed54;
 }
 #dateM {
-    position: relative;
-    font-size: 3rem;
-    top: 6rem;
-    color: #ffed54;
+  position: relative;
+  font-size: 3rem;
+  top: 6rem;
+  color: #ffed54;
 }
-
 
 #btn1_P2 {
-    width: 8vw;
-    height: 4.5vh;
-    font-size: 1.5vw;
-    font-family: 'KOTRAHOPE';
-    font-weight: 600;
-    border-radius: 10px;
-    background-color: #ffed54;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-    transition: 0.4s all; 
-    overflow:hidden;
-    margin-top: 2vw;
-    top: 18vh;
+  width: 8vw;
+  height: 4.5vh;
+  font-size: 1.5vw;
+  font-family: "KOTRAHOPE";
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: 0.4s all;
+  overflow: hidden;
+  margin-top: 2vw;
+  top: 18vh;
 }
 
-
-#btn1_P2:hover{transform:scale(1.2);}
-#btn1_P2:after{
-    content:''; 
-    position: absolute; 
-    top: calc(50% - 50px); 
-    left: -50px; width: 20px; 
-    height: 100px; 
-    background: white; 
-    -webkit-transform: rotate(30deg); 
-    transform:rotate(30deg); 
-    -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
-    transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1); 
-    opacity: 0;}
+#btn1_P2:hover {
+  transform: scale(1.2);
+}
+#btn1_P2:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 50px);
+  left: -50px;
+  width: 20px;
+  height: 100px;
+  background: white;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+}
 #btn1_P2:hover:after {
-    left: calc(100% + 50px); 
-    opacity: 1;}
+  left: calc(100% + 50px);
+  opacity: 1;
+}
+
+.backP {
+  position: absolute;
+  top: 63vh;
+  left: 60vw;
+  cursor: pointer;
+}
 
 #btn1_M2 {
-        width: 9rem;
-        height: 2.8rem;
-        font-size: 2rem;
-        font-family: 'KOTRAHOPE';
-        font-weight: 500;
-        border-radius: 10px;
-        background-color: #ffed54;
-        cursor: pointer;
-        text-align: center;
-        position: relative;
-        transition: 0.4s all; 
-        overflow:hidden;
-        margin-top: 2vw;
-        top: 7rem;
-        z-index: 100;
-    }
-
-
-
-#anal_resultM{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.7rem;
-    top: 9rem;
-    position: relative;
-}
-#anal_posiM{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.5rem;
-    margin-top: 0.6rem;
-    color: blue;
-    top: 9rem;
-    position: relative;
-}
-#anal_neuM{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.5rem;
-    margin-top: 0.6rem;
-    color: #ffed54;
-    top: 9rem;
-    position: relative;
-}
-#anal_negaM{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.5rem;
-    margin-top: 0.6rem;
-    color: red;
-    top: 9rem;
-    position: relative;
+  width: 9rem;
+  height: 2.8rem;
+  font-size: 2rem;
+  font-family: "KOTRAHOPE";
+  font-weight: 500;
+  border-radius: 10px;
+  background-color: #ffed54;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  transition: 0.4s all;
+  overflow: hidden;
+  margin-top: 2vw;
+  top: 7rem;
+  z-index: 100;
 }
 
-#anal_box{
-    text-align: center;
-    position: relative;
-    right: 14vw;
+#anal_resultM {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.7rem;
+  top: 9rem;
+  position: relative;
+}
+#anal_posiM {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+  color: blue;
+  top: 9rem;
+  position: relative;
+}
+#anal_neuM {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+  color: #ffed54;
+  top: 9rem;
+  position: relative;
+}
+#anal_negaM {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.5rem;
+  margin-top: 0.6rem;
+  color: red;
+  top: 9rem;
+  position: relative;
 }
 
-#anal_boxM{
-    text-align: center;
-    position: relative;
+#anal_box {
+  text-align: center;
+  position: relative;
+  right: 14vw;
 }
 
-#anal_box2{
-    text-align: center;
-    position: relative;
-    left: 13vw;
-    font-size: 1vw;
-    width: 35vw;
-    font-family: 'ROKAFSansMedium';
-    top: 3.2vh;
+#anal_boxM {
+  text-align: center;
+  position: relative;
 }
 
-#anal_box2M{
-    text-align: center;
-    position: relative;
-    font-size: 1rem;
-    width: 20rem;
-    font-family: 'ROKAFSansMedium';
-    top: 10.5rem;
+#anal_box2 {
+  text-align: center;
+  position: relative;
+  left: 13vw;
+  font-size: 1vw;
+  width: 35vw;
+  font-family: "ROKAFSansMedium";
+  top: 3.2vh;
 }
 
-#anal_titleM{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.6rem;
-    position: relative;
-    margin-bottom: 1vh;
+#anal_box2M {
+  text-align: center;
+  position: relative;
+  font-size: 1rem;
+  width: 20rem;
+  font-family: "ROKAFSansMedium";
+  top: 10.5rem;
 }
 
-#anal_title{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.5vw;
-    position: relative;
-    margin-bottom: 1vh;
+#anal_titleM {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.6rem;
+  position: relative;
+  margin-bottom: 1vh;
 }
 
+#anal_title {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.5vw;
+  position: relative;
+  margin-bottom: 1vh;
+}
 
-#anal_result{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.5vw;
-    top: 22vh;
-    position: relative;
+#anal_result {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.5vw;
+  top: 22vh;
+  position: relative;
 }
-#anal_posi{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.4vw;
-    margin-top: 0.6rem;
-    color: blue;
-    top: 22vh;
-    position: relative;
+#anal_posi {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.4vw;
+  margin-top: 0.6rem;
+  color: blue;
+  top: 22vh;
+  position: relative;
 }
-#anal_neu{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.4vw;
-    margin-top: 0.6rem;
-    color: #ffed54;
-    top: 22vh;
-    position: relative;
+#anal_neu {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.4vw;
+  margin-top: 0.6rem;
+  color: #ffed54;
+  top: 22vh;
+  position: relative;
 }
-#anal_nega{
-    font-family: 'ROKAFSansMedium';
-    font-size: 1.4vw;
-    margin-top: 0.6rem;
-    color: red;
-    top: 22vh;
-    position: relative;
+#anal_nega {
+  font-family: "ROKAFSansMedium";
+  font-size: 1.4vw;
+  margin-top: 0.6rem;
+  color: red;
+  top: 22vh;
+  position: relative;
 }

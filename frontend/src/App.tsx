@@ -31,6 +31,10 @@ function App() {
   const [bgmOn, setbgmOn] = useState<boolean>(false);
   const [audio, setAudio] = useState(new Audio(MyStar));
   const [changeBGM, setChangeBGM] = useState<string>("MyStar");
+  // 접속기기 Mobile인지 여부 확인
+  const isMobile: Boolean = /Mobi/i.test(window.navigator.userAgent);
+  // 모바일을 모바일 웹 vs 웹뷰 로 나누기 위한 변수 생성
+  const browserInfo = window.navigator.userAgent;
 
   useEffect(() => {
     if (changeBGM === "MyStar") {
@@ -61,8 +65,25 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Intro />}></Route>
-          <Route path="/home" element={<Home />}></Route>
+          {isMobile ? (
+            browserInfo.indexOf("MyApp") > -1 ? (
+              // 모바일 중에서 '웹뷰'
+              <Route path="/" element={<Home />}></Route>
+            ) : (
+              // 모바일 '브라우저'
+              <Route path="/" element={<Intro />}></Route>
+            )
+          ) : (
+            <Route path="/" element={<Home />}></Route>
+          )}
+
+          {isMobile ? (
+            browserInfo.indexOf("MyApp") > -1 ? null : (
+              <Route path="/home" element={<Home />}></Route>
+            )
+          ) : null}
+
+          {isMobile ? <Route path="/home" element={<Home />}></Route> : null}
           <Route path="/lobby" element={<Lobby />}></Route>
           <Route path="/calendar" element={<CalendarPage />}></Route>
           <Route path="/clinic" element={<Clinic />}></Route>
