@@ -142,7 +142,7 @@
     position: absolute;
     width: 3rem;
     left: 4rem;
-    top: 6rem;
+    top: 8rem;
 }
 
 /* 클래식별 노랑 */
@@ -150,7 +150,7 @@
     position: absolute;
     width: 1.5rem;
     right: 6rem;
-    top: 14rem;
+    top: 15.5rem;
 }
 
 /* 트윙클별 */
@@ -158,7 +158,7 @@
     position: absolute;
     width: 1.5rem;
     left: 9rem;
-    top: 5rem;
+    top: 7rem;
 }
 
 /* 흰색 별사탕 */
@@ -166,7 +166,7 @@
     position: absolute;
     width: 1.5rem;
     right: 3rem;
-    top: 6rem;
+    top: 7.5rem;
 }
 
 /* 작은 별사탕 하얀거 */
@@ -175,7 +175,7 @@
     width: 0.9rem;
     /* height: 1.5vh; */
     left: 4rem;
-    top: 15rem;
+    top: 16.5rem;
 }
 
 /* 노랑 별사탕 작은거 */
@@ -183,8 +183,8 @@
     position: absolute;
     width: 1.2rem;
     /* height: 1.5vh; */
-    left: 10rem;
-    top: 11rem;
+    left: 12rem;
+    top: 18rem;
 }
 
 /* 흰별 클래식 */
@@ -192,21 +192,21 @@
     position: absolute;
     width: 1.2rem;
     /* height: 3vh; */
-    right: 10rem;
-    top: 7rem;
+    right: 13rem;
+    top: 10rem;
 }
 
 .fireM{
     position: fixed;
     z-index: 10;
-    top: 25rem;
+    top: 31rem;
 }
 
 .groundM{
     position: fixed;
     width: 60rem;
     height: 40rem;
-    bottom: -13rem;
+    bottom: -15rem;
 }
 
 .adM{
@@ -214,16 +214,16 @@
     /* position: relative; */
     position: fixed;
     width: 13rem;
-    top: 37rem;
-    right: 0.2rem;
+    top: 42rem;
+    right: 1.5rem;
 }
 
 .campingM{
     z-index: 18;
     /* position: relative; */
     position: fixed;
-    width: 8rem;
-    top: 34.5rem;
+    width: 10rem;
+    top: 39rem;
     /* right: -5vw; */
     right: 0rem;
     transform: rotate(10deg)
@@ -232,23 +232,23 @@
 .CactusM{
     z-index: 20;
     position: fixed;
-    width: 5rem;
-    top: 45.2rem;
+    width: 6rem;
+    top: 49.2rem;
     left: 1rem;
 }
 .Cactus2M{
     z-index: 20;
     position: fixed;
-    width: 4rem;
-    top: 46rem;
-    left: 2.9rem;
+    width: 5rem;
+    top: 50.5rem;
+    left: 3rem;
     /* transform: scaleX(-1); */
 }
 .pyramidM{
     z-index: 20;
     position: fixed;
-    width: 6rem;
-    top: 36.3rem;
+    width: 7.5rem;
+    top: 42.2rem;
     left: 1.3rem;
     transform: rotate(-10deg)
 }

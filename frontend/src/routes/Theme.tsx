@@ -154,7 +154,20 @@ function Theme(){
         <MobileView>
         <div className={styles.M_container2}>
             <h1 id={styles.title_M}>Theme</h1>
-            
+            <div id={styles.themeboxM}>
+                <div id={styles.themebox1M}>
+                    <button  onClick={changeModak} id={styles.btn2_M} > 모닥불</button>
+                    <img id={styles.modakM} src={Modak} alt="modak" />
+                </div>
+                <div id={styles.themebox2M}>
+                    <button  onClick={changeBandi} id={styles.btn2_M} > 반딧불</button>
+                    <img id={styles.modakM} src={Modak} alt="modak" />
+                </div>
+                <div id={styles.themebox3M}>
+                    <button  onClick={changeSuper} id={styles.btn2_M} > 슈퍼맨</button>
+                    <img id={styles.modakM} src={Modak} alt="modak" />
+                </div>
+            </div>
             <Link to="/setting"><button id={styles.btn1_M}> 돌아가기 </button></Link>
         </div>
         </MobileView>

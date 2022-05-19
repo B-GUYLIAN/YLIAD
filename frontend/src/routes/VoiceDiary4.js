@@ -9,8 +9,8 @@ import Stars2 from "../components/layout/Stars2";
 // import { render } from "react-dom";
 import useRecorder from "./VoiceRecoder";
 import moment from "moment";
-import spring from "../assets/images/spring.png"
-import spring2 from "../assets/images/spring2.png"
+import spring from "../assets/images/spring.png";
+import spring2 from "../assets/images/spring2.png";
 import AWS from 'aws-sdk';
 import { v1, v3, v4, v5} from 'uuid';
 import axios from "axios";
@@ -26,8 +26,8 @@ function VoiceDiary4(){
     const userid = sessionStorage.getItem("userid");
 
     //뒤로가기 버튼
+    const date = params.date
     function moveselectDiary(){
-        const date = params.date
         navigate(`/selectdiary/${date}/${color}`)
     }
 
@@ -64,29 +64,15 @@ function VoiceDiary4(){
     } else {
         fontstyle = 'KOTRAHOPE'
     }
-   
-
 
     //recode css 바꾸기
-    // const [recoding, setRecoding] = useState<boolean>(false);
     const [recoding, setRecoding] = useState(false);
     const getRecoding = () => {
         setRecoding(!recoding);
     }
 
-    //***녹음 관련 함수 시작
-    // type audioRecording = {
-    //     audioURL: string | boolean;
-    //     isRecording: string | boolean;
-    //     startRecording: string | boolean;
-    //     stopRecording: string | boolean;
-    // }
-
-    // let [audioURL, isRecording, startRecording, stopRecording] = useRecorder<audioRecording>();
-    let [resetTranscript, dailytext, transcript, audioURL, isRecording, startRecording, stopRecording] = useRecorder();
+    let [resetTranscript, dailytext, transcript, audioURL, isRecording, setDailyText, startRecording, stopRecording] = useRecorder();
     const audio = new Audio(audioURL);
-    //녹음 내용 재생 && replay css 바꾸기1
-    // const [replay, setReplay] = useState(false);
 
     //재생
     const start = () => {
@@ -179,14 +165,17 @@ function VoiceDiary4(){
                     }
                 }
             )
-            .then((res) => {
-                console.log("저장 완료!", res)
-                console.log(dailytext.transcript);
+            .then(async (res) => {
+                // console.log("저장 완료!", res)
+                // console.log(dailytext.transcript);
+                setDailyText('');
+                // transcript = '';
+                navigate(`/selectdiary/${date}/${color}`)
                 send();
             })
             .catch(error => {
                 console.log("저장 실패!", error.response)
-                console.log(dailytext.transcript);
+                // console.log(dailytext.transcript);
                 fail();
             })
     };
@@ -207,9 +196,6 @@ function VoiceDiary4(){
             <BrowserView >
                 <div className={base.container}> 
                     {/* <h1>음성 일기</h1> */}
-                    {/* <div className={Styles.cylinderP} style={{left:'31.34vw'}}></div> */}
-                    {/* <div className={Styles.cylinderP} style={{left:'30vw'}}></div> */}
-                    {/* <img src={spring} alt="spring" style={{width: '35vw', top:'15.5vh', position:'absolute', zIndex:'2'}} /> */}
                     <img src={spring2} alt="spring" style={{width: '5.5vw', top:'22.5vh', position:'absolute', zIndex:'2', left:'28.4vw'}} />
                     <div className={Styles.timeP} style={{backgroundColor:`${bgcolor}`,
                     fontFamily:`${fontstyle}`}}>

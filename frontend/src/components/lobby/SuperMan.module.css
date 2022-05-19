@@ -98,23 +98,23 @@
     position: absolute;
     width: 1.5rem;
     right: 3.5rem;
-    top: 48rem;
+    top: 50rem;
 }
 
 /* 트윙클별 */
 .star2M{
     position: absolute;
     width: 1.5rem;
-    left: 1rem;
-    top: 17rem;
+    left: 1.2rem;
+    top: 19rem;
 }
 
 /* 흰색 별사탕 */
 .star3M{
     position: absolute;
     width: 1rem;
-    right: 2.5rem;
-    top: 9rem;
+    right: 8rem;
+    top: 10rem;
 }
 
 /* 작은 별사탕 하얀거 */
@@ -123,7 +123,7 @@
     width: 0.9rem;
     /* height: 1.5vh; */
     left: 5rem;
-    top: 30rem;
+    top: 31rem;
 }
 
 /* 노랑 별사탕 작은거 */
@@ -131,7 +131,7 @@
     position: absolute;
     width: 1.5rem;
     right: 3rem;
-    top: 20rem;
+    top: 22rem;
 }
 
 /* 흰별 클래식 */
@@ -139,34 +139,34 @@
     position: absolute;
     width: 1.5rem;
     left: 2rem;
-    top: 50rem;
+    top: 53rem;
 }
 
 
 .moonMoveM{
     position: fixed;
-    width: 5rem;
+    width: 5.5rem;
     right: 5.3rem;
-    top: 38rem;
+    top: 40rem;
 }
 
 .ardsuperM{
     position: fixed;
-    width: 15rem;
-    top: 20rem;
+    width: 16.5rem;
+    top: 22rem;
     right: 3.5rem;
 }
 
 .earthShadowM{
     position: fixed;
-    width: 12rem;
-    top: 40rem;
-    left: 2.7rem;
+    width: 14rem;
+    top: 41rem;
+    left: 2.8rem;
 }
 
 .spaceStationM{
     position: fixed;
-    width: 8rem;
+    width: 10rem;
     top: 8rem;
-    left: 2rem;
+    left: 3rem;
 }

@@ -26,6 +26,7 @@ import VoiceDiary4 from "./routes/VoiceDiary4";
 import STT from "./routes/STT";
 import Sentiment from "./routes/Sentiment";
 import Intro from "./routes/Intro";
+import DayList from "./routes/DayList";
 
 function App() {
   const [bgmOn, setbgmOn] = useState<boolean>(false);
@@ -101,6 +102,7 @@ function App() {
           ></Route>
           <Route path="/textdiary/:date/:color" element={<TextDiary />}></Route>
           <Route path="/daydiary/:date" element={<DayDiary />}></Route>
+          <Route path="/dayList/:date" element={<DayList />}></Route>
           <Route path="/mypage" element={<Mypage />}></Route>
           <Route path="/theme" element={<Theme />}></Route>
           <Route

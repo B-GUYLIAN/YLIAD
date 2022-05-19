@@ -66,7 +66,7 @@ const useRecorder = () => {
     saveDailyText();
   };
 
-  return [resetTranscript, dailytext, transcript, audioURL, isRecording, startRecording, stopRecording];
+  return [resetTranscript, dailytext, transcript, audioURL, isRecording, setDailyText,startRecording, stopRecording];
 };
 
 async function requestRecorder() {

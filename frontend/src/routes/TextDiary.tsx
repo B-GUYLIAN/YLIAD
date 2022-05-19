@@ -26,8 +26,8 @@ function TextDiary(){
 
     //뒤로가기 버튼
     const color = params.color
+    const date = params.date
     function moveselectDiary(){
-        const date = params.date
         const color = params.color
         navigate(`/selectdiary/${date}/${color}`)
     }
@@ -153,6 +153,8 @@ function TextDiary(){
             .then((res) => {
                 console.log("저장 완료!", res)
                 send();
+                setText('');
+                // navigate(`/selectdiary/${date}/${color}`)
             })
             .catch(error => {
                 console.log("저장 실패!", error.response)

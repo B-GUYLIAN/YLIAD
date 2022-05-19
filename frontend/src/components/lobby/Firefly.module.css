@@ -215,7 +215,7 @@
     position: absolute;
     width: 3rem;
     left: 4rem;
-    top: 6rem;
+    top: 8rem;
 }
 
 /* 반딧불이 밭 */
@@ -224,7 +224,7 @@
     width: 2rem;
     /* height: 3vh; */
     right: 4rem;
-    top: 10rem;
+    top: 11rem;
     transform: rotate(-10deg);
 }
 
@@ -233,7 +233,7 @@
     width: 1.5rem;
     /* height: 3vh; */
     left: 3rem;
-    top: 15rem;
+    top: 16rem;
     transform: rotate(20deg);
 }
 
@@ -242,7 +242,7 @@
     width: 1.5rem;
     /* height: 3vh; */
     right: 5rem;
-    top: 20rem;
+    top: 21rem;
     transform: rotate(70deg);
 }
 
@@ -272,14 +272,14 @@
     right: -46vw; */
     position: fixed;
     width: 10rem;
-    top: 29rem;
+    top: 34rem;
     right: -1rem;
 }
 .bubbletreeRM{
     z-index: 19;
     position: fixed;
     width: 8rem;
-    top: 29rem;
+    top: 34rem;
     right: 3rem;
     /* position: relative;
     width: 15vw;
@@ -295,7 +295,7 @@
     left: -29vw */
     position: fixed;
     width: 10rem;
-    top: 29rem;
+    top: 34rem;
     left: -1rem;
 }
 .bubbletreeLM{
@@ -306,7 +306,7 @@
     left: -37vw */
     position: fixed;
     width: 8rem;
-    top: 29rem;
+    top: 34rem;
     left: 4rem;
 }
 .stone2M{
@@ -317,7 +317,7 @@
     left: -50.5vw */
     position: fixed;
     width: 3rem;
-    top: 38rem;
+    top: 43rem;
     left: 8rem;
 }
 
@@ -332,7 +332,7 @@
     z-index: 20;
     position: fixed;
     width: 13rem;
-    top: 38rem;
+    top: 40rem;
     right: 6rem;
     /* z-index: 20;
     position: relative;
@@ -349,7 +349,7 @@
     */
     position: fixed;
     width: 13rem;
-    top: 44rem;
+    top: 46rem;
     right: -1.5rem;
 }
 
@@ -357,8 +357,8 @@
     position: fixed;
     z-index: 22;
     width: 5rem;
-    top: 44rem;
-    left: 1.5rem;
+    top: 50rem;
+    left: 1.6rem;
     transform: rotate(-5deg)
 }
 
@@ -366,7 +366,7 @@
     position: fixed;
     z-index: 22;
     width: 3rem;
-    top: 71vh;
+    top: 43.5rem;
     right: 0rem;
     transform: rotate(5deg)
 }
