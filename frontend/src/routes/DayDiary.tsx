@@ -51,7 +51,7 @@ function DayDiary(){
     } else if(bgcolor === 'fear'){
         bgcolor = '#CA77FE95'
     } else if(bgcolor === 'joy'){
-        bgcolor = '#FFE69295'
+        bgcolor = '#ffed5495'
     } else if(bgcolor === 'sad'){
         bgcolor = '#6AA6FF95'
     } else if(bgcolor === 'disgust'){
@@ -154,6 +154,12 @@ function DayDiary(){
                 </div>
             
             <button id={styles.btn1_M2} onClick={analyzeSentiment}> 감정분석 </button>
+            <img
+                onClick={moveToCalendar}
+                className={styles.backPM}
+                src="https://img.icons8.com/office/30/FFFFFF/undo.png"
+                alt="selectDiary"
+             />
             <div id={styles.anal_boxM}>
                 <div id={styles.anal_resultM}> 감정 분류 결과: {senti} </div>
                 <div id={styles.anal_posiM}> 긍정: {positive} </div>

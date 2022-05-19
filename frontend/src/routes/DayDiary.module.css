@@ -199,6 +199,13 @@
   cursor: pointer;
 }
 
+.backPM {
+  position: absolute;
+  top: 28rem;
+  left: 22rem;
+  cursor: pointer;
+}
+
 #btn1_M2 {
   width: 9rem;
   height: 2.8rem;

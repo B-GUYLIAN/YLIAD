@@ -69,7 +69,7 @@ function TextDiary(){
     } else if(bgcolor === 'yellow'){
         // bgcolor = '#FFE69295'
         // bgcolor = '#FFDE6D95'
-        bgcolor = '#FDD03B95'
+        bgcolor = '#FFED5495'
     } else if(bgcolor === 'blue'){
         bgcolor = '#6AA6FF95'
     } else if(bgcolor === 'green'){

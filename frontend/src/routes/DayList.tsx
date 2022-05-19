@@ -82,7 +82,7 @@ function DayList(){
     } else if(bgcolor === 'fear'){
         bgcolor = '#CA77FE95'
     } else if(bgcolor === 'joy'){
-        bgcolor = '#FFE69295'
+        bgcolor = '#ffed5495'
     } else if(bgcolor === 'sad'){
         bgcolor = '#6AA6FF95'
     } else if(bgcolor === 'disgust'){

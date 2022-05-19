@@ -42,7 +42,7 @@ function VoiceDiary4(){
         bgcolor = '#CA77FE95'
     } else if(bgcolor === 'yellow'){
         // bgcolor = '#FFE69295'
-        bgcolor = '#FDD03B95'
+        bgcolor = '#FFED5495'
     } else if(bgcolor === 'blue'){
         bgcolor = '#6AA6FF95'
     } else if(bgcolor === 'green'){
