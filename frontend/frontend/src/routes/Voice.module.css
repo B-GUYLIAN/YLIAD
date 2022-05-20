@@ -1,0 +1,555 @@
+/* PC 버전 */
+.cylinderP{
+    position:absolute;
+    /* left:31.34vw; */
+    top: 18vh;
+    /* width: 2.95vw; */
+    /* height:2vh; */
+    width: 1.9vw;
+    height:1.5vh;
+    /* border-radius: 50% / 25%; */
+    /* border-radius: 44% / 55%; */
+    border-radius: 105vw / 38vw;
+    /* background-color: rgb(0, 0, 255); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border: 1px solid transparent;
+}
+.cylinderP:after{
+    z-index: 1;
+    position: absolute;
+    /* width:3vw; */
+    width:2vw;
+    height:49vh;
+    left:0;
+    top:-0.3vh;
+    
+    /* background-color:  rgba(0, 0, 255, 0.8); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+      /* #FB5E3B95, */
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    /* border-radius: 100px / 37.5px; */
+    border-radius: 100vw / 37.5vw;
+    content: '';
+  }
+
+.timeP {
+    position: absolute;
+    justify-content: center;
+    /* top: 24vh; */
+    top: 20vh;
+    /* width: 30vw; */
+    /* width: 32vw; */
+    width: 34.64vw;
+    height: 45vh;
+    /* height: 5vh; */
+    /* border: 0.1vw solid #521cf4 ; */
+    border-left: none;
+    border: 0.2vw solid transparent ;
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #FFE69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image-slice: 1;
+    /* border-radius: 3vw; */
+    padding-left: 1vw;
+    padding-right: 1vw;
+    /* padding-left: 2vw; */
+    font-size: 3.3vh;
+    color: white;
+    /* scroll-behavior: auto; */
+    overflow: auto;
+}
+
+.timeP::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.timeP::-webkit-scrollbar-thumb {
+    background-color: azure;
+}
+
+.timeP::-webkit-scrollbar-track {
+    background-color: aliceblue;
+}
+
+.recodeGroupP{
+    display: flex;
+    justify-content: center;
+}
+
+.recodeP {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 70vh;
+    width: 5vw;
+    height: 9vh;
+    border-radius: 50%;
+    background-color: red;
+    border: 1.5vh solid aliceblue;
+    cursor: pointer;
+}
+
+.recodingP {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 70vh;
+    width: 5vw;
+    height: 9vh;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: red;
+    border: 1.5vh solid aliceblue;
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+#recodeP::checked ~ .recodeP {
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+.replayP{
+    position: relative;
+    top: 46vh;
+    margin-left: 2vw;
+    /* border-bottom: 0.45in solid transparent;
+    border-top: 0.45in solid transparent;
+    border-left: 0.3in solid skyblue;
+    border-right: 0rem solid transparent; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2vw 0 2vw 3vw;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+.stopP{
+    position: relative;
+    top: 46vh;
+    margin-left: 2vw;
+    width: 1.5vh;
+    height: 8vh;
+    /* border-left-color:#ffffff; */
+    border-left: 2vh solid #ffffff;
+    border-right:2vh solid #ffffff;
+}
+
+/* .on_now_tag:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fd183a;
+    border-radius: 50%;
+    margin-left: 3px;
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+} */
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.infoP {
+    position: absolute;
+    justify-content: center;
+    font-size: 4vh;
+    top: 90vh;
+}
+
+.buttonP {
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.audioP{
+    position: relative;
+    left: -9vw;
+    padding-top: 1vh;
+    /* top: 75vh; */
+    top: 64vh;
+}
+
+.playP {
+    position: relative;
+    margin-right: 0.5vw;
+    padding-top: 1vh;
+    cursor: pointer;
+}
+
+.stop2P {
+    position: relative;
+    padding-top: 1vh;
+    cursor: pointer;
+}
+.resetP {
+    position: relative;
+    margin-left: 0.6vw;
+    margin-bottom: 0.5vh;
+    /* padding-top: -1vh; */
+    cursor: pointer;
+}
+
+.fileP{
+    position: relative;
+    right: -9vw;
+    padding-top: 1vh;
+    top: 64vh;
+    cursor: pointer;
+}
+
+.saveP {
+    position: relative;
+    /* left: -4vw; */
+    padding-top: 1vh;
+    cursor: pointer;
+    /* top: 75vh; */
+    /* top: 64vh; */
+}
+
+.backP {
+    position: relative;
+    margin-left: 0.5vw;
+    padding-top: 1vh;
+    cursor: pointer;
+}
+
+
+/* //////////////////////////////////////////////////////// */
+/* 모바일 버전 */
+.cylinder{
+    position:absolute;
+    left:23.4rem;
+    top: 8.5rem;
+    width: 1.85rem;
+    height:0.6rem;
+    transform: rotate( 90deg );
+    /* border-radius: 50% / 25%; */
+    /* border-radius: 44% / 55%; */
+    border-radius: 105rem / 38rem;
+    /* background-color: rgb(0, 0, 255); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border: 0.11rem solid transparent;
+}
+.cylinder:after{
+    z-index: 1;
+    position: absolute;
+    width:2rem;
+    height:24rem;
+    left:0;
+    top:-0.2rem;
+    
+    /* background-color:  rgba(0, 0, 255, 0.8); */
+    background-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #ffe69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    /* border-radius: 100px / 37.5px; */
+    border-radius: 100rem / 37.5rem;
+    content: '';
+  }
+
+.time {
+    position: absolute;
+    justify-content: center;
+    top: 9.94rem;
+    width: 20rem;
+    height: 25rem;
+    font-size: 2.2rem;
+    color: white;
+    border: 0.3rem solid transparent ;
+    border-image: linear-gradient(
+    120deg,
+    /* 노랑: 연한건 FFE692 진한건 FFDE6D*/
+     #FFE69295,
+    /* 분홍: 연한건 FFB7EB 진한건 FEA0E4*/
+     #FFB7EB95,
+    /* 보라: 연한건 DCA3FF 진한건 CA77FE*/
+     #DCA3FF95,
+     /* 빨강: 연한건 FBB03B 진한건 FB5E3B*/
+      #FBB03B95,
+    /* 연두: 연한건 D3FFB0 진한건 A8FF63*/
+     #D3FFB095,
+    /* 파랑: 연한건 6AA6FF 진한건 3B5AFB*/
+     #6AA6FF95
+  );
+    border-image-slice: 1;
+    /* border-radius: 3rem; */
+    padding-left: 1.5rem;
+    padding-right: 1.0rem;
+    /* scroll-behavior: auto; */
+    overflow: auto;
+}
+
+.timeP::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.timeP::-webkit-scrollbar-thumb {
+    background-color: azure;
+}
+
+.timeP::-webkit-scrollbar-track {
+    background-color: aliceblue;
+}
+
+.recodeGroup{
+    display: flex;
+    justify-content: center;
+}
+
+.recode{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 36rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: red;
+    border: 0.7rem solid aliceblue;
+}
+
+.recoding {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 36rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: red;
+    border: 0.7rem solid aliceblue;
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+#recode::checked ~ .recode {
+    box-shadow: 0 0 30px rgb(254, 194, 194);
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+.replay{
+    position: relative;
+    top: 26rem;
+    margin-left: 2rem;
+    /* border-bottom: 0.45in solid transparent;
+    border-top: 0.45in solid transparent;
+    border-left: 0.3in solid skyblue;
+    border-right: 0rem solid transparent; */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 2.5rem 0 2.5rem 3.5rem;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+.stop{
+    position: relative;
+    top: 26.3rem;
+    margin-left: 2rem;
+    width: 1.5rem;
+    height: 4.5rem;
+    /* border-left-color:#ffffff; */
+    border-left: 1rem solid #ffffff;
+    border-right:1rem solid #ffffff;
+}
+
+/* .on_now_tag:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fd183a;
+    border-radius: 50%;
+    margin-left: 3px;
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+} */
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.info{
+    position: absolute;
+    justify-content: center;
+    font-size: 2rem;
+    top: 50rem;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.audio{
+    position: relative;
+    padding-top: 1rem;
+    left: -5rem;
+    top: 37rem;  
+}
+.play{
+    position: relative;
+    padding-top: 1rem;
+    margin-right: 0.5rem;
+    /* left: -3rem; */
+    /* top: 33rem;   */
+}
+.stop2{
+    position: relative;
+    padding-top: 1rem;
+    /* left: -3rem; */
+    /* top: 33rem;   */
+}
+
+.reset{
+    position: relative;
+    margin-left: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.file{
+    position: relative;
+    padding-top: 1rem;
+    right: -5rem;
+    top: 37rem;  
+}
+
+.save {
+    position: relative;
+    padding-top: 1rem;
+    /* left: -3rem; */
+    /* top: 33rem; */
+}
+
+.back {
+    position: relative;
+    padding-top: 1rem;
+    margin-left: 0.5rem;
+    /* right: -3rem; */
+    /* top: 33rem; */
+}

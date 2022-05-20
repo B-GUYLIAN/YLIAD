@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'SDMiSaeng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+.container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'KOTRAHOPE';
+}
+
+
+body {
+    z-index: -50;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    background-position: 50% 0%;
+    background-size: 150vmax 150vmax;
+    background-repeat: no-repeat;
+    background-color: #090b3b;
+    color: white;
+  }
+

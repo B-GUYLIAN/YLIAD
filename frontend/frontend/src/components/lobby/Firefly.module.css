@@ -1,0 +1,371 @@
+/* PC 버전 */
+.moon{
+    position: absolute;
+    width: 3vw;
+    left: 28vw;
+    top: 18vh;
+}
+
+/* 반딧불이 밭 */
+.firefly{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 30vw;
+    top: 21vh;
+    transform: rotate(-10deg);
+}
+
+.firefly2{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 30vw;
+    top: 30vh;
+    transform: rotate(20deg);
+}
+
+.firefly3{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 35vw;
+    top: 54vh;
+    transform: rotate(70deg);
+}
+
+.firefly4{
+    z-index: 20;
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 35vw;
+    top: 77vh;
+    transform: rotate(-70deg);
+}
+
+.firefly5{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 55vw;
+    top: 47vh;
+    transform: rotate(-140deg);
+}
+
+.firefly6{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 9vw;
+    top: 34vh;
+    transform: rotate(-80deg);
+}
+
+.firefly7{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 15vw;
+    top: 31vh;
+    transform: rotate(60deg);
+}
+
+.firefly8{
+    z-index: 22;
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    right: 15vw;
+    top: 70vh;
+    transform: rotate(30deg);
+}
+
+.firefly9{
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 17vw;
+    top: 31vh;
+    transform: rotate(-50deg);
+}
+
+.firefly10{
+    z-index: 22;
+    position: absolute;
+    width: 2vw;
+    /* height: 3vh; */
+    left: 18vw;
+    top: 59vh;
+    transform: rotate(-80deg);
+}
+
+.basictree1R{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: 30vh;
+    right: -46vw; */
+    position: fixed;
+    width: 20vw;
+    top: 39vh;
+    right: 2vw;
+}
+.bubbletreeR{
+    z-index: 19;
+    position: fixed;
+    width: 15vw;
+    top: 40vh;
+    right: 13vw;
+    /* position: relative;
+    width: 15vw;
+    top: 25vh;
+    right: -20vw; */
+}
+
+.basictree1L{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: -17vh;
+    left: -29vw */
+    position: fixed;
+    width: 20vw;
+    top: 39vh;
+    left: 2vw;
+}
+.bubbletreeL{
+    z-index: 19;
+    /* position: relative;
+    width: 15vw;
+    top: -22vh;
+    left: -37vw */
+    position: fixed;
+    width: 15vw;
+    top: 41vh;
+    left: 13vw;
+}
+.stone2{
+    z-index: 19;
+    /* position: relative;
+    width: 5vw;
+    top: -5vh;
+    left: -50.5vw */
+    position: fixed;
+    width: 5vw;
+    top: 85vh;
+    left: 15vw
+}
+
+.ground{
+    position: fixed;
+    width: 130vw;
+    /* height: 120vh; */
+    top: 43vh;
+}
+
+.ad{
+    z-index: 20;
+    position: fixed;
+    width: 17vw;
+    top: 55vh;
+    right: 25vw;
+    /* z-index: 20;
+    position: relative;
+    width: 15vw;
+    top: -40vh;
+    right: -25vw; */
+}
+
+.stone{
+    z-index: 19;
+    /* position: relative;
+    top: -40vh; 
+    right: -19vw;
+    */
+    width: 15vw;
+    position: fixed;
+    top: 71vh;
+    right: 17vw;
+}
+
+.woods{
+    position: fixed;
+    z-index: 22;
+    width: 6vw;
+    top: 70vh;
+    left: 19.5vw;
+    transform: rotate(-5deg)
+}
+
+.woods2{
+    position: fixed;
+    z-index: 22;
+    width: 6vw;
+    top: 74vh;
+    right: 5vw;
+    transform: rotate(5deg)
+}
+
+
+/* 모바일 버전 ///////////////////////////////////////////////// */
+/* PC 버전 */
+.moonM{
+    position: absolute;
+    width: 3rem;
+    left: 4rem;
+    top: 8rem;
+}
+
+/* 반딧불이 밭 */
+.fireflyM{
+    position: absolute;
+    width: 2rem;
+    /* height: 3vh; */
+    right: 4rem;
+    top: 11rem;
+    transform: rotate(-10deg);
+}
+
+.firefly2M{
+    position: absolute;
+    width: 1.5rem;
+    /* height: 3vh; */
+    left: 3rem;
+    top: 16rem;
+    transform: rotate(20deg);
+}
+
+.firefly3M{
+    position: absolute;
+    width: 1.5rem;
+    /* height: 3vh; */
+    right: 5rem;
+    top: 21rem;
+    transform: rotate(70deg);
+}
+
+.firefly4M{
+    position: absolute;
+    width: 2rem;
+    /* height: 3vh; */
+    left: 8rem;
+    top: 25rem;
+    transform: rotate(-100deg);
+}
+
+.firefly5M{
+    position: absolute;
+    width: 2rem;
+    /* height: 3vh; */
+    right: 12rem;
+    top: 18rem;
+    transform: rotate(-180deg);
+}
+
+.basictree1RM{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: 30vh;
+    right: -46vw; */
+    position: fixed;
+    width: 10rem;
+    top: 34rem;
+    right: -1rem;
+}
+.bubbletreeRM{
+    z-index: 19;
+    position: fixed;
+    width: 8rem;
+    top: 34rem;
+    right: 3rem;
+    /* position: relative;
+    width: 15vw;
+    top: 25vh;
+    right: -20vw; */
+}
+
+.basictree1LM{
+    z-index: 20;
+    /* position: relative;
+    width: 20vw;
+    top: -17vh;
+    left: -29vw */
+    position: fixed;
+    width: 10rem;
+    top: 34rem;
+    left: -1rem;
+}
+.bubbletreeLM{
+    z-index: 19;
+    /* position: relative;
+    width: 15vw;
+    top: -22vh;
+    left: -37vw */
+    position: fixed;
+    width: 8rem;
+    top: 34rem;
+    left: 4rem;
+}
+.stone2M{
+    z-index: 19;
+    /* position: relative;
+    width: 5vw;
+    top: -5vh;
+    left: -50.5vw */
+    position: fixed;
+    width: 3rem;
+    top: 43rem;
+    left: 8rem;
+}
+
+.groundM{
+    position: fixed;
+    width: 60rem;
+    height: 40rem;
+    bottom: -13rem;
+}
+
+.adM{
+    z-index: 20;
+    position: fixed;
+    width: 13rem;
+    top: 40rem;
+    right: 6rem;
+    /* z-index: 20;
+    position: relative;
+    width: 15vw;
+    top: -40vh;
+    right: -25vw; */
+}
+
+.stoneM{
+    z-index: 19;
+    /* position: relative;
+    top: -40vh; 
+    right: -19vw;
+    */
+    position: fixed;
+    width: 13rem;
+    top: 46rem;
+    right: -1.5rem;
+}
+
+.woodsM{
+    position: fixed;
+    z-index: 22;
+    width: 5rem;
+    top: 50rem;
+    left: 1.6rem;
+    transform: rotate(-5deg)
+}
+
+.woods2M{
+    position: fixed;
+    z-index: 22;
+    width: 3rem;
+    top: 43.5rem;
+    right: 0rem;
+    transform: rotate(5deg)
+}
