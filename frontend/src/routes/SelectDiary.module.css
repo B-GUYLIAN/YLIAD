@@ -1,0 +1,132 @@
+/* Bitter */
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,900&display=swap");
+
+/* Russo One */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.P_container {
+  margin-top: 18rem;
+  font-size: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bitter", serif !important;
+}
+
+#voicebox_P {
+  width: 16rem;
+  height: 16rem;
+  padding: 8px;
+  border: 2px solid white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#textbox_P {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  padding: 8px;
+  border: 2px solid white;
+  top: 3rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#voice_P {
+  width: 10rem;
+}
+
+#voicebox_P:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+#voicetext_P {
+  color: red;
+  top: 9.5vw;
+  left: 47vw;
+  font-weight: 600;
+  background: rgb(255, 177, 177);
+  height: 16rem;
+}
+
+#text_P {
+  width: 10rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#textbox_P:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+#texttext_P {
+  color: blue;
+  background: #ffed54;
+  height: 16rem;
+  font-weight: 600;
+}
+
+.M_container {
+  margin-top: 10.5rem;
+  font-size: 3.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bitter", serif !important;
+}
+
+#voicebox_M {
+  width: 16rem;
+  height: 16rem;
+  padding: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+#textbox_M {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  padding: 8px;
+  border: 2px solid white;
+  top: 3rem;
+  cursor: pointer;
+}
+
+#voice_M {
+  width: 9rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#text_M {
+  width: 9rem;
+  margin-top: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#voicetext_M {
+  color: red;
+  top: 8rem;
+  /* left: 6.5rem; */
+  background: rgb(255, 177, 177);
+  height: 16rem;
+}
+
+#texttext_M {
+  color: blue;
+  background: #ffed54;
+  height: 16rem;
+}
