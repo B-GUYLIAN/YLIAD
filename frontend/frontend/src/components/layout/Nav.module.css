@@ -10,7 +10,7 @@
 
 .title {
   font-size: 60px;
-  font-family: 'KOTRAHOPE';
+  font-family: "KOTRAHOPE";
   display: flex;
 }
 
@@ -47,7 +47,7 @@
 .gearP {
   color: #ffed54;
   font-size: 40px;
-  font-family: 'KOTRAHOPE';
+  font-family: "KOTRAHOPE";
   /* padding: 3% 14% 3% 2%; */
   margin: 8px 30px;
   /* height: 3vh; */
@@ -95,7 +95,7 @@
 
 .toggleBtn {
   position: absolute;
-  top: 48px;
+  top: 15px;
   right: 32px;
   font-size: 32px;
   color: #ffed54;
@@ -112,17 +112,25 @@
   .hospitalP,
   .trashP,
   .gearP {
-    font-size: 48px;
-    margin: 6px 12px;
+    font-size: 30px;
+    margin: 5px 12px;
   }
   .navP {
+    margin-top: 20px;
     flex-direction: column;
     align-items: flex-start;
   }
   .title {
     /* display:none 적용 해제 */
-    display: block;
-    margin: 12px;
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-left: 20px;
+    font-size: 40px;
+  }
+  .title img {
+    width: 40px;
+    height: 40px;
   }
   .menuP img {
     display: none;
@@ -134,6 +142,11 @@
     /* 햄버거 버튼 눌렀을 때 display 속성을 flex로 바꿔야 함 */
     display: none;
   }
+
+  .menuP.active {
+    display: flex;
+  }
+
   .toggleBtn {
     display: block;
   }
@@ -263,13 +276,10 @@
   top: 0.1rem;
 }
 
-
-
-
-
 @font-face {
-  font-family: 'KOTRAHOPE';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+  font-family: "KOTRAHOPE";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
