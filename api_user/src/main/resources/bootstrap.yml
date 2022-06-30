@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      uri: http://k6a308.p.ssafy.io:8889
+      name: ecommerce
+      fail-fast: true
+  profiles:
+    active: dev
