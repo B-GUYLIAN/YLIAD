@@ -1,0 +1,84 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: apigateway-service
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+              - "https://10.0.2.2:3000"
+              - "http://10.0.2.2:3000"
+              - "https://k6a308.p.ssafy.io/home"
+              - "https://k6a308.p.ssafy.io"
+            allow-credentials: true
+            allowedHeaders:
+              - x-requested-with
+              - authorization
+              - content-type
+              - credential
+              - X-AUTH-TOKEN
+              - X-CSRF-TOKEN
+            allowedMethods:
+              - POST
+              - GET
+              - PUT
+              - PATCH
+              - OPTIONS
+              - DELETE
+      default-filters:
+        - name: GlobalFilter
+          args:
+            baseMessage: Spring Cloud Gateway Global filter
+            preLogger: true
+            postLogger: true
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/api/auth
+            - Method=POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - CustomFilter
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+            - CustomFilter
+        - id: api-diary
+          uri: lb://API-DIARY
+          predicates:
+            - Path=/api-diary/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/api-diary/(?<segment>.*), /$\{segment}
+            - CustomFilter
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://k6a308.p.ssafy.io:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, info, httptrace, busrefresh
